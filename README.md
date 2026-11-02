@@ -106,25 +106,33 @@
 </div>
 
 ---
-### 🏁 Mentality, Hardware & Workspace
+
+---
+### ❄️ Mentality, Hardware & Workspace
 
 <table width="100%">
   <tr>
-    <!-- CỘT TRÁI: ẢNH MÈO PHI CÔNG (38%) -->
-    <td width="38%" align="center" valign="middle">
-      <img src="./pilot_cat.jpg" width="100%" style="border-radius: 12px; display: block;" alt="life update: I'm up again." />
+    <!-- LEFT: WINTER ANIME -->
+    <td width="32%" align="center" valign="middle">
+      <img
+        src="./winter-girl.png"
+        width="100%"
+        alt="Winter Anime"
+      />
+      <br/>
+      <sub><i>Stay calm. Keep moving. ❄️</i></sub>
     </td>
-    <!-- CỘT PHẢI: BẢNG CẤU HÌNH & TRIẾT LÝ VẬN HÀNH (62%) -->
-    <td width="62%" valign="top" style="padding-left: 15px;">
-      <h3 align="left">🖥️ WORKSTATION & INFERENCE RIG</h3>    
-      <p align="left">
-        <img src="https://img.shields.io/badge/RIG_STATUS-ONLINE-00ff66?style=flat-square&logo=nvidia&logoColor=white" alt="Rig Online" />
-        <img src="https://img.shields.io/badge/INFERENCE-LOCAL_GPU-00e5ff?style=flat-square&logo=linux&logoColor=white" alt="Local Inference" />
-        <img src="https://img.shields.io/badge/TUNNEL-ZEROTIER_SDN-ff9800?style=flat-square&logo=zerotier&logoColor=white" alt="ZeroTier" />
+    <!-- RIGHT: WORKSTATION -->
+    <td width="68%" valign="top">
+      <h3>🖥️ WORKSTATION & INFERENCE RIG</h3>
+      <p>
+        <img src="https://img.shields.io/badge/RIG_STATUS-ONLINE-00cc66?style=flat-square" />
+        <img src="https://img.shields.io/badge/INFERENCE-LOCAL_GPU-00cfff?style=flat-square" />
+        <img src="https://img.shields.io/badge/TUNNEL-ZEROTIER_SDN-ff9800?style=flat-square" />
       </p>
       <table width="100%">
         <tr>
-          <td width="32%"><b>⚡ Processor</b></td>
+          <td width="35%"><b>⚡ Processor</b></td>
           <td>Intel® Core™ i5-13400F (10C / 16T)</td>
         </tr>
         <tr>
@@ -141,21 +149,23 @@
         </tr>
         <tr>
           <td><b>🐳 Runtimes</b></td>
-          <td>Ollama • vLLM • Docker Containers • n8n</td>
+          <td>Ollama • vLLM • Docker • n8n</td>
         </tr>
         <tr>
-          <td><b>🎯 Target Pace</b></td>
-          <td>Sub-7:00/mile 10K • Low-Latency Automation</td>
+          <td><b>🎯 Focus</b></td>
+          <td>Local AI • Data Pipelines • Automation</td>
         </tr>
       </table>
       <br/>
-      <div align="left">
-        <i>"Zero excuses, pure execution."</i><br/>
-        <code>>> Status: Ascending. Target locked and deploying.</code>
-      </div>
+      <i>"Zero excuses, pure execution."</i>
+      <br/>
+      <code>>> Status: Ascending. Target locked and deploying.</code>
     </td>
   </tr>
 </table>
+
+---
+
 ---
 
 ### 📬 Connect With Me
