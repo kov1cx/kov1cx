@@ -24,37 +24,50 @@
 </div>
 
 ---
-
-### 💬 About Me & Life Update
+## 💬 About Me & Life Update
 
 <table>
   <tr>
-    <td width="64%" valign="top">
+    <!-- CỘT TRÁI: THÔNG TIN CHI TIẾT (62%) -->
+    <td width="62%" valign="top">
+      <!-- Khối 1: Bản thân -->
+      <h3>👋 <code>IDENTITY & CURRENT RIG</code></h3>
       <ul>
-        <li>🎓 Senior student majoring in <b>Logistics & Supply Chain Management</b> at HUCE.</li>
-        <li>🤖 Researching <b>Data Analytics & Local AI</b>.</li>
-        <li>⚡ Running an automated inference lab powered by <b>i5-13400F + RTX 3060 12GB</b>.</li>
+        <li>🎓 <b>Senior Student</b> majoring in <b>Logistics & Supply Chain Management</b> at <a href="https://huce.edu.vn">HUCE</a>.</li>
+        <li>🤖 Researching <b>Data Analytics & Applied AI</b> (Fine-tuning local models for predictive supply chain risk).</li>
+        <li>⚡ Running an automated inference & orchestration lab powered by <b>i5-13400F + RTX 3060 12GB</b>.</li>
+        <li>🏃‍♂️ Endurance runner targeting <b>Sub-7:00/mile 10K</b>.</li>
       </ul>
       <br/>
-      <b>🚀 Current Focus & Learning:</b>
+      <!-- Khối 2: Đang tập trung -->
+      <h3>🚀 <code>CURRENT FOCUS & LEARNING</code></h3>
       <ul>
-        <li>✨ Cold-Chain Logistics & Reefer Operations (CPT / FOB routes to JP)</li>
-        <li>✨ Automated Risk Ingestion Pipelines via <code>Docker</code> & <code>n8n</code></li>
-        <li>✨ High-throughput local serving with <code>vLLM</code> & <code>Ollama</code></li>
+        <li>✨ <b>Cold-Chain Logistics</b> & Reefer Operations (CPT / FOB routes to Japan).</li>
+        <li>✨ Automated Risk Ingestion Pipelines utilizing <code>Docker</code> & <code>n8n</code>.</li>
+        <li>✨ High-throughput local model serving using <code>vLLM</code> & <code>Ollama</code>.</li>
       </ul>
       <br/>
-      <b>🎮 Vibe & Interests:</b>
+      <!-- Khối 3: Sở thích -->
+      <h3>🎮 <code>VIBE & INTERESTS</code></h3>
       <ul>
-        <li>✨ Sim Racing, F1 & PCs</li>
-        <li>✨ Film, Light Novels & Alternative Soundtracks</li>
+        <li>🏎️ Sim Racing, F1 & PC building/customizing.</li>
+        <li>📚 Film, Light Novels & Alternative Soundtracks.</li>
       </ul>
     </td>
-    <td width="36%" align="center" valign="middle">
-      <!-- Ảnh Mèo Phi Công: Biểu trưng cho năng lượng & bứt phá -->
-      <img src="https://i.pinimg.com/736x/f2/17/10/f21710ca652d031513ef2929d5d1ced3.jpg" width="100%" style="border-radius: 16px; border: 2px solid #ff9800;" alt="Life update: I'm up again" />
+    <!-- CỘT PHẢI: MEME STAY CHILL BRO (38%) -->
+    <td width="38%" align="center" valign="middle">
+      <div style="background: #0d1117; border: 2px solid #30363d; border-radius: 12px; padding: 4px; box-shadow: 0 8px 24px rgba(0,0,0,0.5);">
+        <!-- Thay link bên dưới bằng file ảnh local hoặc link Pinterest của bạn -->
+        <img src="https://i.pinimg.com/736x/f2/17/10/f21710ca652d031513ef2929d5d1ced3.jpg" width="100%" style="border-radius: 8px; display: block;" alt="stay chill bro, it's just a bad day, not a bad life" />
+        <div style="padding: 8px 0 4px 0; font-size: 0.85em; color: #8b949e; font-style: italic; font-family: monospace;">
+          ☕ "stay chill bro, it's just a bad day..."
+        </div>
+      </div>
     </td>
   </tr>
 </table>
+
+---
 
 ---
 
