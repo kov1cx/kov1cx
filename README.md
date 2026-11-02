@@ -1,3 +1,27 @@
+<div align="center">
+  <table border="0">
+    <tr>
+      <td width="38%" align="center" valign="middle">
+        <!-- Ảnh GIF hiển thị bên trái -->
+        <img src="https://media.giphy.com/media/LmNwrBhejkK9EFP504/giphy.gif" width="100%" style="border-radius: 12px;" alt="Coding Vibe GIF" />
+      </td>
+      <td width="62%" align="left" valign="middle">
+        <h1>Hi there, I'm Kov1cx 👋</h1>
+        <p><b>Logistics & Supply Chain Engineering | Applied Local AI</b></p>
+        <p><i>"Optimizing complex supply chain systems through data pipelines, process automation, and applied AI."</i></p>
+        <p>
+          <img src="https://komarev.com/ghpvc/?username=kov1cx&color=00e5ff&style=flat-square&label=PROFILE+VIEWS" alt="Profile views" />
+          <img src="https://img.shields.io/badge/STATUS-SYSTEM%20ONLINE-00ff66?style=flat-square" alt="Status" />
+          <img src="https://img.shields.io/badge/HANOI-VIETNAM-ff007f?style=flat-square" alt="Location" />
+        </p>
+        <a href="https://github.com/kov1cx">
+          <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=15&duration=2800&pause=1000&color=64B5F6&center=false&vCenter=true&width=450&lines=Data-Driven+Supply+Chain+Pipelines;Fine-tuning+Custom+LLMs+for+Logistics;Targeting+Sub-7%3A00%2Fmile+10K" alt="Typing SVG" />
+        </a>
+      </td>
+    </tr>
+  </table>
+</div>
+
 ## 🛠️ Tech Stack & Tooling
 
 <div align="center">
