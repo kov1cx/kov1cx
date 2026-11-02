@@ -28,9 +28,8 @@
 
 <table>
   <tr>
-    <!-- CỘT TRÁI: THÔNG TIN CHI TIẾT (62%) -->
+    <!-- LEFT: PERSONAL INFORMATION -->
     <td width="62%" valign="top">
-      <!-- Khối 1: Bản thân -->
       <h3>👋 <code>IDENTITY & CURRENT RIG</code></h3>
       <ul>
         <li>🎓 <b>Senior Student</b> majoring in <b>Logistics & Supply Chain Management</b> at <a href="https://huce.edu.vn">HUCE</a>.</li>
@@ -39,7 +38,6 @@
         <li>🏃‍♂️ Endurance runner targeting <b>Sub-7:00/mile 10K</b>.</li>
       </ul>
       <br/>
-      <!-- Khối 2: Đang tập trung -->
       <h3>🚀 <code>CURRENT FOCUS & LEARNING</code></h3>
       <ul>
         <li>✨ <b>Cold-Chain Logistics</b> & Reefer Operations (CPT / FOB routes to Japan).</li>
@@ -47,30 +45,28 @@
         <li>✨ High-throughput local model serving using <code>vLLM</code> & <code>Ollama</code>.</li>
       </ul>
       <br/>
-      <!-- Khối 3: Sở thích -->
       <h3>🎮 <code>VIBE & INTERESTS</code></h3>
       <ul>
         <li>🏎️ Sim Racing, F1 & PC building/customizing.</li>
         <li>📚 Film, Light Novels & Alternative Soundtracks.</li>
       </ul>
     </td>
-    <!-- CỘT PHẢI: MEME STAY CHILL BRO (38%) -->
+    <!-- RIGHT: CAT PILOT IMAGE -->
     <td width="38%" align="center" valign="middle">
-      <div style="background: #0d1117; border: 2px solid #30363d; border-radius: 12px; padding: 4px; box-shadow: 0 8px 24px rgba(0,0,0,0.5);">
-        <!-- Thay link bên dưới bằng file ảnh local hoặc link Pinterest của bạn -->
-        <img src="https://i.pinimg.com/736x/f2/17/10/f21710ca652d031513ef2929d5d1ced3.jpg" width="100%" style="border-radius: 8px; display: block;" alt="stay chill bro, it's just a bad day, not a bad life" />
-        <div style="padding: 8px 0 4px 0; font-size: 0.85em; color: #8b949e; font-style: italic; font-family: monospace;">
-          ☕ "stay chill bro, it's just a bad day..."
-        </div>
-      </div>
+      <img
+        src="./cat-pilot.png"
+        width="100%"
+        alt="Cat Pilot - Life Update: I'm up again."
+      />
+      <br/>
+      <sub>
+        <i>✈️ "Life update: I'm up again."</i>
+      </sub>
     </td>
   </tr>
 </table>
 
 ---
-
----
-
 ### 🛠️ Core Stack & Tooling
 
 <div align="center">
@@ -104,8 +100,6 @@
 </p>
 
 </div>
-
----
 
 ---
 ### ❄️ Mentality, Hardware & Workspace
@@ -165,9 +159,6 @@
 </table>
 
 ---
-
----
-
 ### 📬 Connect With Me
 
 <p align="center">
