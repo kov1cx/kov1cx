@@ -134,21 +134,6 @@
 
 ---
 
-### 📊 GitHub Activity & Telemetry
-
-<div align="center">
-
-<img src="https://github-readme-stats-sigma-five.vercel.app/api?username=kov1cx&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=58a6ff&icon_color=00e5ff&text_color=c9d1d9" width="48%" alt="kov1cx stats" />
-<img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=kov1cx&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9" width="48%" alt="Top Languages" />
-
-<br/><br/>
-
-<img src="https://streak-stats.demolab.com/?user=kov1cx&theme=tokyonight&hide_border=true&background=0d1117&ring=00e5ff&fire=ff007f&currStreakLabel=00e5ff" width="97%" alt="GitHub Streak" />
-
-</div>
-
----
-
 ### 📬 Connect With Me
 
 <p align="center">
