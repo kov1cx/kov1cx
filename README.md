@@ -2,41 +2,31 @@
 
 <div align="center">
 
-### Data Analytics, Engineering & Backend
+### Data Pipelines & Machine Learning
 <p>
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=python,pytorch,tensorflow,fastapi,postgres,sqlite,mongodb,postman&perline=8&theme=dark" alt="Data & Backend" />
+    <img src="https://skillicons.dev/icons?i=python,pytorch,tensorflow,postgres,sqlite,postman&perline=6&theme=dark" alt="Data & ML" />
   </a>
 </p>
 
-### Frontend, Web & Scripts
+### Infrastructure, Automation & Inference
 <p>
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=html,css,js,ts,react,nodejs,tailwind,markdown&perline=8&theme=dark" alt="Web & Scripts" />
+    <img src="https://skillicons.dev/icons?i=docker,linux,bash,git,github,vscode&perline=6&theme=dark" alt="Infra & Inference" />
   </a>
 </p>
 
-### DevOps, Automation & Cloud Infrastructure
+### Domain & Applied Logistics Systems
 <p>
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=docker,git,github,githubactions,linux,bash,cloudflare,vercel&perline=8&theme=dark" alt="DevOps & Cloud" />
-  </a>
+  <img src="https://img.shields.io/badge/Local_AI-Ollama%20%7C%20vLLM-00e5ff?style=flat-square&logo=linux&logoColor=white" />
+  <img src="https://img.shields.io/badge/Acceleration-NVIDIA_CUDA-76b900?style=flat-square&logo=nvidia&logoColor=white" />
+  <img src="https://img.shields.io/badge/Workflows-n8n_Pipelines-ea4c89?style=flat-square&logo=n8n&logoColor=white" />
+  <img src="https://img.shields.io/badge/SDN-ZeroTier_Mesh-ff9800?style=flat-square&logo=zerotier&logoColor=white" />
 </p>
-
-### Development Environments & Creative Tools
 <p>
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=vscode,idea,pycharm,figma,pr,ae,ps,windows&perline=8&theme=dark" alt="Tools & Environments" />
-  </a>
-</p>
-
-### Domain & Applied Workflows
-<p>
-  <img src="https://img.shields.io/badge/Ollama-Local_Inference-black?style=for-the-badge&logo=linux&logoColor=white" />
-  <img src="https://img.shields.io/badge/vLLM-High_Throughput-00acc1?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/NVIDIA_CUDA-12.x-76b900?style=for-the-badge&logo=nvidia&logoColor=white" />
-  <img src="https://img.shields.io/badge/n8n-Workflow_Automation-ea4c89?style=for-the-badge&logo=n8n&logoColor=white" />
-  <img src="https://img.shields.io/badge/ZeroTier-Mesh_SDN-ff9800?style=for-the-badge&logo=zerotier&logoColor=white" />
+  <img src="https://img.shields.io/badge/Freight-CPT%20%7C%20FOB%20%7C%20Reefer%2040'RH-0288d1?style=flat-square" />
+  <img src="https://img.shields.io/badge/Procurement-S2P%20%7C%20P2P%20%7C%20Kraljic-2e7d32?style=flat-square" />
+  <img src="https://img.shields.io/badge/Quality_Ops-FMEA%20%7C%20Ishikawa%20%7C%20Pareto-e65100?style=flat-square" />
 </p>
 
 </div>
