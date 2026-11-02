@@ -131,11 +131,11 @@
         </tr>
         <tr>
           <td><b>🎮 GPU / VRAM</b></td>
-          <td>NVIDIA® GeForce RTX™ 3060 12GB GDDR6</td>
+          <td>NVIDIA® GeForce RTX™ 3060 12GB </td>
         </tr>
         <tr>
-          <td><b>🧠 Memory</b></td>
-          <td>16GB High-Speed System Memory</td>
+          <td><b>🧠 Mainboard</b></td>
+          <td>B760M</td>
         </tr>
         <tr>
           <td><b>🌐 Networking</b></td>
