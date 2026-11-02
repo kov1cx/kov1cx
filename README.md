@@ -2,7 +2,9 @@
 
 <!-- Banner sóng động phối màu Ice Blue & Twilight -->
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=1,6,12,20&height=210&section=header&text=KOV1CX&fontSize=75&fontAlignY=36&animation=twinkling&desc=Logistics%20Engineer%20%7C%20Applied%20AI%20%7C%20Endurance%20Runner&descAlignY=62&descSize=18&fontColor=e0f2fe" width="100%" />
+  <a href="https://github.com/kov1cx">
+    <img src="https://capsule-render.vercel.app/api?type=transparent&height=160&text=KOV1CX&fontSize=80&fontAlignY=45&fontColor=38bdf8&desc=Logistics%20%26%20Applied%20AI%20Inference%20Lab&descAlignY=70&descSize=19" width="100%" />
+  </a>
 </div>
 
 <!-- HERO SECTION: Ảnh Anime Mùa Đông + Giới thiệu -->
