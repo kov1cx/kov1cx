@@ -3,7 +3,7 @@
     <tr>
       <td width="38%" align="center" valign="middle">
         <!-- Ảnh GIF hiển thị bên trái -->
-        <img src="https://media.giphy.com/media/LmNwrBhejkK9EFP504/giphy.gif" width="100%" style="border-radius: 12px;" alt="Coding Vibe GIF" />
+        <img src="[https://media.giphy.com/media/LmNwrBhejkK9EFP504/giphy.gif](https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif)" width="100%" style="border-radius: 12px;" alt="Coding Vibe GIF" />
       </td>
       <td width="62%" align="left" valign="middle">
         <h1>Hi there, I'm Kov1cx 👋</h1>
