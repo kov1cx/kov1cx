@@ -1,0 +1,55 @@
+{
+  "title": "Portfolio",
+  "skip": "Passer au contenu",
+  "nav": {
+    "logo": "Portfolio",
+    "hero": "Accueil",
+    "parcours": "Parcours",
+    "projets": "Projets",
+    "competences": "Compétences",
+    "certifications": "Certifications",
+    "contact": "Contact"
+  },
+  "theme": { "toggle": "Thème" },
+  "hero": {
+    "name": "",
+    "role": "",
+    "intro": "",
+    "status": "",
+    "cv": "Télécharger le CV",
+    "contact": "Me contacter"
+  },
+  "parcours": {
+    "title": "Parcours"
+  },
+  "projets": { "title": "Projets" },
+  "filter": {
+    "all": "Tout",
+    "python": "Python",
+    "r": "R",
+    "sql": "SQL",
+    "cpp": "C++",
+    "ml": "ML",
+    "stats": "Stats"
+  },
+  "project": { "pdf": "Rapport PDF", "view": "Voir le projet" },
+  "competences": {
+    "title": "Compétences",
+    "langage": { "title": "Langages de programmation" },
+    "ml": { "title": "Statistiques & ML" },
+    "data": { "title": "Données & BI" },
+    "spoken": { "title": "Langues parlées" },
+    "daily": "Utilisation quotidienne",
+    "proficient": "Maîtrise",
+    "basic": "Déjà utilisé"
+  },
+  "certifications": { "title": "Certifications" },
+  "contact": {
+    "title": "Contact",
+    "email": "E‑mail",
+    "phone": "Téléphone",
+    "form": { "name": "Nom", "email": "E‑mail", "message": "Message", "send": "Envoyer" }
+  },
+  "footer": { "copy": "© 2026 Portfolio. All rights reserved." },
+  "404": { "title": "Page non trouvée", "message": "La page que vous cherchez n’existe pas.", "home": "Retour à l’accueil" }
+}

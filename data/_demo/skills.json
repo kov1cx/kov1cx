@@ -1,0 +1,114 @@
+{
+  "_notice": "DỮ LIỆU GIẢ LẬP / DEMO PURPOSES ONLY",
+  "analysis": [
+    {
+      "name": {
+        "vi": "Dự báo nhu cầu (Forecasting)",
+        "en": "Demand Forecasting",
+        "fr": "Prévision de la demande"
+      },
+      "level": "proficient",
+      "evidence": ["he-thong-du-bao-nhu-cau-ton-kho-kho-lanh"]
+    },
+    {
+      "name": {
+        "vi": "Mô phỏng chuỗi cung ứng",
+        "en": "Supply Chain Simulation",
+        "fr": "Simulation des flux supply chain"
+      },
+      "level": "daily"
+    },
+    {
+      "name": {
+        "vi": "Tối ưu hóa VRP / Lộ trình",
+        "en": "VRP & Route Optimization",
+        "fr": "Optimisation de tournées (VRP)"
+      },
+      "level": "daily",
+      "evidence": ["toi-uu-hoa-lo-trinh-doi-xe-da-diem"]
+    }
+  ],
+  "programming": [
+    {
+      "name": {
+        "vi": "Python (Pandas, PuLP, OR-Tools)",
+        "en": "Python (Pandas, PuLP, OR-Tools)",
+        "fr": "Python (Pandas, PuLP, OR-Tools)"
+      },
+      "level": "daily",
+      "evidence": ["demo-badge-python", "toi-uu-hoa-lo-trinh-doi-xe-da-diem"],
+      "logo": "<svg viewBox='0 0 24 24' width='16' height='16' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/></svg>"
+    },
+    {
+      "name": {
+        "vi": "SQL (PostgreSQL, BigQuery)",
+        "en": "SQL (PostgreSQL, BigQuery)",
+        "fr": "SQL (PostgreSQL, BigQuery)"
+      },
+      "level": "daily",
+      "evidence": ["dashboard-dieu-do-van-tai-cang-bien"],
+      "logo": "<svg viewBox='0 0 24 24' width='16' height='16' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><ellipse cx='12' cy='5' rx='9' ry='3'/><path d='M21 12c0 1.66-4 3-9 3s-9-1.34-9-3'/><path d='M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5'/></svg>"
+    },
+    {
+      "name": {
+        "vi": "R (Chuỗi thời gian)",
+        "en": "R (Time Series Analysis)",
+        "fr": "R (Séries temporelles)"
+      },
+      "level": "learning"
+    }
+  ],
+  "logisticsTools": [
+    {
+      "name": {
+        "vi": "WMS / TMS Software",
+        "en": "WMS / TMS Software",
+        "fr": "Logiciels WMS & TMS"
+      },
+      "level": "daily"
+    },
+    {
+      "name": {
+        "vi": "Power BI & Tableau",
+        "en": "Power BI & Tableau",
+        "fr": "Power BI & Tableau"
+      },
+      "level": "proficient",
+      "evidence": ["dashboard-dieu-do-van-tai-cang-bien"]
+    },
+    {
+      "name": {
+        "vi": "ERP SAP (MM/SD)",
+        "en": "ERP SAP (MM/SD)",
+        "fr": "ERP SAP (MM/SD)"
+      },
+      "level": "learning"
+    }
+  ],
+  "softwares": [
+    {
+      "name": {
+        "vi": "Excel Nâng cao & VBA",
+        "en": "Advanced Excel & VBA",
+        "fr": "Excel Avancé & VBA"
+      },
+      "level": "daily"
+    },
+    {
+      "name": {
+        "vi": "Git & GitHub",
+        "en": "Git & GitHub",
+        "fr": "Git & GitHub"
+      },
+      "level": "proficient"
+    },
+    {
+      "name": {
+        "vi": "Docker & Cloud Basics",
+        "en": "Docker & Cloud Basics",
+        "fr": "Bases Docker & Cloud"
+      },
+      "level": "learning"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "title": "Portfolio",
+  "skip": "Skip to content",
+  "nav": {
+    "logo": "Portfolio",
+    "hero": "Home",
+    "parcours": "Education",
+    "projets": "Projects",
+    "competences": "Skills",
+    "certifications": "Certifications",
+    "contact": "Contact"
+  },
+  "theme": { "toggle": "Theme" },
+  "hero": {
+    "name": "",
+    "role": "",
+    "intro": "",
+    "status": "",
+    "cv": "Download CV",
+    "contact": "Contact"
+  },
+  "parcours": {
+    "title": "Education"
+  },
+  "projets": { "title": "Projects" },
+  "filter": {
+    "all": "All",
+    "python": "Python",
+    "r": "R",
+    "sql": "SQL",
+    "cpp": "C++",
+    "ml": "ML",
+    "stats": "Stats"
+  },
+  "project": { "pdf": "PDF Report", "view": "View Project" },
+  "competences": {
+    "title": "Skills",
+    "langage": { "title": "Programming Languages" },
+    "ml": { "title": "Statistics & ML" },
+    "data": { "title": "Data & BI" },
+    "spoken": { "title": "Spoken Languages" },
+    "daily": "Daily use",
+    "proficient": "Proficient",
+    "basic": "Previously used"
+  },
+  "certifications": { "title": "Certifications" },
+  "contact": {
+    "title": "Contact",
+    "email": "Email",
+    "phone": "Phone",
+    "form": { "name": "Name", "email": "Email", "message": "Message", "send": "Send" }
+  },
+  "footer": { "copy": "© 2026 Portfolio. All rights reserved." },
+  "404": { "title": "Page not found", "message": "The requested page does not exist.", "home": "Back to home" }
+}

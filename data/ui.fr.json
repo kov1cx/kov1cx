@@ -1,0 +1,226 @@
+{
+  "meta": {
+    "title": "Portfolio Professionnel",
+    "description": "Dossier de compétences professionnelles et réalisations de projets en supply chain et logistique",
+    "ogTitle": "Portfolio Professionnel",
+    "ogDescription": "Dossier de compétences professionnelles et réalisations de projets en supply chain et logistique",
+    "ogUrl": "https://USERNAME.github.io/portfolio/"
+  },
+  "skip": "Passer au contenu",
+  "demoBadge": "Mode Démo",
+  "demoNotice": "Affichage des données de simulation (?demo=1). Les fichiers réels dans data/ ne sont pas modifiés.",
+  "emptyProfileBadge": "PROFIL EN ATTENTE DE DONNÉES",
+  "emptyProfileHint": "Aucune donnée personnelle configurée. Ajoutez ?demo=1 à l’URL pour prévisualiser l’interface avec le jeu d’essai complet.",
+  "header": {
+    "indexAria": "Index de navigation",
+    "langToggle": "Langue",
+    "themeToggle": "Thème clair/sombre",
+    "themeLight": "CLAIR",
+    "themeDark": "SOMBRE"
+  },
+  "rail": {
+    "overview": "APERÇU",
+    "profile": "PARCOURS",
+    "projects": "PROJETS",
+    "archive": "ARCHIVES",
+    "caseStudy": "ÉTUDE DE CAS",
+    "context": "CONTEXTE",
+    "data": "DONNÉES",
+    "method": "MÉTHODE",
+    "results": "RÉSULTATS",
+    "limits": "LIMITES",
+    "skills": "COMPÉTENCES",
+    "certificates": "CERTIFICATS",
+    "categories": "CATÉGORIES",
+    "grouped": "GROUPÉS",
+    "courses": "FORMATIONS",
+    "planned": "PRÉVUS",
+    "contact": "CONTACT",
+    "message": "MESSAGE"
+  },
+  "tabs": {
+    "home": {
+      "name": "Accueil",
+      "slug": "",
+      "metaTitle": "Accueil",
+      "metaDesc": "Présentation de mon profil professionnel, de mes compétences et de mes solutions logistiques."
+    },
+    "profile": {
+      "name": "Parcours",
+      "slug": "parcours",
+      "metaTitle": "Formation & Expérience",
+      "metaDesc": "Cursus académique, diplômes et parcours professionnel."
+    },
+    "projects": {
+      "name": "Projets",
+      "slug": "projets",
+      "metaTitle": "Projets Réalisés",
+      "metaDesc": "Sélection de projets réels, modèles d’optimisation logistique et résultats quantitatifs obtenus."
+    },
+    "skills": {
+      "name": "Compétences",
+      "slug": "competences",
+      "metaTitle": "Compétences & Certifications",
+      "metaDesc": "Compétences techniques, outils de gestion logistique et certifications professionnelles."
+    },
+    "contact": {
+      "name": "Contact",
+      "slug": "contact",
+      "metaTitle": "Informations de Contact",
+      "metaDesc": "Échangeons sur les opportunités de collaboration, par e-mail, téléphone, LinkedIn ou GitHub."
+    }
+  },
+  "hero": {
+    "cv": "Télécharger le CV",
+    "contact": "Me contacter",
+    "viewProjects": "Voir les projets",
+    "openFullscreen": "Ouvrir en plein écran",
+    "portraitAlt": "Portrait de {name}"
+  },
+  "profileSection": {
+    "title": "Parcours Professionnel",
+    "educationTitle": "Formation & Diplômes",
+    "experienceTitle": "Expérience Professionnelle",
+    "emptyNotice": "Aucune donnée de formation ou d’expérience disponible."
+  },
+  "projects": {
+    "title": "Projets Réalisés",
+    "archiveTitle": "Autres Projets",
+    "filterAll": "Tous",
+    "viewProject": "Voir le projet",
+    "viewReport": "Rapport PDF",
+    "sourceCode": "Code source",
+    "demo": "Démo",
+    "backToList": "← Retour à la liste des projets",
+    "overview": "Présentation de la solution",
+    "results": "Résultats obtenus",
+    "technologies": "Technologies & Outils",
+    "role": "Rôle",
+    "links": "Liens du projet",
+    "notFound": "Le projet demandé est introuvable.",
+    "figurePrefix": "Figure",
+    "sections": {
+      "context": "Contexte & Problématique",
+      "data": "Données d’entrée",
+      "method": "Méthodologie",
+      "result": "Résultats obtenus",
+      "limitations": "Limites & Perspectives"
+    },
+    "meta": {
+      "year": "ANNÉE",
+      "role": "RÔLE",
+      "tech": "TECHNOLOGIES",
+      "result": "RÉSULTAT CLÉ"
+    },
+    "keyResult": "Résultat clé",
+    "openFullscreen": "Plein écran",
+    "closeFullscreen": "Quitter plein écran"
+  },
+  "skills": {
+    "title": "Compétences & Certifications",
+    "skillsTitle": "Compétences Clés",
+    "certsTitle": "Certifications Professionnelles",
+    "featuredTitle": "Certifications Clés",
+    "byCategoryTitle": "Certifications par Domaine",
+    "groupedTitle": "Modules & Certificats Groupés",
+    "coursesTitle": "Formations suivies (sans certificat)",
+    "inProgressTitle": "En cours & À venir",
+    "skillCategory": {
+      "analysis": "Analyse & Optimisation",
+      "dataScience": "Science des Données",
+      "programming": "Programmation & Ingénierie",
+      "logisticsTools": "Outils Logistiques & BI",
+      "softwares": "Logiciels & Systèmes"
+    },
+    "category": {
+      "data": "Données & Analyse",
+      "code": "Programmation & Ingénierie",
+      "logistics": "Logistique & Supply Chain",
+      "ai": "Intelligence Artificielle (IA)",
+      "management": "Gestion & Projets",
+      "other": "Autres Compétences"
+    },
+    "typeLabel": {
+      "certificate": "Certificat",
+      "badge": "Badge",
+      "course": "Formation"
+    },
+    "level": {
+      "learning": "En apprentissage",
+      "proficient": "Maîtrisé",
+      "daily": "Pratique quotidienne"
+    },
+    "meta": {
+      "year": "ANNÉE",
+      "issuer": "ORGANISME",
+      "type": "TYPE",
+      "verify": "VÉRIFICATION"
+    },
+    "verifyCert": "Vérifier",
+    "verifyAria": "Vérifier {title}, nouvel onglet",
+    "verifyOnRequest": "Vérification sur demande",
+    "relatedProject": "Projet associé",
+    "evidencePrefix": "Preuve :",
+    "hours": "{hours} h",
+    "featuredBadge": "À la une",
+    "modulesLabel": "modules complémentaires",
+    "groupSummary": "{issuer} : {count} {modulesLabel}, {dateRange}",
+    "filterAll": "Tous les domaines",
+    "statusInProgress": "En cours",
+    "statusPlanned": "Prévu",
+    "expectedPrefix": "Prévu : ",
+    "homeFeaturedHeading": "Certifications clés :",
+    "viewAllCerts": "Voir toutes les Compétences & Certifications"
+  },
+  "contact": {
+    "title": "Contact",
+    "desc": "À l’écoute de nouveaux défis et d’opportunités de collaboration. N’hésitez pas à m’envoyer un message via le formulaire ou à me contacter directement.",
+    "email": "E-mail",
+    "phone": "Téléphone",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "kaggle": "Kaggle",
+    "formName": "Nom & Prénom",
+    "formNamePlaceholder": "Votre nom et prénom",
+    "formEmail": "E-mail",
+    "formEmailPlaceholder": "email@exemple.fr",
+    "formMsg": "Message",
+    "formMsgPlaceholder": "Votre message...",
+    "formSubmit": "Envoyer le message",
+    "formSuccess": "Message envoyé avec succès ! Merci.",
+    "formError": "Échec de l’envoi, veuillez réessayer.",
+    "openingEmailApp": "Ouverture de la messagerie..."
+  },
+  "footer": {
+    "copy": "© 2026 Portfolio. Tous droits réservés.",
+    "indexLabel": "INDEX",
+    "linksLabel": "LIENS",
+    "topButton": "↑ HAUT"
+  },
+  "statusBar": {
+    "emailAria": "Envoyer un e-mail à {email}",
+    "contactAria": "Contact",
+    "cvAria": "Télécharger le CV (s'ouvre dans un nouvel onglet)"
+  },
+  "navGrid": {
+    "ariaLabel": "Navigation des sections du portfolio",
+    "open": "Ouvrir",
+    "openAria": "Ouvrir: {name}",
+    "certificatesName": "Certificats",
+    "projectsCount": {
+      "one": "{n} projet",
+      "other": "{n} projets"
+    },
+    "skillsCount": {
+      "one": "{n} compétence",
+      "other": "{n} compétences"
+    },
+    "certsCount": {
+      "one": "{n} certificat",
+      "other": "{n} certificats"
+    }
+  },
+  "aria": {
+    "tabSwitched": "Onglet actif : {tabName}"
+  }
+}

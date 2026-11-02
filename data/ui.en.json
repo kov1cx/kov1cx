@@ -1,0 +1,226 @@
+{
+  "meta": {
+    "title": "Professional Portfolio",
+    "description": "Professional portfolio and projects showcase",
+    "ogTitle": "Professional Portfolio",
+    "ogDescription": "Professional portfolio and projects showcase",
+    "ogUrl": "https://USERNAME.github.io/portfolio/"
+  },
+  "skip": "Skip to content",
+  "demoBadge": "Demo Mode",
+  "demoNotice": "Displaying mock data (?demo=1). Real files in data/ remain unchanged.",
+  "emptyProfileBadge": "Awaiting profile data",
+  "emptyProfileHint": "No personal profile loaded yet. Add ?demo=1 to URL to preview with full demo data.",
+  "header": {
+    "indexAria": "Navigation index",
+    "langToggle": "Language",
+    "themeToggle": "Light/Dark theme",
+    "themeLight": "LIGHT",
+    "themeDark": "DARK"
+  },
+  "rail": {
+    "overview": "OVERVIEW",
+    "profile": "PROFILE",
+    "projects": "PROJECTS",
+    "archive": "ARCHIVE",
+    "caseStudy": "CASE STUDY",
+    "context": "CONTEXT",
+    "data": "DATA",
+    "method": "METHOD",
+    "results": "RESULTS",
+    "limits": "LIMITS",
+    "skills": "SKILLS",
+    "certificates": "CERTIFICATES",
+    "categories": "CATEGORIES",
+    "grouped": "GROUPED",
+    "courses": "COURSES",
+    "planned": "PLANNED",
+    "contact": "CONTACT",
+    "message": "MESSAGE"
+  },
+  "tabs": {
+    "home": {
+      "name": "About",
+      "slug": "",
+      "metaTitle": "About",
+      "metaDesc": "Introduction to professional background, expertise, and supply chain solutions."
+    },
+    "profile": {
+      "name": "Profile",
+      "slug": "profile",
+      "metaTitle": "Education & Experience",
+      "metaDesc": "Academic credentials, degrees, and professional work experience."
+    },
+    "projects": {
+      "name": "Projects",
+      "slug": "projects",
+      "metaTitle": "Featured Projects",
+      "metaDesc": "Portfolio of real-world projects, logistics optimization models, and measurable outcomes."
+    },
+    "skills": {
+      "name": "Skills",
+      "slug": "skills",
+      "metaTitle": "Skills & Certifications",
+      "metaDesc": "Core technical competencies, supply chain management tools, and professional certifications."
+    },
+    "contact": {
+      "name": "Contact",
+      "slug": "contact",
+      "metaTitle": "Contact Information",
+      "metaDesc": "Get in touch for professional inquiries, collaborations, and career opportunities."
+    }
+  },
+  "hero": {
+    "cv": "Download CV",
+    "contact": "Contact",
+    "viewProjects": "View all projects",
+    "openFullscreen": "Open fullscreen",
+    "portraitAlt": "Portrait of {name}"
+  },
+  "profileSection": {
+    "title": "Professional Profile",
+    "educationTitle": "Education & Academic Background",
+    "experienceTitle": "Work Experience",
+    "emptyNotice": "No education or experience data available."
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "archiveTitle": "Other Projects",
+    "filterAll": "All",
+    "viewProject": "View Project",
+    "viewReport": "PDF Report",
+    "sourceCode": "Source Code",
+    "demo": "Live Demo",
+    "backToList": "← Back to projects list",
+    "overview": "Solution Overview",
+    "results": "Key Results",
+    "technologies": "Technologies & Tools",
+    "role": "Role",
+    "links": "Project Links",
+    "notFound": "Requested project could not be found.",
+    "figurePrefix": "Figure",
+    "sections": {
+      "context": "Context & Problem",
+      "data": "Dataset & Inputs",
+      "method": "Methodology",
+      "result": "Key Results",
+      "limitations": "Limitations & Next Steps"
+    },
+    "meta": {
+      "year": "YEAR",
+      "role": "ROLE",
+      "tech": "TECHNOLOGY",
+      "result": "KEY RESULT"
+    },
+    "keyResult": "Key Result",
+    "openFullscreen": "Fullscreen",
+    "closeFullscreen": "Exit Fullscreen"
+  },
+  "skills": {
+    "title": "Skills & Certifications",
+    "skillsTitle": "Technical Skills",
+    "certsTitle": "Professional Certifications",
+    "featuredTitle": "Featured Certifications",
+    "byCategoryTitle": "Certifications by Field",
+    "groupedTitle": "Grouped Programs & Modules",
+    "coursesTitle": "Completed Courses (Non-certificate)",
+    "inProgressTitle": "In Progress & Planned",
+    "skillCategory": {
+      "analysis": "Analysis & Optimization",
+      "dataScience": "Data Science",
+      "programming": "Programming & Engineering",
+      "logisticsTools": "Logistics & BI Tools",
+      "softwares": "Software & Systems"
+    },
+    "category": {
+      "data": "Data & Analytics",
+      "code": "Programming & Engineering",
+      "logistics": "Logistics & Supply Chain",
+      "ai": "Artificial Intelligence (AI)",
+      "management": "Management & Projects",
+      "other": "Other Skills"
+    },
+    "typeLabel": {
+      "certificate": "Certificate",
+      "badge": "Badge",
+      "course": "Course"
+    },
+    "level": {
+      "learning": "Learning",
+      "proficient": "Proficient",
+      "daily": "Daily"
+    },
+    "meta": {
+      "year": "YEAR",
+      "issuer": "ISSUER",
+      "type": "TYPE",
+      "verify": "VERIFICATION"
+    },
+    "verifyCert": "Verify",
+    "verifyAria": "Verify {title}, opens in new tab",
+    "verifyOnRequest": "Verification upon request",
+    "relatedProject": "Related Project",
+    "evidencePrefix": "Evidence:",
+    "hours": "{hours} hrs",
+    "featuredBadge": "Featured",
+    "modulesLabel": "supplementary modules",
+    "groupSummary": "{issuer}: {count} {modulesLabel}, {dateRange}",
+    "filterAll": "All Fields",
+    "statusInProgress": "In Progress",
+    "statusPlanned": "Planned",
+    "expectedPrefix": "Expected: ",
+    "homeFeaturedHeading": "Featured Certifications:",
+    "viewAllCerts": "View all Skills & Certifications"
+  },
+  "contact": {
+    "title": "Contact",
+    "desc": "Open to new challenges, collaborations, and career opportunities. Feel free to reach out via the form or through social channels below.",
+    "email": "Email",
+    "phone": "Phone",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "kaggle": "Kaggle",
+    "formName": "Full Name",
+    "formNamePlaceholder": "Your full name",
+    "formEmail": "Email",
+    "formEmailPlaceholder": "email@example.com",
+    "formMsg": "Message",
+    "formMsgPlaceholder": "Your message...",
+    "formSubmit": "Send Message",
+    "formSuccess": "Sent successfully! Thank you.",
+    "formError": "Failed to send. Please try again.",
+    "openingEmailApp": "Opening email client..."
+  },
+  "footer": {
+    "copy": "© 2026 Portfolio. All rights reserved.",
+    "indexLabel": "INDEX",
+    "linksLabel": "LINKS",
+    "topButton": "↑ TOP"
+  },
+  "statusBar": {
+    "emailAria": "Send an email to {email}",
+    "contactAria": "Contact",
+    "cvAria": "Download CV (opens in a new tab)"
+  },
+  "navGrid": {
+    "ariaLabel": "Portfolio sections navigation",
+    "open": "Open",
+    "openAria": "Open: {name}",
+    "certificatesName": "Certificates",
+    "projectsCount": {
+      "one": "{n} project",
+      "other": "{n} projects"
+    },
+    "skillsCount": {
+      "one": "{n} skill",
+      "other": "{n} skills"
+    },
+    "certsCount": {
+      "one": "{n} certificate",
+      "other": "{n} certificates"
+    }
+  },
+  "aria": {
+    "tabSwitched": "Switched to {tabName} tab"
+  }
+}

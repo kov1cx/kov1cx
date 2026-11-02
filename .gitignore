@@ -1,0 +1,11 @@
+   node_modules/
+   certificate/
+   thong-tin/
+   data/_demo/
+   assets/img/demo-*
+   scripts/
+   .env
+   .env.*
+   *.pdf
+   Thumbs.db
+   .DS_Store

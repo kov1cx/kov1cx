@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540" style="background:#FBF9F5; font-family:'IBM Plex Mono',monospace;">
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#E6E0D5" stroke-width="1"/>
+    </pattern>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#BC473A"/>
+    </marker>
+  </defs>
+
+  <rect width="100%" height="100%" fill="#FBF9F5"/>
+  <rect width="100%" height="100%" fill="url(#grid)"/>
+
+  <!-- Coordinate frame -->
+  <g stroke="#8C827A" stroke-width="1.5">
+    <line x1="96" y1="456" x2="880" y2="456"/>
+    <line x1="96" y1="56" x2="96" y2="456"/>
+  </g>
+
+  <!-- Grid tick labels (>= 12px) -->
+  <g font-size="12" fill="#716860" text-anchor="middle">
+    <text x="96" y="482">0</text>
+    <text x="252" y="482">25</text>
+    <text x="408" y="482">50</text>
+    <text x="564" y="482">75</text>
+    <text x="720" y="482">100</text>
+    <text x="876" y="482">125 km</text>
+
+    <text x="78" y="460" text-anchor="end">0</text>
+    <text x="78" y="360" text-anchor="end">20</text>
+    <text x="78" y="260" text-anchor="end">40</text>
+    <text x="78" y="160" text-anchor="end">60</text>
+    <text x="78" y="64" text-anchor="end">80 km</text>
+  </g>
+
+  <!-- Route 1 (Terracotta) -->
+  <path d="M 224 324 L 336 244 L 304 148 L 432 114 L 464 216 L 224 324" fill="rgba(188,71,58,0.06)" stroke="#BC473A" stroke-width="2.5" marker-mid="url(#arrow)"/>
+
+  <!-- Route 2 (Secondary Slate/Charcoal) -->
+  <path d="M 224 324 L 256 418 L 448 430 L 544 364 L 400 310 L 224 324" fill="rgba(43,40,38,0.04)" stroke="#4A4541" stroke-width="2.2" stroke-dasharray="5 5"/>
+
+  <!-- Route 3 (East Sector - Terracotta dashed) -->
+  <path d="M 592 256 L 672 162 L 816 176 L 784 296 L 688 338 L 592 256" fill="rgba(188,71,58,0.05)" stroke="#BC473A" stroke-width="2.2" stroke-dasharray="7 4"/>
+
+  <!-- Cluster hulls -->
+  <polygon points="272,128 456,100 496,230 312,264" fill="none" stroke="#BC473A" stroke-width="1" stroke-dasharray="3 3" opacity="0.6"/>
+  <polygon points="648,142 840,156 808,316 664,358" fill="none" stroke="#8C827A" stroke-width="1" stroke-dasharray="3 3" opacity="0.6"/>
+
+  <!-- Nodes (Delivery stops) -->
+  <g fill="#2B2826">
+    <circle cx="336" cy="244" r="5.5"/>
+    <circle cx="304" cy="148" r="5.5"/>
+    <circle cx="432" cy="114" r="6.5"/>
+    <circle cx="464" cy="216" r="5.5"/>
+    <circle cx="256" cy="418" r="5"/>
+    <circle cx="448" cy="430" r="6"/>
+    <circle cx="544" cy="364" r="5.5"/>
+    <circle cx="400" cy="310" r="5"/>
+    <circle cx="672" cy="162" r="5.5"/>
+    <circle cx="816" cy="176" r="6.5"/>
+    <circle cx="784" cy="296" r="5.5"/>
+    <circle cx="688" cy="338" r="5.5"/>
+  </g>
+
+  <!-- Node IDs & demands (>= 12px) -->
+  <g font-size="12" fill="#4A4541">
+    <text x="348" y="248">N03 (1.2t)</text>
+    <text x="316" y="144">N04 (0.8t)</text>
+    <text x="444" y="110">N07 (2.4t)</text>
+    <text x="476" y="220">N09 (1.5t)</text>
+    <text x="684" y="158">N12 (1.1t)</text>
+    <text x="828" y="172">N14 (2.0t)</text>
+    <text x="796" y="300">N16 (1.7t)</text>
+    <text x="700" y="342">N18 (0.9t)</text>
+  </g>
+
+  <!-- Depots (Square icons) -->
+  <g fill="#BC473A" stroke="#2B2826" stroke-width="2">
+    <rect x="214" y="314" width="20" height="20"/>
+    <rect x="582" y="246" width="20" height="20"/>
+  </g>
+  <g font-size="12" font-weight="700" fill="#BC473A">
+    <text x="210" y="356">DEPOT-ALPHA</text>
+    <text x="578" y="288">DEPOT-BETA</text>
+  </g>
+</svg>

@@ -1,0 +1,199 @@
+{
+  "_notice": "DỮ LIỆU GIẢ LẬP / DEMO PURPOSES ONLY",
+  "projects": [
+    {
+      "title": {
+        "vi": "Tối ưu hóa Lộ trình Đội xe Đa điểm [DEMO]",
+        "en": "Multi-stop Fleet Route Optimization [DEMO]",
+        "fr": "Optimisation de Tournées de Véhicules Multi-points [DEMO]"
+      },
+      "slug": "toi-uu-hoa-lo-trinh-doi-xe-da-diem",
+      "year": "2024",
+      "context": {
+        "vi": "Chi phí nhiên liệu và thời gian chờ tại 18 trung tâm phân phối khu vực tăng cao do lịch trình điều phối thủ công thiếu đồng bộ khung giờ nhận hàng [DEMO].",
+        "en": "Fuel expenditure and waiting times across 18 regional distribution hubs escalated due to manual dispatching without synchronized time-window constraints [DEMO].",
+        "fr": "Les coûts de carburant et les temps d’attente sur 18 centres régionaux ont augmenté en raison d’une planification manuelle sans fenêtres horaires synchronisées [DEMO]."
+      },
+      "data": {
+        "vi": "12.400 bản ghi GPS lộ trình giao nhận, ma trận khoảng cách GIS và khung giờ tiếp nhận của 18 điểm giao hàng trong 6 tháng [DEMO].",
+        "en": "12,400 GPS delivery route records, GIS distance matrices, and receiving time windows across 18 hubs over 6 months [DEMO].",
+        "fr": "12 400 relevés GPS de livraison, matrices de distance SIG et créneaux de réception sur 18 hubs pendant 6 mois [DEMO]."
+      },
+      "method": {
+        "vi": [
+          "Chuẩn hóa dữ liệu tọa độ kho bãi và xây dựng ma trận thời gian di chuyển theo khung giờ cao điểm.",
+          "Thiết lập mô hình Capacitated Vehicle Routing Problem with Time Windows (CVRPTW) bằng Python và Google OR-Tools.",
+          "Kiểm định kịch bản phân cụm tuyến giao nhận và đối chiếu với lịch trình vận hành thực tế tại 18 trung tâm."
+        ],
+        "en": [
+          "Normalized hub coordinates and constructed travel-time matrices accounting for peak traffic windows.",
+          "Formulated a Capacitated Vehicle Routing Problem with Time Windows (CVRPTW) model using Python and Google OR-Tools.",
+          "Validated route clustering scenarios and benchmarked against historical dispatching baselines across 18 hubs."
+        ],
+        "fr": [
+          "Normalisation des coordonnées des dépôts et construction des matrices de temps de parcours selon les heures de pointe.",
+          "Modélisation du problème de tournées avec capacité et fenêtres de temps (CVRPTW) sous Python et Google OR-Tools.",
+          "Validation des scénarios de sectorisation et comparaison avec l’historique d’exploitation sur 18 centres."
+        ]
+      },
+      "summary": {
+        "vi": "Mô hình định tuyến phương tiện (VRP) với ràng buộc khung thời gian, giúp cắt giảm 14% chi phí nhiên liệu.",
+        "en": "Vehicle Routing Problem (VRP) model with time windows constraints, cutting fuel expenditure by 14%.",
+        "fr": "Modèle d’optimisation des tournées (VRP) avec fenêtres de temps, réduisant la consommation de carburant de 14 %."
+      },
+      "result": {
+        "vi": "Tiết kiệm 14% chi phí và rút ngắn 22% thời gian giao hàng tại 18 trung tâm phân phối.",
+        "en": "Saved 14% operational costs and shortened transit lead time by 22% across 18 regional distribution hubs.",
+        "fr": "Économie de 14 % sur les coûts d’exploitation et réduction de 22 % des délais sur 18 centres de distribution."
+      },
+      "limitations": {
+        "vi": "Mô hình giả định tốc độ trung bình theo khung giờ tĩnh, chưa tích hợp dữ liệu sự cố giao thông thời gian thực [DEMO].",
+        "en": "Model assumes static time-bucketed average speeds and does not yet ingest live traffic incident feeds [DEMO].",
+        "fr": "Le modèle repose sur des vitesses moyennes par tranche horaire sans flux d’incidents routiers en temps réel [DEMO]."
+      },
+      "result_metric": {
+        "value": "-14%",
+        "label": {
+          "vi": "Chi phí nhiên liệu vận hành",
+          "en": "Operating fuel costs",
+          "fr": "Dépenses carburant d'exploitation"
+        }
+      },
+      "tags": ["Python", "OR-Tools", "VRP", "GIS"],
+      "role": {
+        "vi": "Trưởng nhóm Tối ưu hóa [DEMO]",
+        "en": "Lead Optimization Engineer [DEMO]",
+        "fr": "Ingénieur Référent Optimisation [DEMO]"
+      },
+      "figure": {
+        "src": "assets/img/demo-vrp-network.svg",
+        "caption": {
+          "vi": "Hình 1. Sơ đồ phân cụm lộ trình giao nhận đa điểm qua 18 trung tâm phân phối [DEMO]",
+          "en": "Figure 1. Multi-stop routing clustering schema across 18 distribution hubs [DEMO]",
+          "fr": "Figure 1. Schéma de sectorisation des tournées multi-points sur 18 hubs [DEMO]"
+        }
+      },
+      "grayscale": false,
+      "pdfLink": "#report-demo",
+      "githubLink": "https://github.com/demo-account/vrp-demo",
+      "demoLink": "https://example.com/demo1",
+      "featured": true
+    },
+    {
+      "title": {
+        "vi": "Hệ thống Dự báo Nhu cầu & Tồn kho Kho lạnh [DEMO]",
+        "en": "Cold Storage Demand & Inventory Forecasting System [DEMO]",
+        "fr": "Système de Prévision de la Demande & des Stocks en Entrepôt Frigorifique [DEMO]"
+      },
+      "slug": "he-thong-du-bao-nhu-cau-ton-kho-kho-lanh",
+      "year": "2023 – 2024",
+      "context": {
+        "vi": "Biến động mùa vụ của hàng nông sản tươi sống gây dư thừa tồn kho lạnh hoặc đứt gãy nguồn cung cục bộ [DEMO].",
+        "en": "Seasonal volatility in fresh agricultural produce caused cold storage overstocking and localized stockouts [DEMO].",
+        "fr": "La saisonnalité des produits agricoles frais entraînait des surstocks frigorifiques et des ruptures locales [DEMO]."
+      },
+      "data": {
+        "vi": "Chuỗi thời gian 104 tuần xuất nhập kho của 45 nhóm SKU nông sản lạnh kèm biến thời tiết và lịch khuyến mãi [DEMO].",
+        "en": "104-week warehouse throughput time series across 45 cold-chain SKU groups with weather and promotion covariates [DEMO].",
+        "fr": "Séries temporelles sur 104 semaines pour 45 familles de produits frais avec variables météo et promotions [DEMO]."
+      },
+      "method": {
+        "vi": [
+          "Khử nhiễu chuỗi thời gian và tách thành phần mùa vụ cho 45 nhóm SKU kho lạnh.",
+          "Huấn luyện tổ hợp mô hình SARIMAX và XGBoost với kiểm định chéo trượt theo tuần (rolling-origin evaluation).",
+          "Tích hợp ngưỡng tồn kho an toàn động vào bảng điều khiển kế hoạch nhập hàng hàng tuần."
+        ],
+        "en": [
+          "Denoised time-series signals and decomposed seasonal components across 45 cold-chain SKU groups.",
+          "Trained an ensemble of SARIMAX and XGBoost models with weekly rolling-origin cross-validation.",
+          "Integrated dynamic safety-stock thresholds into the weekly replenishment planning dashboard."
+        ],
+        "fr": [
+          "Filtrage des séries temporelles et décomposition saisonnière sur 45 familles de produits frigorifiques.",
+          "Entraînement combiné SARIMAX et XGBoost avec validation croisée glissante hebdomadaire.",
+          "Intégration des seuils de stock de sécurité dynamique au tableau de réapprovisionnement."
+        ]
+      },
+      "summary": {
+        "vi": "Phân tích chuỗi thời gian SARIMAX và XGBoost nhằm dự báo sức mua nông sản theo tuần.",
+        "en": "SARIMAX and XGBoost time-series analytics predicting weekly agricultural perishable goods demand.",
+        "fr": "Modèles de séries temporelles SARIMAX et XGBoost pour la prévision hebdomadaire de produits périssables."
+      },
+      "result": {
+        "vi": "Giảm 30% tỷ lệ hư hỏng hàng tươi sống và cải thiện độ chính xác dự báo lên 91%.",
+        "en": "Reduced perishable spoilage rate by 30% and elevated forecast accuracy to 91%.",
+        "fr": "Diminution de 30 % des pertes de denrées fraîches et amélioration de la précision des prévisions à 91 %."
+      },
+      "limitations": {
+        "vi": "Độ trễ dự báo tăng nhẹ khi xuất hiện các đợt biến động giá nguyên liệu đột xuất ngoài chu kỳ mùa vụ [DEMO].",
+        "en": "Forecast lag increases slightly during unscheduled commodity price shocks outside historical seasonal patterns [DEMO].",
+        "fr": "Un léger décalage de prévision apparaît lors de chocs tarifaires imprévus hors saisonnalité historique [DEMO]."
+      },
+      "result_metric": {
+        "value": "-30%",
+        "label": {
+          "vi": "Tỷ lệ hư hao hàng nông sản",
+          "en": "Perishable goods spoilage",
+          "fr": "Pertes de denrées périssables"
+        }
+      },
+      "tags": ["Python", "SARIMAX", "XGBoost", "PowerBI"],
+      "role": {
+        "vi": "Chuyên viên Phân tích Dữ liệu [DEMO]",
+        "en": "Data Analyst [DEMO]",
+        "fr": "Analyste de Données [DEMO]"
+      },
+      "figure": {
+        "src": "assets/img/demo-cold-storage-forecast.svg",
+        "caption": {
+          "vi": "Hình 2. Mô hình dự báo sức mua chuỗi thời gian SARIMAX cho nông sản lạnh [DEMO]",
+          "en": "Figure 2. SARIMAX time-series forecast model for cold chain fresh produce [DEMO]",
+          "fr": "Figure 2. Modèle de prévision SARIMAX pour la chaîne logistique du froid [DEMO]"
+        }
+      },
+      "grayscale": true,
+      "pdfLink": "#report-demo",
+      "githubLink": "https://github.com/demo-account/forecast-demo",
+      "demoLink": "https://example.com/demo2",
+      "featured": true
+    },
+    {
+      "title": {
+        "vi": "Dashboard Điều độ Vận tải Cảng Biển [DEMO]",
+        "en": "Seaport Freight Dispatching Dashboard [DEMO]",
+        "fr": "Tableau de Bord d’Ordonnancement du Fret Portuaire [DEMO]"
+      },
+      "slug": "dashboard-dieu-do-van-tai-cang-bien",
+      "year": "2023",
+      "summary": {
+        "vi": "Báo cáo giám sát thời gian thực năng lực tiếp nhận cầu bến và vòng quay container rỗng.",
+        "en": "Real-time monitoring report for berth capacity utilization and empty container repositioning cycles.",
+        "fr": "Supervision en temps réel de l’occupation des quais et de la rotation des conteneurs vides."
+      },
+      "result": {
+        "vi": "Tăng 18% thông lượng bến bãi trong giờ cao điểm.",
+        "en": "Boosted yard throughput by 18% during peak congestion hours.",
+        "fr": "Hausse de 18 % de la cadence de traitement des terre-pleins aux heures de pointe."
+      },
+      "result_metric": {
+        "value": "+18%",
+        "label": {
+          "vi": "Thông lượng bến bãi giờ cao điểm",
+          "en": "Peak yard throughput",
+          "fr": "Cadence des terre-pleins en pointe"
+        }
+      },
+      "tags": ["PowerBI", "SQL", "DAX", "ETL"],
+      "role": {
+        "vi": "Kỹ sư Phát triển BI [DEMO]",
+        "en": "BI Developer [DEMO]",
+        "fr": "Développeur Décisionnel / BI [DEMO]"
+      },
+      "grayscale": false,
+      "pdfLink": "#report-demo",
+      "githubLink": "https://github.com/demo-account/port-bi-demo",
+      "demoLink": "https://example.com/demo3",
+      "featured": false
+    }
+  ]
+}

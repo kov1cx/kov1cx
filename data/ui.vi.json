@@ -1,0 +1,226 @@
+{
+  "meta": {
+    "title": "Hồ sơ năng lực – Portfolio",
+    "description": "Hồ sơ năng lực chuyên môn và dự án",
+    "ogTitle": "Hồ sơ năng lực – Portfolio",
+    "ogDescription": "Hồ sơ năng lực chuyên môn và dự án",
+    "ogUrl": "https://USERNAME.github.io/portfolio/"
+  },
+  "skip": "Bỏ qua nội dung",
+  "demoBadge": "Chế độ xem thử (Demo)",
+  "demoNotice": "Đang hiển thị dữ liệu giả định (?demo=1). Dữ liệu thật tại data/ không bị chỉnh sửa.",
+  "emptyProfileBadge": "HỒ SƠ ĐANG CHỜ DỮ LIỆU",
+  "emptyProfileHint": "Dữ liệu cá nhân chưa được thiết lập. Thêm ?demo=1 vào URL để xem giao diện mẫu đầy đủ.",
+  "header": {
+    "indexAria": "Mục lục điều hướng",
+    "langToggle": "Ngôn ngữ",
+    "themeToggle": "Chế độ sáng/tối",
+    "themeLight": "SÁNG",
+    "themeDark": "TỐI"
+  },
+  "rail": {
+    "overview": "TỔNG QUAN",
+    "profile": "HỒ SƠ",
+    "projects": "DỰ ÁN",
+    "archive": "LƯU TRỮ",
+    "caseStudy": "NGHIÊN CỨU",
+    "context": "BỐI CẢNH",
+    "data": "DỮ LIỆU",
+    "method": "PHƯƠNG PHÁP",
+    "results": "KẾT QUẢ",
+    "limits": "HẠN CHẾ",
+    "skills": "KỸ NĂNG",
+    "certificates": "CHỨNG CHỈ",
+    "categories": "PHÂN LOẠI",
+    "grouped": "NHÓM GOM",
+    "courses": "KHÓA HỌC",
+    "planned": "LỘ TRÌNH",
+    "contact": "LIÊN HỆ",
+    "message": "TIN NHẮN"
+  },
+  "tabs": {
+    "home": {
+      "name": "Giới thiệu",
+      "slug": "",
+      "metaTitle": "Giới thiệu",
+      "metaDesc": "Giới thiệu hồ sơ năng lực chuyên môn, định hướng nghề nghiệp và giải pháp chuỗi cung ứng."
+    },
+    "profile": {
+      "name": "Hồ sơ",
+      "slug": "ho-so",
+      "metaTitle": "Hồ sơ học vấn & kinh nghiệm",
+      "metaDesc": "Quá trình đào tạo học vấn, bằng cấp và kinh nghiệm công tác chuyên môn."
+    },
+    "projects": {
+      "name": "Dự án",
+      "slug": "du-an",
+      "metaTitle": "Dự án tiêu biểu",
+      "metaDesc": "Tổng hợp các dự án thực tế, mô hình tối ưu hóa vận tải và kết quả định lượng đạt được."
+    },
+    "skills": {
+      "name": "Kỹ năng",
+      "slug": "ky-nang",
+      "metaTitle": "Kỹ năng & Chứng chỉ",
+      "metaDesc": "Bộ kỹ năng công nghệ, phần mềm quản trị chuỗi cung ứng và chứng chỉ chuyên ngành quốc tế."
+    },
+    "contact": {
+      "name": "Liên hệ",
+      "slug": "lien-he",
+      "metaTitle": "Thông tin liên hệ",
+      "metaDesc": "Kết nối và trao đổi công việc qua email, điện thoại, LinkedIn và GitHub."
+    }
+  },
+  "hero": {
+    "cv": "Tải CV",
+    "contact": "Liên hệ",
+    "viewProjects": "Xem tất cả dự án",
+    "openFullscreen": "Mở toàn màn hình",
+    "portraitAlt": "Chân dung của {name}"
+  },
+  "profileSection": {
+    "title": "Hồ sơ năng lực",
+    "educationTitle": "Học vấn & Đào tạo",
+    "experienceTitle": "Kinh nghiệm làm việc",
+    "emptyNotice": "Chưa có dữ liệu học vấn và kinh nghiệm."
+  },
+  "projects": {
+    "title": "Dự án tiêu biểu",
+    "archiveTitle": "Dự án khác",
+    "filterAll": "Tất cả",
+    "viewProject": "Xem dự án",
+    "viewReport": "Báo cáo PDF",
+    "sourceCode": "Mã nguồn",
+    "demo": "Bản thử",
+    "backToList": "← Quay lại danh sách dự án",
+    "overview": "Tổng quan giải pháp",
+    "results": "Kết quả thực tiễn",
+    "technologies": "Công nghệ & Công cụ ứng dụng",
+    "role": "Vai trò thực hiện",
+    "links": "Liên kết dự án",
+    "notFound": "Không tìm thấy thông tin dự án yêu cầu.",
+    "figurePrefix": "Hình",
+    "sections": {
+      "context": "Bối cảnh & Bài toán",
+      "data": "Dữ liệu đầu vào",
+      "method": "Phương pháp thực hiện",
+      "result": "Kết quả thực tiễn",
+      "limitations": "Hạn chế & Hướng mở rộng"
+    },
+    "meta": {
+      "year": "NĂM",
+      "role": "VAI TRÒ",
+      "tech": "CÔNG NGHỆ",
+      "result": "KẾT QUẢ CHÍNH"
+    },
+    "keyResult": "Kết quả chính",
+    "openFullscreen": "Mở toàn màn hình",
+    "closeFullscreen": "Thu nhỏ"
+  },
+  "skills": {
+    "title": "Kỹ năng & Chứng chỉ",
+    "skillsTitle": "Kỹ năng chuyên môn",
+    "certsTitle": "Chứng chỉ nghề nghiệp",
+    "featuredTitle": "Chứng chỉ nổi bật",
+    "byCategoryTitle": "Chứng chỉ theo lĩnh vực",
+    "groupedTitle": "Chứng chỉ & Khóa học theo nhóm",
+    "coursesTitle": "Đã học (không có chứng chỉ)",
+    "inProgressTitle": "Đang học & Dự kiến",
+    "skillCategory": {
+      "analysis": "Phân tích & Tối ưu",
+      "dataScience": "Khoa học Dữ liệu",
+      "programming": "Lập trình",
+      "logisticsTools": "Công cụ Logistics & BI",
+      "softwares": "Phần mềm & Hệ thống"
+    },
+    "category": {
+      "data": "Dữ liệu & Phân tích",
+      "code": "Lập trình & Kỹ thuật",
+      "logistics": "Logistics & Chuỗi cung ứng",
+      "ai": "Trí tuệ Nhân tạo (AI)",
+      "management": "Quản trị & Dự án",
+      "other": "Kỹ năng bổ trợ khác"
+    },
+    "typeLabel": {
+      "certificate": "Chứng chỉ",
+      "badge": "Huy hiệu",
+      "course": "Khóa học"
+    },
+    "level": {
+      "learning": "Đang học",
+      "proficient": "Thành thạo",
+      "daily": "Hàng ngày"
+    },
+    "meta": {
+      "year": "NĂM",
+      "issuer": "ĐƠN VỊ CẤP",
+      "type": "LOẠI",
+      "verify": "XÁC THỰC"
+    },
+    "verifyCert": "Xác thực",
+    "verifyAria": "Xác thực {title}, mở tab mới",
+    "verifyOnRequest": "Xác thực khi được yêu cầu",
+    "relatedProject": "Dự án liên quan",
+    "evidencePrefix": "Minh chứng:",
+    "hours": "{hours} giờ",
+    "featuredBadge": "Nổi bật",
+    "modulesLabel": "mô-đun bổ trợ",
+    "groupSummary": "{issuer}: {count} {modulesLabel}, {dateRange}",
+    "filterAll": "Tất cả lĩnh vực",
+    "statusInProgress": "Đang học",
+    "statusPlanned": "Dự kiến",
+    "expectedPrefix": "Dự kiến: ",
+    "homeFeaturedHeading": "Chứng chỉ nổi bật:",
+    "viewAllCerts": "Xem toàn bộ Kỹ năng & Chứng chỉ"
+  },
+  "contact": {
+    "title": "Liên hệ",
+    "desc": "Sẵn sàng đón nhận các cơ hội hợp tác và dự án mới. Hãy gửi tin nhắn qua biểu mẫu hoặc kết nối qua các kênh dưới đây.",
+    "email": "Email",
+    "phone": "Điện thoại",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "kaggle": "Kaggle",
+    "formName": "Họ & Tên",
+    "formNamePlaceholder": "Họ và tên của bạn",
+    "formEmail": "Email",
+    "formEmailPlaceholder": "email@example.com",
+    "formMsg": "Tin nhắn",
+    "formMsgPlaceholder": "Nội dung liên hệ...",
+    "formSubmit": "Gửi tin nhắn",
+    "formSuccess": "Đã gửi thành công! Cảm ơn bạn.",
+    "formError": "Gửi thất bại, vui lòng thử lại.",
+    "openingEmailApp": "Đang mở ứng dụng email..."
+  },
+  "footer": {
+    "copy": "© 2026 Portfolio. All rights reserved.",
+    "indexLabel": "MỤC LỤC",
+    "linksLabel": "LIÊN KẾT",
+    "topButton": "↑ ĐẦU TRANG"
+  },
+  "statusBar": {
+    "emailAria": "Gửi email tới {email}",
+    "contactAria": "Liên hệ",
+    "cvAria": "Tải CV (mở tab mới)"
+  },
+  "navGrid": {
+    "ariaLabel": "Điều hướng các mục hồ sơ",
+    "open": "Mở",
+    "openAria": "Mở: {name}",
+    "certificatesName": "Chứng chỉ",
+    "projectsCount": {
+      "one": "{n} dự án",
+      "other": "{n} dự án"
+    },
+    "skillsCount": {
+      "one": "{n} kỹ năng",
+      "other": "{n} kỹ năng"
+    },
+    "certsCount": {
+      "one": "{n} chứng chỉ",
+      "other": "{n} chứng chỉ"
+    }
+  },
+  "aria": {
+    "tabSwitched": "Đã chuyển sang tab {tabName}"
+  }
+}

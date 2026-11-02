@@ -1,0 +1,145 @@
+{
+  "name": "Nguyễn Nam Khánh",
+  "initials": "NNK",
+  "role": {
+    "vi": "Sinh viên Logistics và Quản lý Chuỗi Cung Ứng",
+    "en": "Logistics and Supply Chain Student",
+    "fr": "Étudiant en logistique et gestion de la chaîne d'approvisionnement"
+  },
+  "tagline": {
+    "vi": "Sinh viên năm 3 ngành Quản lý Chuỗi Cung Ứng tại Đại học Xây dựng Hà Nội.",
+    "en": "Third-year Supply Chain Management student at Hanoi University of Civil Engineering.",
+    "fr": "Étudiant en 3e année de gestion de la chaîne d'approvisionnement à Đại học Xây dựng Hà Nội (Hanoi University of Civil Engineering)."
+  },
+  "status": {
+    "vi": "Đang tìm kiếm cơ hội thực tập và việc làm",
+    "en": "Seeking internship and job opportunities",
+    "fr": "À la recherche d'opportunités de stage et d'emploi"
+  },
+  "target": {
+    "vi": "",
+    "en": "",
+    "fr": ""
+  },
+  "intro": {
+    "vi": "",
+    "en": "",
+    "fr": ""
+  },
+  "facts": [
+    {
+      "label": {
+        "vi": "Trường",
+        "en": "School",
+        "fr": "École"
+      },
+      "value": {
+        "vi": "Đại học Xây dựng Hà Nội (Hanoi University of Civil Engineering)",
+        "en": "Đại học Xây dựng Hà Nội (Hanoi University of Civil Engineering)",
+        "fr": "Đại học Xây dựng Hà Nội (Hanoi University of Civil Engineering)"
+      }
+    },
+    {
+      "label": {
+        "vi": "Trình độ",
+        "en": "Level",
+        "fr": "Niveau"
+      },
+      "value": {
+        "vi": "Cử nhân đại học, năm 3",
+        "en": "Bachelor's degree, 3rd year",
+        "fr": "Licence (bachelor), 3e année"
+      }
+    },
+    {
+      "label": {
+        "vi": "Ngôn ngữ",
+        "en": "Languages",
+        "fr": "Langues"
+      },
+      "value": {
+        "vi": "Tiếng Việt, Tiếng Anh",
+        "en": "Vietnamese, English",
+        "fr": "Vietnamien, anglais"
+      }
+    },
+    {
+      "label": {
+        "vi": "Nơi ở",
+        "en": "Location",
+        "fr": "Localisation"
+      },
+      "value": {
+        "vi": "Hà Nội, Việt Nam",
+        "en": "Hanoi, Vietnam",
+        "fr": "Hanoï, Vietnam"
+      }
+    },
+    {
+      "label": {
+        "vi": "Sẵn sàng",
+        "en": "Availability",
+        "fr": "Disponibilité"
+      },
+      "value": {
+        "vi": "",
+        "en": "",
+        "fr": ""
+      }
+    }
+  ],
+  "cvLink": "",
+  "email": "sinonsan2000@gmail.com",
+  "phone": "",
+  "linkedin": "",
+  "github": "https://github.com/kov1cx",
+  "kaggle": "",
+  "formspreeId": "",
+  "location": {
+    "vi": "Hà Nội, Việt Nam",
+    "en": "Hanoi, Vietnam",
+    "fr": "Hanoï, Vietnam"
+  },
+  "portrait": {
+    "src": "",
+    "alt": {
+      "vi": "",
+      "en": "",
+      "fr": ""
+    },
+    "grayscale": true
+  },
+  "hero_media": {
+    "type": "none",
+    "src": "",
+    "alt": { "vi": "", "en": "", "fr": "" },
+    "caption": { "vi": "", "en": "", "fr": "" },
+    "link_project": ""
+  },
+  "hero_annotation": {
+    "vi": "",
+    "en": "",
+    "fr": ""
+  },
+  "education": [
+    {
+      "degree": {
+        "vi": "Cử nhân đại học",
+        "en": "",
+        "fr": ""
+      },
+      "school": {
+        "vi": "Đại học Xây dựng Hà Nội",
+        "en": "",
+        "fr": ""
+      },
+      "year": "",
+      "details": {
+        "vi": "đang học năm 3",
+        "en": "",
+        "fr": ""
+      }
+    }
+  ],
+  "experience": []
+}

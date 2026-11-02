@@ -1,0 +1,201 @@
+{
+  "_notice": "DỮ LIỆU GIẢ LẬP / DEMO PURPOSES ONLY - DO NOT USE FOR PRODUCTION",
+  "name": "Nguyễn Văn Demo",
+  "initials": "NVD",
+  "role": {
+    "vi": "Chuyên viên Quản trị Chuỗi Cung ứng [DEMO]",
+    "en": "Supply Chain & Logistics Specialist [DEMO]",
+    "fr": "Spécialiste Supply Chain & Logistique [DEMO]"
+  },
+  "tagline": {
+    "vi": "Tối ưu hóa lộ trình giao nhận đa điểm và dự báo tồn kho chuỗi cung ứng lạnh [DEMO].",
+    "en": "Multi-stop fleet route optimization and cold-chain inventory forecasting [DEMO].",
+    "fr": "Optimisation de tournées multi-points et prévision des stocks frigorifiques [DEMO]."
+  },
+  "status": {
+    "vi": "Sẵn sàng đón nhận cơ hội mới [DEMO]",
+    "en": "Open to new opportunities [DEMO]",
+    "fr": "À l’écoute de nouvelles opportunités [DEMO]"
+  },
+  "target": {
+    "vi": "Tháng 09/2026",
+    "en": "September 2026",
+    "fr": "Septembre 2026"
+  },
+  "location": {
+    "vi": "Hà Nội, Việt Nam",
+    "en": "Hanoi, Vietnam",
+    "fr": "Hanoï, Vietnam"
+  },
+  "portrait": {
+    "src": "data/_demo/demo-portrait-800.jpg",
+    "alt": {
+      "vi": "",
+      "en": "",
+      "fr": ""
+    },
+    "grayscale": true
+  },
+  "facts": [
+    {
+      "label": {
+        "vi": "Thời gian sẵn sàng",
+        "en": "Availability",
+        "fr": "Disponibilité"
+      },
+      "value": {
+        "vi": "Tháng 09/2026 · Toàn thời gian [DEMO]",
+        "en": "September 2026 · Full-time [DEMO]",
+        "fr": "Septembre 2026 · Temps plein [DEMO]"
+      }
+    },
+    {
+      "label": {
+        "vi": "Nơi ở",
+        "en": "Location",
+        "fr": "Localisation"
+      },
+      "value": {
+        "vi": "Hà Nội, Việt Nam",
+        "en": "Hanoi, Vietnam",
+        "fr": "Hanoï, Vietnam"
+      }
+    },
+    {
+      "label": {
+        "vi": "Ngôn ngữ",
+        "en": "Languages",
+        "fr": "Langues"
+      },
+      "value": {
+        "vi": "Tiếng Việt (Bản ngữ) · Tiếng Anh (IELTS 7.5) · Tiếng Pháp (DELF B2) [DEMO]",
+        "en": "Vietnamese (Native) · English (IELTS 7.5) · French (DELF B2) [DEMO]",
+        "fr": "Vietnamiens (Langue maternelle) · Anglais (IELTS 7.5) · Français (DELF B2) [DEMO]"
+      }
+    },
+    {
+      "label": {
+        "vi": "Trường & Năm học",
+        "en": "University & Degree",
+        "fr": "Université & Diplôme"
+      },
+      "value": {
+        "vi": "Đại học Kinh tế · Thạc sĩ Chuỗi Cung ứng (2024) [DEMO]",
+        "en": "University of Economics · M.Sc. Supply Chain (2024) [DEMO]",
+        "fr": "Université d’Économie · M.Sc. Supply Chain (2024) [DEMO]"
+      }
+    }
+  ],
+  "hero_media": {
+    "type": "image",
+    "src": "assets/img/demo-vrp-network.svg",
+    "alt": {
+      "vi": "Bản đồ phân cụm và tuyến đường tối ưu hóa đội xe VRP [DEMO]",
+      "en": "Clustering map and vehicle routing problem (VRP) fleet network [DEMO]",
+      "fr": "Carte de sectorisation et réseau d’itinéraires optimisés VRP [DEMO]"
+    },
+    "caption": {
+      "vi": "Tối ưu hóa Lộ trình Đội xe Đa điểm · 2024 [DEMO]",
+      "en": "Multi-stop Fleet Route Optimization · 2024 [DEMO]",
+      "fr": "Optimisation de Tournées de Véhicules Multi-points · 2024 [DEMO]"
+    },
+    "link_project": "toi-uu-hoa-lo-trinh-doi-xe-da-diem"
+  },
+  "hero_annotation": {
+    "vi": "Dữ liệu phân cụm tuyến giao nhận thực tế 2024",
+    "en": "Empirical delivery routing cluster data 2024",
+    "fr": "Données réelles de sectorisation des tournées 2024"
+  },
+  "intro": {
+    "vi": "Dữ liệu thử nghiệm minh họa bố cục hồ sơ năng lực ngành Logistics & Vận tải chuỗi cung ứng.",
+    "en": "Demo profile illustrating logistics and freight supply chain capabilities.",
+    "fr": "Profil de démonstration illustrant la gestion logistique et le transport multimodal."
+  },
+  "cvLink": "#demo-cv",
+  "email": "demo.logistics@example.com",
+  "phone": "+84 90 123 4567",
+  "linkedin": "https://linkedin.com/in/demo-profile",
+  "github": "https://github.com/demo-account",
+  "kaggle": "https://kaggle.com/demo-account",
+  "formspreeId": "",
+  "education": [
+    {
+      "degree": {
+        "vi": "Thạc sĩ Khoa học Chuỗi Cung ứng & Logistics [DEMO]",
+        "en": "Master of Science in Supply Chain & Logistics [DEMO]",
+        "fr": "Master of Science en Supply Chain & Logistique [DEMO]"
+      },
+      "school": {
+        "vi": "Đại học Kinh tế – Logistics Institute",
+        "en": "University of Economics – Logistics Institute",
+        "fr": "Université d’Économie – Institut de Logistique"
+      },
+      "year": "2022 – 2024",
+      "details": {
+        "vi": "Chuyên sâu về mô hình tối ưu hóa vận tải đa phương thức và thuật toán định tuyến đội xe (VRP). Luận văn đạt loại Xuất sắc.",
+        "en": "Specialized in multimodal transport optimization and Vehicle Routing Problem (VRP) algorithms. Master thesis graded with Distinction.",
+        "fr": "Spécialisation en optimisation du transport multimodal et algorithmes de tournées de véhicules (VRP). Mémoire soutenu avec mention Très Bien."
+      }
+    },
+    {
+      "degree": {
+        "vi": "Cử nhân Kinh tế Đối ngoại & Vận tải Quốc tế [DEMO]",
+        "en": "Bachelor in International Economics & Freight Transportation [DEMO]",
+        "fr": "Licence en Économie Internationale & Transport de Fret [DEMO]"
+      },
+      "school": {
+        "vi": "Đại học Ngoại thương",
+        "en": "Foreign Trade University",
+        "fr": "Université du Commerce Extérieur"
+      },
+      "year": "2018 – 2022",
+      "details": {
+        "vi": "Tốt nghiệp loại Giỏi. Tham gia nghiên cứu về giải pháp số hóa cảng biển và chuỗi cung ứng lạnh.",
+        "en": "Graduated with Honors. Participated in research on seaport digitalization and cold chain operations.",
+        "fr": "Diplômé avec mention Bien. Travaux de recherche sur la numérisation portuaire et la logistique de la chaîne du froid."
+      }
+    }
+  ],
+  "experience": [
+    {
+      "role": {
+        "vi": "Chuyên viên Hoạch định Vận tải & Chuỗi Cung ứng [DEMO]",
+        "en": "Freight Planning & Supply Chain Specialist [DEMO]",
+        "fr": "Spécialiste Planification du Transport & Supply Chain [DEMO]"
+      },
+      "company": {
+        "vi": "Tập đoàn Phân phối Logistics Á Châu",
+        "en": "Asia Logistics Distribution Group",
+        "fr": "Groupe de Distribution Logistique Asie"
+      },
+      "period": {
+        "vi": "2024 – Hiện tại",
+        "en": "2024 – Present",
+        "fr": "2024 – Présent"
+      },
+      "description": {
+        "vi": "Quản lý dữ liệu phân phối tại 14 trung tâm logistics khu vực. Triển khai mô hình dự báo nhu cầu giúp giảm 18% tồn kho an toàn và tối ưu hóa chi phí vận chuyển.",
+        "en": "Managed distribution datasets across 14 regional fulfillment hubs. Implemented demand forecasting models reducing safety stock by 18% and cutting transit costs.",
+        "fr": "Pilotage des flux de distribution sur 14 plateformes régionales. Déploiement de modèles prédictifs réduisant le stock de sécurité de 18 % et minimisant les coûts de transport."
+      }
+    },
+    {
+      "role": {
+        "vi": "Kỹ sư Tối ưu hóa Tuyến & Điều độ Kho [DEMO]",
+        "en": "Route Optimization & Dispatching Engineer [DEMO]",
+        "fr": "Ingénieur Optimisation de Tournées & Ordonnancement [DEMO]"
+      },
+      "company": {
+        "vi": "Công ty TNHH Tiếp vận Toàn Cầu (Global Logistics)",
+        "en": "Global Logistics Solutions Ltd.",
+        "fr": "Solutions Logistiques Mondiales SAS"
+      },
+      "period": "2022 – 2024",
+      "description": {
+        "vi": "Ứng dụng Python và SQL xây dựng công cụ lập kế hoạch giao nhận đa điểm tự động. Nâng cao tỷ lệ giao hàng đúng hẹn (OTIF) từ 84% lên 96%.",
+        "en": "Built automated multi-stop delivery planning tools using Python and SQL. Improved on-time in-full (OTIF) rate from 84% to 96%.",
+        "fr": "Développement d’outils automatisés de planification de livraisons sous Python et SQL. Amélioration du taux de service (OTIF) de 84 % à 96 %."
+      }
+    }
+  ]
+}

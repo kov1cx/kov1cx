@@ -1,0 +1,55 @@
+{
+  "title": "Hồ sơ năng lực",
+  "skip": "Bỏ qua nội dung",
+  "nav": {
+    "logo": "Portfolio",
+    "hero": "Trang chủ",
+    "parcours": "Quá trình học",
+    "projets": "Dự án",
+    "competences": "Kỹ năng",
+    "certifications": "Chứng chỉ",
+    "contact": "Liên hệ"
+  },
+  "theme": { "toggle": "Chế độ" },
+  "hero": {
+    "name": "",
+    "role": "",
+    "intro": "",
+    "status": "",
+    "cv": "Tải CV",
+    "contact": "Liên hệ"
+  },
+  "parcours": {
+    "title": "Quá trình học"
+  },
+  "projets": { "title": "Dự án" },
+  "filter": {
+    "all": "Tất cả",
+    "python": "Python",
+    "r": "R",
+    "sql": "SQL",
+    "cpp": "C++",
+    "ml": "ML",
+    "stats": "Stats"
+  },
+  "project": { "pdf": "Báo cáo PDF", "view": "Xem dự án" },
+  "competences": {
+    "title": "Kỹ năng",
+    "langage": { "title": "Ngôn ngữ lập trình" },
+    "ml": { "title": "Thống kê & ML" },
+    "data": { "title": "Dữ liệu & BI" },
+    "spoken": { "title": "Ngôn ngữ giao tiếp" },
+    "daily": "Sử dụng hàng ngày",
+    "proficient": "Thành thạo",
+    "basic": "Đã dùng"
+  },
+  "certifications": { "title": "Chứng chỉ" },
+  "contact": {
+    "title": "Liên hệ",
+    "email": "Email",
+    "phone": "Điện thoại",
+    "form": { "name": "Tên", "email": "Email", "message": "Tin nhắn", "send": "Gửi" }
+  },
+  "footer": { "copy": "© 2026 Portfolio. All rights reserved." },
+  "404": { "title": "Không tìm thấy trang", "message": "Trang bạn yêu cầu không tồn tại.", "home": "Quay lại trang chủ" }
+}
