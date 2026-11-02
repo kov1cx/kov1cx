@@ -1,4 +1,4 @@
-<h1 align="center">Konnichiwa, I'm Kov1cx 👋</h1>
+<h1 align="center">Hi, I'm Kov1cx 👋</h1>
 
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=kov1cx&color=00e5ff&style=for-the-badge&label=PROFILE+VIEWS" alt="Profile views" />
