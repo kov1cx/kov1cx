@@ -1,7 +1,9 @@
 <div align="center">
 
 <!-- Banner sóng động phối màu Ice Blue & Twilight -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=2,12,24,30&height=180&section=header&text=KOV1CX&fontSize=70&fontAlignY=35&animation=twinkling&desc=Logistics%20Engineer%20%7C%20Applied%20AI%20%7C%20Endurance%20Runner&descAlignY=62&descSize=18" width="100%" />
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=1,6,12,20&height=210&section=header&text=KOV1CX&fontSize=75&fontAlignY=36&animation=twinkling&desc=Logistics%20Engineer%20%7C%20Applied%20AI%20%7C%20Endurance%20Runner&descAlignY=62&descSize=18&fontColor=e0f2fe" width="100%" />
+</div>
 
 <!-- HERO SECTION: Ảnh Anime Mùa Đông + Giới thiệu -->
 <table border="0">
