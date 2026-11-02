@@ -7,8 +7,8 @@
       <img src="https://i.pinimg.com/736x/2a/d7/d9/2ad7d960e7b814832605065a9f4e157f.jpg" width="100%" style="border-radius: 16px; border: 2px solid #58a6ff;" alt="Anime Ice Vibe" />
     </td>
     <td width="65%" align="left" valign="middle">
-      <h2>Konnichiwa, I'm Kov1cx 👋</h2>
-      <p><i>"Optimizing complex supply chain systems through data pipelines, process automation, and applied AI."</i></p>
+      <h2>Hi, I'm Kov1cx 👋</h2>
+      <p><i>"Tryna do my best!"</i></p>
       <p>
         <img src="https://komarev.com/ghpvc/?username=kov1cx&color=58a6ff&style=flat-square&label=PROFILE+VIEWS" alt="views" />
         <img src="https://img.shields.io/badge/STATUS-SYSTEM%20ONLINE-00ff66?style=flat-square" alt="status" />
@@ -32,9 +32,8 @@
     <td width="64%" valign="top">
       <ul>
         <li>🎓 Senior student majoring in <b>Logistics & Supply Chain Management</b> at HUCE.</li>
-        <li>🤖 Researching <b>Data Analytics & Local AI</b> (Fine-tuning custom LLMs for freight & disruption risks).</li>
+        <li>🤖 Researching <b>Data Analytics & Local AI</b>.</li>
         <li>⚡ Running an automated inference lab powered by <b>i5-13400F + RTX 3060 12GB</b>.</li>
-        <li>🏃‍♂️ Endurance runner constantly pushing limits toward a <b>Sub-7:00/mile 10K</b>.</li>
       </ul>
       <br/>
       <b>🚀 Current Focus & Learning:</b>
@@ -46,8 +45,8 @@
       <br/>
       <b>🎮 Vibe & Interests:</b>
       <ul>
-        <li>✨ Sim Racing, F1 & Hardware Tuning</li>
-        <li>✨ Anime, Light Novels & Alternative Soundtracks</li>
+        <li>✨ Sim Racing, F1 & PCs</li>
+        <li>✨ Film, Light Novels & Alternative Soundtracks</li>
       </ul>
     </td>
     <td width="36%" align="center" valign="middle">
