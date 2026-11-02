@@ -109,41 +109,56 @@
 
 ### 🏁 Mentality, Hardware & Workspace
 
-<table>
+<table border="0" width="100%">
   <tr>
-    <td width="35%" align="center" valign="middle">
-      <!-- Ảnh F1 Red Bull: Tập trung tuyệt đối & Racing mindset -->
-      <img src="https://i.pinimg.com/736x/d7/12/e9/d712e9a541e6e9c2e9910b7c5744154f.jpg" width="100%" style="border-radius: 16px; border: 2px solid #e53935;" alt="Focus Mentality" />
+    <!-- CỘT TRÁI: POSTER PHI CÔNG (36%) -->
+    <td width="36%" align="center" valign="middle">
+      <div style="background: #0d1117; border: 2px solid #38bdf8; border-radius: 14px; padding: 4px; box-shadow: 0 0 15px rgba(56, 189, 248, 0.2);">
+        <img src="https://i.pinimg.com/736x/f2/17/10/f21710ca652d031513ef2929d5d1ced3.jpg" width="100%" style="border-radius: 10px; display: block;" alt="Life update: I'm up again" />
+      </div>
     </td>
-    <td width="65%" valign="middle">
-      <h4 align="center">🖥️ Workstation & Inference Rig</h4>
-      <table border="0">
+    <!-- CỘT PHẢI: WORKSTATION SPEC & EXECUTION MINDSET (64%) -->
+    <td width="64%" valign="middle" style="padding-left: 18px;">
+      <!-- Tiêu đề & Trạng thái -->
+      <h3 align="left" style="margin-top: 0;">
+        🖥️ <code>WORKSTATION & INFERENCE RIG</code>
+      </h3>
+      <p align="left">
+        <img src="https://img.shields.io/badge/RIG_STATUS-ONLINE-00ff66?style=flat-square&logo=nvidia&logoColor=white" alt="Rig Online" />
+        <img src="https://img.shields.io/badge/INFERENCE-LOCAL_GPU-00e5ff?style=flat-square&logo=linux&logoColor=white" alt="Local Inference" />
+        <img src="https://img.shields.io/badge/TUNNEL-ZEROTIER_SDN-ff9800?style=flat-square&logo=zerotier&logoColor=white" alt="ZeroTier" />
+      </p>
+      <!-- Bảng cấu hình chi tiết -->
+      <table width="100%" border="0">
         <tr>
-          <td><b>Processor</b></td>
-          <td>Intel® Core™ i5-13400F (10C / 16T)</td>
+          <td width="28%"><b>⚡ Processor</b></td>
+          <td width="72%">Intel® Core™ i5-13400F (10C / 16T, up to 4.60 GHz)</td>
         </tr>
         <tr>
-          <td><b>GPU / VRAM</b></td>
-          <td>NVIDIA® GeForce RTX™ 3060 12GB GDDR6</td>
+          <td><b>🎮 GPU / VRAM</b></td>
+          <td>NVIDIA® GeForce RTX™ 3060 12GB GDDR6 (CUDA 12.x)</td>
         </tr>
         <tr>
-          <td><b>RAM</b></td>
-          <td>16GB High-Speed System Memory</td>
+          <td><b>🧠 Memory</b></td>
+          <td>16GB DDR4 High-Speed Dual-Channel</td>
         </tr>
         <tr>
-          <td><b>Network</b></td>
-          <td>ZeroTier Encrypted Mesh SDN</td>
+          <td><b>🌐 Networking</b></td>
+          <td>ZeroTier Encrypted Mesh SDN (Remote Microservice Sync)</td>
         </tr>
         <tr>
-          <td><b>Runtimes</b></td>
-          <td>Ollama • vLLM • Docker Containers</td>
+          <td><b>🐳 Runtime</b></td>
+          <td>Docker Containers • vLLM • Ollama • n8n Pipelines</td>
+        </tr>
+        <tr>
+          <td><b>🎯 Focus Target</b></td>
+          <td>Sub-7:00/mile 10K Pace • Zero-latency Automation</td>
         </tr>
       </table>
-      <p align="center"><i>"Zero excuses, pure execution."</i></p>
-    </td>
-  </tr>
-</table>
-
+      <br/>
+      <!-- Khối trích dẫn phong cách Terminal -->
+      <div align="left" style="background: #161b22; border-left: 4px solid #ff007f; padding: 10px 14px; border-radius: 6px; font-family: monospace;">
+        <span style="color: #ff007f;">kov1cx@system</span>:<span style="color:
 ---
 
 ### 📬 Connect With Me
