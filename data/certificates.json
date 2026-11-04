@@ -17,7 +17,10 @@
       "verify_url": "https://www.datacamp.com/statement-of-accomplishment/course/0fe4425c57687f47fc61f7c70a981d4e123e589b",
       "verify_note": "",
       "hours": "4",
-      "project_id": "analyzing-motorcycle-part-sales-sql"
+      "project_id": "analyzing-motorcycle-part-sales-sql",
+      "image": "assets/img/certificates/cert-datacamp-supply-chain-analytics.webp",
+      "thumbnail": "assets/img/certificates/cert-datacamp-supply-chain-analytics-thumb.webp",
+      "pdf": "certificate/Data camp logistics certificate.pdf"
     },
     {
       "id": "cert-data-science",
@@ -36,7 +39,10 @@
       "verify_url": "https://www.life-global.org/certificate/847eb4ee-c158-40b5-b35c-ebb1bf2e4180",
       "verify_note": "",
       "hours": "",
-      "project_id": ""
+      "project_id": "",
+      "image": "assets/img/certificates/cert-data-science.webp",
+      "thumbnail": "assets/img/certificates/cert-data-science-thumb.webp",
+      "pdf": "certificate/847eb4ee-c158-40b5-b35c-ebb1bf2e4180.pdf"
     },
     {
       "id": "cert-gemini-educator",
@@ -55,7 +61,10 @@
       "verify_url": "https://edu.google.accredible.com/cffcff95-9743-4371-be5d-325b46b67667#acc.CL5Wziyq",
       "verify_note": "",
       "hours": "",
-      "project_id": ""
+      "project_id": "",
+      "image": "assets/img/certificates/cert-gemini-educator.webp",
+      "thumbnail": "assets/img/certificates/cert-gemini-educator-thumb.webp",
+      "pdf": "certificate/google gemini certified educator.pdf"
     },
     {
       "id": "cert-agile-pm",
@@ -74,7 +83,10 @@
       "verify_url": "https://www.life-global.org/certificate/990dda13-d640-4c26-8491-88861d4751dd",
       "verify_note": "",
       "hours": "",
-      "project_id": ""
+      "project_id": "",
+      "image": "assets/img/certificates/cert-agile-pm.webp",
+      "thumbnail": "assets/img/certificates/cert-agile-pm-thumb.webp",
+      "pdf": "certificate/990dda13-d640-4c26-8491-88861d4751dd.pdf"
     },
     {
       "id": "cert-hp-ai-business",
@@ -93,7 +105,10 @@
       "verify_url": "https://www.life-global.org/certificate/423c197c-e1b5-4e64-aacd-b9d4d631697c",
       "verify_note": "",
       "hours": "",
-      "project_id": ""
+      "project_id": "",
+      "image": "assets/img/certificates/cert-hp-ai-business.webp",
+      "thumbnail": "assets/img/certificates/cert-hp-ai-business-thumb.webp",
+      "pdf": "certificate/423c197c-e1b5-4e64-aacd-b9d4d631697c.pdf"
     },
     {
       "id": "cert-hp-critical-thinking-ai",
@@ -112,7 +127,10 @@
       "verify_url": "https://www.life-global.org/certificate/54aca2f8-5fbe-443f-8aee-4a76c98d0821",
       "verify_note": "",
       "hours": "",
-      "project_id": ""
+      "project_id": "",
+      "image": "assets/img/certificates/cert-hp-critical-thinking-ai.webp",
+      "thumbnail": "assets/img/certificates/cert-hp-critical-thinking-ai-thumb.webp",
+      "pdf": "certificate/54aca2f8-5fbe-443f-8aee-4a76c98d0821.pdf"
     },
     {
       "id": "cert-hp-cybersecurity",
@@ -131,7 +149,10 @@
       "verify_url": "https://www.life-global.org/certificate/50c539be-5344-4546-b4d2-2c2fdc29c3d5",
       "verify_note": "",
       "hours": "",
-      "project_id": ""
+      "project_id": "",
+      "image": "assets/img/certificates/cert-hp-cybersecurity.webp",
+      "thumbnail": "assets/img/certificates/cert-hp-cybersecurity-thumb.webp",
+      "pdf": "certificate/50c539be-5344-4546-b4d2-2c2fdc29c3d5.pdf"
     },
     {
       "id": "cert-hp-digital-business",
@@ -150,7 +171,10 @@
       "verify_url": "https://www.life-global.org/certificate/a8c1511b-a413-4a36-8709-cf20a1411ffa",
       "verify_note": "",
       "hours": "",
-      "project_id": ""
+      "project_id": "",
+      "image": "assets/img/certificates/cert-hp-digital-business.webp",
+      "thumbnail": "assets/img/certificates/cert-hp-digital-business-thumb.webp",
+      "pdf": "certificate/a8c1511b-a413-4a36-8709-cf20a1411ffa.pdf"
     },
     {
       "id": "cert-hp-effective-presentations",
@@ -169,7 +193,10 @@
       "verify_url": "https://www.life-global.org/certificate/02811b8b-0a2b-4ad3-a6bd-2421f3e70302",
       "verify_note": "",
       "hours": "",
-      "project_id": ""
+      "project_id": "",
+      "image": "assets/img/certificates/cert-hp-effective-presentations.webp",
+      "thumbnail": "assets/img/certificates/cert-hp-effective-presentations-thumb.webp",
+      "pdf": "certificate/02811b8b-0a2b-4ad3-a6bd-2421f3e70302.pdf"
     },
     {
       "id": "cert-hp-customer-experience",
@@ -188,7 +215,10 @@
       "verify_url": "https://www.life-global.org/certificate/6eb56c4b-1c7e-4e52-b5eb-3e8be192294a",
       "verify_note": "",
       "hours": "",
-      "project_id": ""
+      "project_id": "",
+      "image": "assets/img/certificates/cert-hp-customer-experience.webp",
+      "thumbnail": "assets/img/certificates/cert-hp-customer-experience-thumb.webp",
+      "pdf": "certificate/6eb56c4b-1c7e-4e52-b5eb-3e8be192294a.pdf"
     },
     {
       "id": "cert-hp-uvp",
@@ -207,7 +237,10 @@
       "verify_url": "https://www.life-global.org/certificate/676e1172-4617-41e4-8c3a-45652659b211",
       "verify_note": "",
       "hours": "",
-      "project_id": ""
+      "project_id": "",
+      "image": "assets/img/certificates/cert-hp-uvp.webp",
+      "thumbnail": "assets/img/certificates/cert-hp-uvp-thumb.webp",
+      "pdf": "certificate/676e1172-4617-41e4-8c3a-45652659b211.pdf"
     },
     {
       "id": "cert-hp-target-audience",
@@ -226,7 +259,10 @@
       "verify_url": "https://www.life-global.org/certificate/c0e4ec06-ffc7-46ef-937b-4a545b3bd735",
       "verify_note": "",
       "hours": "",
-      "project_id": ""
+      "project_id": "",
+      "image": "assets/img/certificates/cert-hp-target-audience.webp",
+      "thumbnail": "assets/img/certificates/cert-hp-target-audience-thumb.webp",
+      "pdf": "certificate/c0e4ec06-ffc7-46ef-937b-4a545b3bd735.pdf"
     },
     {
       "id": "cert-hp-effective-leadership",
@@ -245,7 +281,10 @@
       "verify_url": "https://www.life-global.org/certificate/32982d46-78d8-4155-99ad-93df3a2b38c8",
       "verify_note": "",
       "hours": "",
-      "project_id": ""
+      "project_id": "",
+      "image": "assets/img/certificates/cert-hp-effective-leadership.webp",
+      "thumbnail": "assets/img/certificates/cert-hp-effective-leadership-thumb.webp",
+      "pdf": "certificate/32982d46-78d8-4155-99ad-93df3a2b38c8.pdf"
     },
     {
       "id": "cert-hp-ai-beginners",
@@ -264,7 +303,10 @@
       "verify_url": "https://www.life-global.org/certificate/6b154cd1-3558-4e0a-8484-41ba840c64aa",
       "verify_note": "",
       "hours": "",
-      "project_id": ""
+      "project_id": "",
+      "image": "assets/img/certificates/cert-hp-ai-beginners.webp",
+      "thumbnail": "assets/img/certificates/cert-hp-ai-beginners-thumb.webp",
+      "pdf": "certificate/6b154cd1-3558-4e0a-8484-41ba840c64aa.pdf"
     },
     {
       "id": "cert-hp-resume-interview",
@@ -283,7 +325,10 @@
       "verify_url": "https://www.life-global.org/certificate/01cd0844-db15-4183-9859-c01517c6d6ed",
       "verify_note": "",
       "hours": "",
-      "project_id": ""
+      "project_id": "",
+      "image": "assets/img/certificates/cert-hp-resume-interview.webp",
+      "thumbnail": "assets/img/certificates/cert-hp-resume-interview-thumb.webp",
+      "pdf": "certificate/01cd0844-db15-4183-9859-c01517c6d6ed.pdf"
     },
     {
       "id": "cert-hp-business-email",
@@ -302,7 +347,10 @@
       "verify_url": "https://www.life-global.org/certificate/7a39e20e-bcfc-4af8-ad64-a50d6dc8618f",
       "verify_note": "",
       "hours": "",
-      "project_id": ""
+      "project_id": "",
+      "image": "assets/img/certificates/cert-hp-business-email.webp",
+      "thumbnail": "assets/img/certificates/cert-hp-business-email-thumb.webp",
+      "pdf": "certificate/7a39e20e-bcfc-4af8-ad64-a50d6dc8618f.pdf"
     },
     {
       "id": "cert-hp-professional-networking",
@@ -321,7 +369,10 @@
       "verify_url": "https://www.life-global.org/certificate/328e4703-7ac9-46af-98ab-24baf54465ca",
       "verify_note": "",
       "hours": "",
-      "project_id": ""
+      "project_id": "",
+      "image": "assets/img/certificates/cert-hp-professional-networking.webp",
+      "thumbnail": "assets/img/certificates/cert-hp-professional-networking-thumb.webp",
+      "pdf": "certificate/328e4703-7ac9-46af-98ab-24baf54465ca.pdf"
     }
   ]
 }

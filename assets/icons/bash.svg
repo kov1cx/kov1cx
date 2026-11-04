@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <!-- Isometric terminal cube -->
+  <path fill="#1a202c" stroke="#ffffff" stroke-width="5" stroke-linejoin="round" d="M112.205 26.129 71.8 2.142A15.326 15.326 0 0 0 64.005 0c-2.688 0-5.386.717-7.796 2.152L15.795 26.14C10.976 28.999 8 34.289 8 40.018v47.975c0 5.729 2.967 11.019 7.796 13.878L56.2 125.858A15.193 15.193 0 0 0 63.995 128a15.32 15.32 0 0 0 7.796-2.142l40.414-23.987c4.819-2.86 7.796-8.16 7.796-13.878V40.007c0-5.718-2.967-11.019-7.796-13.878z"/>
+  <!-- Internal cube edge lines for true 3D isometric look -->
+  <path d="M64 64 L64 126 M64 64 L120 32 M64 64 L8 32" stroke="#ffffff" stroke-width="4" stroke-linecap="round" fill="none"/>
+  <!-- Terminal prompt $_ -->
+  <text x="32" y="86" font-family="'JetBrains Mono', Consolas, monospace" font-size="28" font-weight="900" fill="#4ade80">$_</text>
+</svg>

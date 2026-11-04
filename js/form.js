@@ -23,12 +23,14 @@ document.addEventListener('submit', async e => {
   }
 
   if (!endpoint || endpoint.trim() === '') {
-    const emailTo = emailVal;
-    const mailto = `mailto:${encodeURIComponent(emailTo)}?subject=Contact%20from%20portfolio&body=${encodeURIComponent(msgVal)}`;
-    window.location.href = mailto;
+    const emailTo = form.dataset.recipient || 'sinonsan2000@gmail.com';
+    const sub = `Liên hệ từ Portfolio: ${nameVal}`;
+    const bdy = `Người gửi: ${nameVal}\nEmail phản hồi: ${emailVal}\n\nNội dung tin nhắn:\n${msgVal}`;
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(emailTo)}&su=${encodeURIComponent(sub)}&body=${encodeURIComponent(bdy)}`;
+    window.open(gmailUrl, '_blank', 'noopener,noreferrer');
     if (status) {
       status.classList.remove('dp-form__status--error');
-      status.textContent = window.currentUI?.contact?.openingEmailApp || 'Đang mở ứng dụng email...';
+      status.textContent = window.currentUI?.contact?.openingGmail || 'Đang mở Gmail để soạn thư...';
     }
     return;
   }

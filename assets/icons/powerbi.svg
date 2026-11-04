@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <!-- Power BI 3 bars with rounded tops -->
+  <rect x="8" y="24" width="7" height="18" rx="2" fill="#d99b00"/>
+  <rect x="18" y="16" width="7" height="26" rx="2" fill="#f4be18"/>
+  <rect x="28" y="8" width="7" height="34" rx="2" fill="#ffd447"/>
+  <rect x="38" y="4" width="2" height="38" rx="1" fill="#ffe27a" opacity="0.6"/>
+</svg>
+

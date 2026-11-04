@@ -1,7 +1,186 @@
 {
-  "analysis": [],
-  "dataScience": [],
-  "logisticsTools": [],
-  "programming": [],
-  "softwares": []
+  "techStack": [
+    {
+      "category": {
+        "vi": "Data Pipelines, Analytics & Machine Learning",
+        "en": "Data Pipelines, Analytics & Machine Learning",
+        "fr": "Pipelines de Données, Analyse & Machine Learning"
+      },
+      "items": [
+        { "name": "Python", "slug": "python", "icon": "assets/icons/python.svg" },
+        { "name": "PostgreSQL", "slug": "postgresql", "icon": "assets/icons/postgresql.svg" },
+        { "name": "SQLite", "slug": "sqlite", "icon": "assets/icons/sqlite.svg" },
+        { "name": "Microsoft Excel", "slug": "excel", "icon": "assets/icons/excel.svg" },
+        { "name": "Power BI", "slug": "powerbi", "icon": "assets/icons/powerbi.svg" },
+        { "name": "Pandas", "slug": "pandas", "icon": "assets/icons/pandas.svg" },
+        { "name": "NumPy", "slug": "numpy", "icon": "assets/icons/numpy.svg" },
+        { "name": "Matplotlib", "slug": "matplotlib", "icon": "assets/icons/matplotlib.svg" },
+        { "name": "Jupyter", "slug": "jupyter", "icon": "assets/icons/jupyter.svg" },
+        { "name": "Scikit-Learn", "slug": "scikitlearn", "icon": "assets/icons/scikitlearn.svg" },
+        { "name": "PyTorch", "slug": "pytorch", "icon": "assets/icons/pytorch.svg" },
+        { "name": "TensorFlow", "slug": "tensorflow", "icon": "assets/icons/tensorflow.svg" },
+        { "name": "Postman", "slug": "postman", "icon": "assets/icons/postman.svg" }
+      ]
+    },
+    {
+      "category": {
+        "vi": "Systems, Infrastructure & Tooling",
+        "en": "Systems, Infrastructure & Tooling",
+        "fr": "Systèmes, Infrastructure & Outils"
+      },
+      "items": [
+        { "name": "Docker", "slug": "docker", "icon": "assets/icons/docker.svg" },
+        { "name": "Linux", "slug": "linux", "icon": "assets/icons/linux.svg" },
+        { "name": "Terminal / Bash", "slug": "bash", "icon": "assets/icons/bash.svg" },
+        { "name": "Git", "slug": "git", "icon": "assets/icons/git.svg" },
+        { "name": "GitHub", "slug": "github", "icon": "assets/icons/github.svg" },
+        { "name": "VS Code", "slug": "vscode", "icon": "assets/icons/vscode.svg" }
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "name": {
+        "vi": "Phân tích Chuỗi cung ứng (Supply Chain Analytics)",
+        "en": "Supply Chain Analytics",
+        "fr": "Analyse de la Supply Chain"
+      },
+      "level": "proficient",
+      "evidence": ["analyzing-motorcycle-part-sales-sql", "cert-datacamp-supply-chain-analytics"]
+    },
+    {
+      "name": {
+        "vi": "Phân tích Pareto ABC (80/20)",
+        "en": "Pareto ABC Analysis (80/20)",
+        "fr": "Analyse Pareto ABC (80/20)"
+      },
+      "level": "proficient",
+      "evidence": ["analyzing-motorcycle-part-sales-sql"]
+    },
+    {
+      "name": {
+        "vi": "Dự báo Nhu cầu & Quản trị Tồn kho An toàn",
+        "en": "Demand Forecasting & Safety Stock Management",
+        "fr": "Prévision de la Demande & Stock de Sécurité"
+      },
+      "level": "proficient",
+      "evidence": ["cert-datacamp-supply-chain-analytics"]
+    }
+  ],
+  "dataScience": [
+    {
+      "name": {
+        "vi": "Phân tích Khám phá Dữ liệu (EDA) & Trực quan hóa",
+        "en": "Exploratory Data Analysis (EDA) & Visualization",
+        "fr": "Analyse Exploratoire des Données (EDA) & Visualisation"
+      },
+      "level": "proficient",
+      "evidence": ["analyzing-motorcycle-part-sales-sql", "cert-data-science"]
+    },
+    {
+      "name": {
+        "vi": "Mô hình hóa Dữ liệu & Học máy Cơ bản (Scikit-Learn)",
+        "en": "Data Modeling & Foundations of Machine Learning",
+        "fr": "Modélisation de Données & Machine Learning"
+      },
+      "level": "learning",
+      "evidence": ["cert-data-science"]
+    },
+    {
+      "name": {
+        "vi": "Ứng dụng Trí tuệ Nhân tạo & Generative AI trong Công việc",
+        "en": "Applied AI & Generative AI in Professional Workflows",
+        "fr": "IA Appliquée & IA Générative dans les Flux Professionnels"
+      },
+      "level": "proficient",
+      "evidence": ["cert-gemini-educator", "cert-hp-ai-business"]
+    }
+  ],
+  "programming": [
+    {
+      "name": {
+        "vi": "SQL (PostgreSQL, Truy vấn & Tổng hợp Dữ liệu)",
+        "en": "SQL (PostgreSQL, Data Aggregation & Queries)",
+        "fr": "SQL (PostgreSQL, Requêtes & Agrégation de Données)"
+      },
+      "level": "daily",
+      "evidence": ["analyzing-motorcycle-part-sales-sql"]
+    },
+    {
+      "name": {
+        "vi": "Python (Pandas, NumPy, Matplotlib, Tối ưu hóa)",
+        "en": "Python (Pandas, NumPy, Matplotlib, Optimization)",
+        "fr": "Python (Pandas, NumPy, Matplotlib, Optimisation)"
+      },
+      "level": "proficient",
+      "evidence": ["analyzing-motorcycle-part-sales-sql", "cert-datacamp-supply-chain-analytics"]
+    },
+    {
+      "name": {
+        "vi": "Shell Scripting & Tự động hóa (Bash, Command Line)",
+        "en": "Shell Scripting & Automation (Bash, Command Line)",
+        "fr": "Scripting Shell & Automatisation (Bash, Ligne de commande)"
+      },
+      "level": "proficient",
+      "evidence": []
+    }
+  ],
+  "logisticsTools": [
+    {
+      "name": {
+        "vi": "Microsoft Excel Nâng cao (VLOOKUP, Pivot Table, Mô hình hóa)",
+        "en": "Advanced Microsoft Excel (Formulas, Pivot Tables, Modeling)",
+        "fr": "Microsoft Excel Avancé (Formules, Tableaux Croisés, Modélisation)"
+      },
+      "level": "daily",
+      "evidence": ["analyzing-motorcycle-part-sales-sql"]
+    },
+    {
+      "name": {
+        "vi": "Báo cáo Dashboard & Đo lường KPI (Power BI)",
+        "en": "Dashboard Reporting & KPI Tracking (Power BI)",
+        "fr": "Tableaux de Bord & Suivi des KPI (Power BI)"
+      },
+      "level": "learning",
+      "evidence": ["cert-data-science"]
+    },
+    {
+      "name": {
+        "vi": "Quản lý & Phân bổ Tồn kho Kho hàng",
+        "en": "Warehouse Inventory & Replenishment",
+        "fr": "Gestion & Réapprovisionnement des Stocks"
+      },
+      "level": "proficient",
+      "evidence": ["cert-datacamp-supply-chain-analytics"]
+    }
+  ],
+  "softwares": [
+    {
+      "name": {
+        "vi": "Quản lý Phiên bản & Cộng tác Mã nguồn (Git, GitHub)",
+        "en": "Version Control & Collaboration (Git, GitHub)",
+        "fr": "Contrôle de Version & Collaboration (Git, GitHub)"
+      },
+      "level": "daily",
+      "evidence": ["analyzing-motorcycle-part-sales-sql"]
+    },
+    {
+      "name": {
+        "vi": "Môi trường Container & Ảo hóa (Docker, Linux)",
+        "en": "Containerization & OS Environments (Docker, Linux)",
+        "fr": "Conteneurisation & Environnements Système (Docker, Linux)"
+      },
+      "level": "proficient",
+      "evidence": []
+    },
+    {
+      "name": {
+        "vi": "Môi trường Lập trình & Kiểm thử API (VS Code, Jupyter, Postman)",
+        "en": "Development & API Testing Tools (VS Code, Jupyter, Postman)",
+        "fr": "Outils de Développement & Tests d'API (VS Code, Jupyter, Postman)"
+      },
+      "level": "daily",
+      "evidence": ["analyzing-motorcycle-part-sales-sql"]
+    }
+  ]
 }

@@ -170,7 +170,11 @@
     "statusPlanned": "Dự kiến",
     "expectedPrefix": "Dự kiến: ",
     "homeFeaturedHeading": "Chứng chỉ nổi bật:",
-    "viewAllCerts": "Xem toàn bộ Kỹ năng & Chứng chỉ"
+    "viewAllCerts": "Xem toàn bộ Kỹ năng & Chứng chỉ",
+    "techStackTitle": "Công nghệ & Công cụ",
+    "viewCertificate": "Xem ảnh chứng chỉ",
+    "openOriginalPdf": "Mở PDF gốc",
+    "closeModal": "Đóng"
   },
   "contact": {
     "title": "Liên hệ",
@@ -189,7 +193,12 @@
     "formSubmit": "Gửi tin nhắn",
     "formSuccess": "Đã gửi thành công! Cảm ơn bạn.",
     "formError": "Gửi thất bại, vui lòng thử lại.",
-    "openingEmailApp": "Đang mở ứng dụng email..."
+    "openingEmailApp": "Đang mở ứng dụng email...",
+    "openGmail": "Soạn thư trên Gmail ↗",
+    "copyEmail": "Sao chép email",
+    "copied": "✓ Đã sao chép!",
+    "gmailSubject": "Liên hệ từ Portfolio - [Họ tên]",
+    "openingGmail": "Đang mở Gmail để soạn thư..."
   },
   "footer": {
     "copy": "© 2026 Portfolio. All rights reserved.",

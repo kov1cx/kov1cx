@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <!-- NumPy Isometric 3D Cube -->
+  <!-- Top Face -->
+  <polygon points="24,6 42,16 24,26 6,16" fill="#4dabcf"/>
+  <!-- Left Face -->
+  <polygon points="6,16 24,26 24,44 6,34" fill="#013243"/>
+  <!-- Right Face -->
+  <polygon points="24,26 42,16 42,34 24,44" fill="#1b5a7a"/>
+  <!-- Bold White 'N' across the isometric front -->
+  <text x="24" y="32" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="20" fill="#ffffff" text-anchor="middle">N</text>
+</svg>
+

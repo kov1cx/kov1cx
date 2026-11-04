@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <!-- Circular plot background or axes -->
+  <circle cx="24" cy="24" r="20" fill="#11557c"/>
+  <circle cx="24" cy="24" r="14" fill="none" stroke="#2a7ca8" stroke-width="1.5"/>
+  <circle cx="24" cy="24" r="8" fill="none" stroke="#2a7ca8" stroke-width="1.5"/>
+  <!-- Crosshair axes -->
+  <line x1="4" y1="24" x2="44" y2="24" stroke="#4db3e6" stroke-width="1.5"/>
+  <line x1="24" y1="4" x2="24" y2="44" stroke="#4db3e6" stroke-width="1.5"/>
+  <!-- Sine wave data curve in vibrant orange/red -->
+  <path d="M6 30 Q 14 12, 24 24 T 42 18" fill="none" stroke="#ff6f3c" stroke-width="3" stroke-linecap="round"/>
+  <!-- Data nodes -->
+  <circle cx="14" cy="18" r="2.5" fill="#ffcf40"/>
+  <circle cx="24" cy="24" r="2.5" fill="#ffcf40"/>
+  <circle cx="34" cy="30" r="2.5" fill="#ffcf40"/>
+</svg>
+

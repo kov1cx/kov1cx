@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <!-- Scikit-learn orange and blue circles with network connections -->
+  <!-- Left circle in scikit-blue -->
+  <circle cx="17" cy="24" r="13" fill="#3499cd"/>
+  <!-- Right circle in scikit-orange -->
+  <circle cx="31" cy="24" r="13" fill="#f89a36" fill-opacity="0.9"/>
+  <!-- Center intersection -->
+  <path d="M24 13.5 a 13 13 0 0 1 0 21 a 13 13 0 0 1 0 -21" fill="#2d688a"/>
+  <!-- Graph nodes and links in white -->
+  <circle cx="15" cy="18" r="2.2" fill="#ffffff"/>
+  <circle cx="13" cy="28" r="2.2" fill="#ffffff"/>
+  <circle cx="24" cy="24" r="2.5" fill="#ffffff"/>
+  <circle cx="33" cy="18" r="2.2" fill="#ffffff"/>
+  <circle cx="35" cy="28" r="2.2" fill="#ffffff"/>
+  <line x1="15" y1="18" x2="24" y2="24" stroke="#ffffff" stroke-width="1.2"/>
+  <line x1="13" y1="28" x2="24" y2="24" stroke="#ffffff" stroke-width="1.2"/>
+  <line x1="24" y1="24" x2="33" y2="18" stroke="#ffffff" stroke-width="1.2"/>
+  <line x1="24" y1="24" x2="35" y2="28" stroke="#ffffff" stroke-width="1.2"/>
+</svg>
+

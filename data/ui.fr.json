@@ -170,7 +170,11 @@
     "statusPlanned": "Prévu",
     "expectedPrefix": "Prévu : ",
     "homeFeaturedHeading": "Certifications clés :",
-    "viewAllCerts": "Voir toutes les Compétences & Certifications"
+    "viewAllCerts": "Voir toutes les Compétences & Certifications",
+    "techStackTitle": "Technologies & Outils",
+    "viewCertificate": "Voir le certificat",
+    "openOriginalPdf": "Ouvrir le PDF original",
+    "closeModal": "Fermer"
   },
   "contact": {
     "title": "Contact",
@@ -189,7 +193,12 @@
     "formSubmit": "Envoyer le message",
     "formSuccess": "Message envoyé avec succès ! Merci.",
     "formError": "Échec de l’envoi, veuillez réessayer.",
-    "openingEmailApp": "Ouverture de la messagerie..."
+    "openingEmailApp": "Ouverture de la messagerie...",
+    "openGmail": "Rédiger sur Gmail ↗",
+    "copyEmail": "Copier l'e-mail",
+    "copied": "✓ Copié !",
+    "gmailSubject": "Contact via Portfolio - [Votre Nom]",
+    "openingGmail": "Ouverture de Gmail pour rédiger..."
   },
   "footer": {
     "copy": "© 2026 Portfolio. Tous droits réservés.",

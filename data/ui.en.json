@@ -170,7 +170,11 @@
     "statusPlanned": "Planned",
     "expectedPrefix": "Expected: ",
     "homeFeaturedHeading": "Featured Certifications:",
-    "viewAllCerts": "View all Skills & Certifications"
+    "viewAllCerts": "View all Skills & Certifications",
+    "techStackTitle": "Tech Stack & Tools",
+    "viewCertificate": "View Certificate",
+    "openOriginalPdf": "Open Original PDF",
+    "closeModal": "Close"
   },
   "contact": {
     "title": "Contact",
@@ -189,7 +193,12 @@
     "formSubmit": "Send Message",
     "formSuccess": "Sent successfully! Thank you.",
     "formError": "Failed to send. Please try again.",
-    "openingEmailApp": "Opening email client..."
+    "openingEmailApp": "Opening email client...",
+    "openGmail": "Compose in Gmail ↗",
+    "copyEmail": "Copy email",
+    "copied": "✓ Copied!",
+    "gmailSubject": "Portfolio Contact - [Your Name]",
+    "openingGmail": "Opening Gmail to compose..."
   },
   "footer": {
     "copy": "© 2026 Portfolio. All rights reserved.",

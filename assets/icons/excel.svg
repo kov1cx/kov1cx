@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <!-- Right spreadsheet sheet -->
+  <rect x="15" y="7" width="27" height="34" rx="2.5" fill="#0d4a25"/>
+  <!-- Spreadsheet grid cells in bright mint/white -->
+  <rect x="23" y="13" width="7" height="5.5" rx="0.8" fill="#3cd070"/>
+  <rect x="32" y="13" width="7" height="5.5" rx="0.8" fill="#3cd070"/>
+  <rect x="23" y="21" width="7" height="5.5" rx="0.8" fill="#3cd070"/>
+  <rect x="32" y="21" width="7" height="5.5" rx="0.8" fill="#3cd070"/>
+  <rect x="23" y="29" width="7" height="5.5" rx="0.8" fill="#3cd070"/>
+  <rect x="32" y="29" width="7" height="5.5" rx="0.8" fill="#3cd070"/>
+  <!-- Left notebook flap with border -->
+  <rect x="5" y="9" width="20" height="30" rx="3" fill="#107c41" stroke="#ffffff" stroke-width="1.5"/>
+  <!-- Crisp white bold X -->
+  <path d="M10 17.5h2.8l2.2 4.5 2.2-4.5H20l-3.5 6.5 3.6 6.5h-2.8l-2.3-4.8-2.3 4.8H10.1l3.6-6.5z" fill="#ffffff"/>
+</svg>

@@ -1029,7 +1029,199 @@
         return null;
       }
 
-      // Helper to build a ruled certificate row [date 2 | title + issuer 5 | hours + related project 3 | verify 2]
+      // Lightbox modal for certificate image preview
+      function openCertLightbox(c) {
+        const existing = document.getElementById('dp-cert-modal');
+        if (existing) existing.remove();
+
+        const modal = ce('div', 'dp-cert-modal');
+        modal.id = 'dp-cert-modal';
+        modal.setAttribute('role', 'dialog');
+        modal.setAttribute('aria-modal', 'true');
+        const cTitle = resolveI18n(c.title, activeLang) || c.title;
+        modal.setAttribute('aria-label', cTitle);
+
+        const backdrop = ce('div', 'dp-cert-modal__backdrop');
+        modal.appendChild(backdrop);
+
+        const dialog = ce('div', 'dp-cert-modal__dialog');
+
+        // Header
+        const header = ce('div', 'dp-cert-modal__header');
+        const titleBlock = ce('div', 'dp-cert-modal__title-block');
+        titleBlock.appendChild(ce('h2', 'dp-cert-modal__title', cTitle));
+        const cIssuer = resolveI18n(c.issuer, activeLang) || c.issuer;
+        if (cIssuer) {
+          titleBlock.appendChild(ce('p', 'dp-cert-modal__meta', `${cIssuer} · ${formatCertDate(c)}`));
+        }
+        header.appendChild(titleBlock);
+
+        const closeBtn = ce('button', 'dp-cert-modal__close', '✕');
+        closeBtn.type = 'button';
+        closeBtn.setAttribute('aria-label', ui.skills?.closeModal || 'Đóng');
+        header.appendChild(closeBtn);
+        dialog.appendChild(header);
+
+        // Body
+        const body = ce('div', 'dp-cert-modal__body');
+        const fullImg = ce('img', 'dp-cert-modal__img');
+        fullImg.src = c.image || c.thumbnail;
+        fullImg.alt = cTitle;
+        fullImg.loading = 'eager';
+        body.appendChild(fullImg);
+        dialog.appendChild(body);
+
+        // Footer
+        const footer = ce('div', 'dp-cert-modal__footer');
+        if (c.verify_url) {
+          const verifyLink = ce('a', 'dp-btn dp-btn--solid', `${ui.skills?.verifyCert || 'Xác thực trực tuyến'} ↗`);
+          verifyLink.href = c.verify_url;
+          verifyLink.target = '_blank';
+          verifyLink.rel = 'noopener noreferrer';
+          footer.appendChild(verifyLink);
+        }
+        if (c.pdf) {
+          const pdfLink = ce('a', 'dp-btn', `${ui.skills?.openOriginalPdf || 'Mở PDF gốc'} ↗`);
+          pdfLink.href = c.pdf;
+          pdfLink.target = '_blank';
+          pdfLink.rel = 'noopener noreferrer';
+          footer.appendChild(pdfLink);
+        }
+        const closeBtn2 = ce('button', 'dp-btn', ui.skills?.closeModal || 'Đóng');
+        closeBtn2.type = 'button';
+        footer.appendChild(closeBtn2);
+
+        dialog.appendChild(footer);
+        modal.appendChild(dialog);
+        document.body.appendChild(modal);
+
+        function closeModal() {
+          document.removeEventListener('keydown', onKeyDown);
+          modal.remove();
+        }
+        function onKeyDown(e) {
+          if (e.key === 'Escape') closeModal();
+        }
+
+        backdrop.addEventListener('click', closeModal);
+        closeBtn.addEventListener('click', closeModal);
+        closeBtn2.addEventListener('click', closeModal);
+        document.addEventListener('keydown', onKeyDown);
+        closeBtn.focus();
+      }
+
+      // Helper to build a featured visual certificate card
+      function buildFeaturedCertCard(c, showFeaturedBadge) {
+        const card = ce('article', 'dp-cert-card');
+        if (c.id) card.id = `cert-card-${c.id}`;
+
+        const cTitleTxt = resolveI18n(c.title, activeLang) || c.title;
+        const cIssuerTxt = resolveI18n(c.issuer, activeLang) || c.issuer;
+        const imgSrc = c.thumbnail || c.image;
+
+        // Media thumbnail
+        if (imgSrc) {
+          const mediaWrap = ce('div', 'dp-cert-card__media');
+          mediaWrap.setAttribute('role', 'button');
+          mediaWrap.setAttribute('tabindex', '0');
+          mediaWrap.setAttribute('aria-label', `${ui.skills?.viewCertificate || 'Xem chứng chỉ'}: ${cTitleTxt}`);
+
+          const img = ce('img', 'dp-cert-card__img');
+          img.src = imgSrc;
+          img.alt = cTitleTxt;
+          img.width = 480;
+          img.height = 300;
+          img.loading = 'lazy';
+          img.decoding = 'async';
+          mediaWrap.appendChild(img);
+
+          const zoomBadge = ce('span', 'dp-cert-card__zoom-hint', '⤢');
+          zoomBadge.setAttribute('aria-hidden', 'true');
+          mediaWrap.appendChild(zoomBadge);
+
+          mediaWrap.addEventListener('click', () => openCertLightbox(c));
+          mediaWrap.addEventListener('keydown', e => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              openCertLightbox(c);
+            }
+          });
+
+          card.appendChild(mediaWrap);
+        }
+
+        // Body
+        const body = ce('div', 'dp-cert-card__body');
+
+        if (showFeaturedBadge || (showHidden && c.hidden)) {
+          const badgesRow = ce('div', 'dp-cert-card__badges');
+          if (showFeaturedBadge) {
+            badgesRow.appendChild(ce('span', 'dp-badge-featured', ui.skills?.featuredBadge || 'Nổi bật'));
+          }
+          if (showHidden && c.hidden) {
+            badgesRow.appendChild(ce('span', 'dp-label', '[HIDDEN]'));
+          }
+          body.appendChild(badgesRow);
+        }
+
+        // Meta row: date + issuer + hours
+        const metaRow = ce('div', 'dp-cert-card__meta');
+        metaRow.appendChild(ce('span', 'dp-cert-card__date', formatCertDate(c)));
+        if (cIssuerTxt) {
+          metaRow.appendChild(ce('span', 'dp-cert-card__issuer', cIssuerTxt));
+        }
+        if (c.hours) {
+          const hoursTxt = (ui.skills?.hours || '{hours} giờ').replace('{hours}', c.hours);
+          metaRow.appendChild(ce('span', 'dp-cert-card__hours', hoursTxt));
+        }
+        body.appendChild(metaRow);
+
+        // Title
+        const titleEl = ce('h3', 'dp-cert-card__title', cTitleTxt);
+        body.appendChild(titleEl);
+
+        // Related project (if any)
+        if (c.project_id) {
+          const proj = (projectsData.projects || []).find(p => p.slug === c.project_id || p.id === c.project_id);
+          if (proj) {
+            const projTitle = resolveI18n(proj.title, activeLang) || proj.slug;
+            const pWrap = ce('p', 'dp-cert-card__related');
+            const pLink = ce('a', 'dp-related-link', `${ui.skills?.relatedProject || 'Dự án liên quan'}: ${projTitle} ↗`);
+            pLink.href = buildTabUrl('projects', ui, proj.slug);
+            pWrap.appendChild(pLink);
+            body.appendChild(pWrap);
+          }
+        }
+
+        // Actions
+        const actions = ce('div', 'dp-cert-card__actions');
+        if (c.image) {
+          const viewBtn = ce('button', 'dp-btn dp-btn--sm', `${ui.skills?.viewCertificate || 'Xem ảnh'} ⤢`);
+          viewBtn.type = 'button';
+          viewBtn.addEventListener('click', () => openCertLightbox(c));
+          actions.appendChild(viewBtn);
+        }
+        if (c.verify_url) {
+          const verifyBtn = ce('a', 'dp-btn dp-btn--sm dp-btn--solid', `${ui.skills?.verifyCert || 'Xác thực'} ↗`);
+          verifyBtn.href = c.verify_url;
+          verifyBtn.target = '_blank';
+          verifyBtn.rel = 'noopener noreferrer';
+          verifyBtn.setAttribute('aria-label', buildVerifyAria(cTitleTxt, ui));
+          actions.appendChild(verifyBtn);
+        } else if (c.pdf) {
+          const pdfBtn = ce('a', 'dp-btn dp-btn--sm', `${ui.skills?.openOriginalPdf || 'Mở PDF'} ↗`);
+          pdfBtn.href = c.pdf;
+          pdfBtn.target = '_blank';
+          pdfBtn.rel = 'noopener noreferrer';
+          actions.appendChild(pdfBtn);
+        }
+
+        body.appendChild(actions);
+        card.appendChild(body);
+        return card;
+      }
+
+      // Helper to build a ruled certificate row [thumb 2 | date 2 | title + issuer 4 | hours + related project 2 | verify 2]
       function buildCertRow(c, showFeaturedBadge) {
         const row = ce('li', 'dp-cert-row');
         if (c.id) row.id = `cert-${c.id}`;
@@ -1037,10 +1229,36 @@
         const cTitleTxt = resolveI18n(c.title, activeLang) || c.title;
         const cIssuerTxt = resolveI18n(c.issuer, activeLang) || c.issuer;
 
-        // Col 1 (2 cols): Date
+        // Col 1 (2 cols): Thumbnail (if exists)
+        if (c.thumbnail || c.image) {
+          const thumbBox = ce('div', 'dp-cert-row__thumb');
+          thumbBox.setAttribute('role', 'button');
+          thumbBox.setAttribute('tabindex', '0');
+          thumbBox.setAttribute('aria-label', `${ui.skills?.viewCertificate || 'Xem ảnh'}: ${cTitleTxt}`);
+          const thumbImg = ce('img', 'dp-cert-row__thumb-img');
+          thumbImg.src = c.thumbnail || c.image;
+          thumbImg.alt = cTitleTxt;
+          thumbImg.width = 80;
+          thumbImg.height = 52;
+          thumbImg.loading = 'lazy';
+          thumbImg.decoding = 'async';
+          thumbBox.appendChild(thumbImg);
+          thumbBox.addEventListener('click', () => openCertLightbox(c));
+          thumbBox.addEventListener('keydown', e => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              openCertLightbox(c);
+            }
+          });
+          row.appendChild(thumbBox);
+        } else {
+          row.appendChild(ce('div', 'dp-cert-row__thumb dp-cert-row__thumb--empty'));
+        }
+
+        // Col 2 (2 cols): Date
         row.appendChild(ce('div', 'dp-cert-row__date', formatCertDate(c)));
 
-        // Col 2 (5 cols): Title + Issuer
+        // Col 3 (4 cols): Title + Issuer
         const mainCol = ce('div', 'dp-cert-row__main');
         if (showFeaturedBadge || (showHidden && c.hidden)) {
           const badgesRow = ce('div', 'dp-cert-row__badges');
@@ -1059,7 +1277,7 @@
         }
         row.appendChild(mainCol);
 
-        // Col 3 (3 cols): Hours + Related Project
+        // Col 4 (2 cols): Hours + Related Project
         const detailsCol = ce('div', 'dp-cert-row__details');
         if (c.hours) {
           const hoursTxt = (ui.skills?.hours || '{hours} giờ').replace('{hours}', c.hours);
@@ -1079,7 +1297,7 @@
         }
         row.appendChild(detailsCol);
 
-        // Col 4 (2 cols): Verification Link or Note (left-aligned, or empty cell without layout hole)
+        // Col 5 (2 cols): Verification Link or Note (left-aligned, or empty cell without layout hole)
         const actionCol = ce('div', 'dp-cert-row__action');
         const verifyEl = createCertVerifyElement(c, cTitleTxt);
         if (verifyEl) actionCol.appendChild(verifyEl);
@@ -1503,6 +1721,59 @@
         panelHome.appendChild(fpSec);
       }
 
+      // 3.5. Home Tech Stack & Core Skills (from skillsData.techStack)
+      const techStackGroups = Array.isArray(skillsData?.techStack) ? skillsData.techStack : [];
+      if (techStackGroups.length > 0) {
+        const tsSec = ce('div', 'dp-section dp-grid dp-section--techstack');
+        tsSec.appendChild(createRail(
+          `${tabNumbers.home}.${homeSubIdx++}`,
+          ui.rail?.skills || 'KỸ NĂNG',
+          ui.skills?.techStackTitle || 'Công nghệ & Công cụ'
+        ));
+
+        const tsContent = ce('div', 'dp-content');
+        const tsWrapper = ce('div', 'dp-techstack');
+
+        techStackGroups.forEach(grp => {
+          const grpEl = ce('div', 'dp-techstack__group');
+          const catTitle = resolveI18n(grp.category, activeLang) || grp.category;
+          if (catTitle) {
+            grpEl.appendChild(ce('h3', 'dp-techstack__heading', catTitle));
+          }
+
+          const gridEl = ce('div', 'dp-techstack__grid');
+          (grp.items || []).forEach(item => {
+            const tile = ce('div', 'dp-techstack__tile');
+            if (item.slug) tile.dataset.slug = item.slug;
+            tile.setAttribute('title', item.name);
+            tile.setAttribute('tabindex', '0');
+            tile.setAttribute('role', 'img');
+            tile.setAttribute('aria-label', item.name);
+
+            const img = ce('img', 'dp-techstack__icon');
+            img.src = item.icon;
+            img.alt = item.name;
+            img.width = 34;
+            img.height = 34;
+            img.loading = 'lazy';
+            img.decoding = 'async';
+            tile.appendChild(img);
+
+            const label = ce('span', 'dp-techstack__name', item.name);
+            tile.appendChild(label);
+
+            gridEl.appendChild(tile);
+          });
+
+          grpEl.appendChild(gridEl);
+          tsWrapper.appendChild(grpEl);
+        });
+
+        tsContent.appendChild(tsWrapper);
+        tsSec.appendChild(tsContent);
+        panelHome.appendChild(tsSec);
+      }
+
       // 4. Navigation Tile Grid (Replaces Home Featured Certifications; positioned right after Hero or after Featured Projects)
       const eduSchool = hasEducation
         ? profile.education.map(e => resolveI18n(e?.school, activeLang)).find(Boolean)
@@ -1516,7 +1787,7 @@
       const projectsSummaryText = formatPluralCount(ui.navGrid?.projectsCount, totalProjectsCount, '{n} dự án');
 
       const totalSkillsCount = Object.entries(skillsData || {}).reduce(
-        (sum, [k, arr]) => (k !== '_notice' && Array.isArray(arr)) ? sum + arr.length : sum,
+        (sum, [k, arr]) => (k !== '_notice' && k !== 'techStack' && Array.isArray(arr)) ? sum + arr.length : sum,
         0
       );
       const skillsSummaryText = formatPluralCount(ui.navGrid?.skillsCount, totalSkillsCount, '{n} kỹ năng');
@@ -1898,14 +2169,67 @@
       const skillsTabNum = tabNumbers.skills || '04';
       let skillsSubIdx = 1;
 
-      // Block A. Kỹ năng (skills.json)
+      // Block 0. Visual Tech Stack & Tools (skillsData.techStack)
+      const skillsTechGroups = Array.isArray(skillsData?.techStack) ? skillsData.techStack : [];
+      if (skillsTechGroups.length > 0) {
+        const tsSec = ce('div', 'dp-section dp-grid dp-section--techstack');
+        tsSec.appendChild(createRail(
+          `${skillsTabNum}.${skillsSubIdx++}`,
+          ui.rail?.skills || 'KỸ NĂNG',
+          ui.skills?.techStackTitle || 'Công nghệ & Công cụ'
+        ));
+
+        const tsContent = ce('div', 'dp-content');
+        const tsWrapper = ce('div', 'dp-techstack');
+
+        skillsTechGroups.forEach(grp => {
+          const grpEl = ce('div', 'dp-techstack__group');
+          const catTitle = resolveI18n(grp.category, activeLang) || grp.category;
+          if (catTitle) {
+            grpEl.appendChild(ce('h3', 'dp-techstack__heading', catTitle));
+          }
+
+          const gridEl = ce('div', 'dp-techstack__grid');
+          (grp.items || []).forEach(item => {
+            const tile = ce('div', 'dp-techstack__tile');
+            if (item.slug) tile.dataset.slug = item.slug;
+            tile.setAttribute('title', item.name);
+            tile.setAttribute('tabindex', '0');
+            tile.setAttribute('role', 'img');
+            tile.setAttribute('aria-label', item.name);
+
+            const img = ce('img', 'dp-techstack__icon');
+            img.src = item.icon;
+            img.alt = item.name;
+            img.width = 34;
+            img.height = 34;
+            img.loading = 'lazy';
+            img.decoding = 'async';
+            tile.appendChild(img);
+
+            const label = ce('span', 'dp-techstack__name', item.name);
+            tile.appendChild(label);
+
+            gridEl.appendChild(tile);
+          });
+
+          grpEl.appendChild(gridEl);
+          tsWrapper.appendChild(grpEl);
+        });
+
+        tsContent.appendChild(tsWrapper);
+        tsSec.appendChild(tsContent);
+        panelSkills.appendChild(tsSec);
+      }
+
+      // Block A. Kỹ năng chuyên môn (skills.json categories)
       if (hasSkillsData) {
         const skSec = ce('div', 'dp-section dp-grid');
         skSec.appendChild(createRail(`${skillsTabNum}.${skillsSubIdx++}`, ui.rail?.skills || ui.tabs?.skills?.name || 'KỸ NĂNG', ui.skills?.skillsTitle || 'Kỹ năng chuyên môn'));
 
         const skContent = ce('div', 'dp-content');
         Object.entries(skillsData).forEach(([catKey, list]) => {
-          if (catKey === '_notice' || !Array.isArray(list) || list.length === 0) return;
+          if (catKey === '_notice' || catKey === 'techStack' || !Array.isArray(list) || list.length === 0) return;
 
           const groupDiv = ce('div', 'dp-skills-group');
           const catTitle = ui.skills?.skillCategory?.[catKey] || ui.skills?.category?.[catKey] || catKey;
@@ -1991,13 +2315,13 @@
           featSec.appendChild(createRail(`${skillsTabNum}.${skillsSubIdx++}`, ui.rail?.certificates || ui.skills?.featuredBadge || 'CHỨNG CHỈ', ui.skills?.featuredTitle || 'Chứng chỉ nổi bật'));
 
           const featContent = ce('div', 'dp-content');
-          const featList = ce('ul', 'dp-cert-list');
           const topFeatCerts = featuredCerts.slice(0, 4);
           const showFeatCertBadge = hasMixedFeatured(topFeatCerts);
+          const featGrid = ce('div', 'dp-cert-cards-grid');
           topFeatCerts.forEach(c => {
-            featList.appendChild(buildCertRow(c, showFeatCertBadge && Boolean(c.featured)));
+            featGrid.appendChild(buildFeaturedCertCard(c, showFeatCertBadge && Boolean(c.featured)));
           });
-          featContent.appendChild(featList);
+          featContent.appendChild(featGrid);
           featSec.appendChild(featContent);
           panelSkills.appendChild(featSec);
         }
@@ -2246,9 +2570,59 @@
       if (profile.email) {
         const stmt = ce('div', 'dp-contact-statement');
         stmt.appendChild(ce('span', 'dp-label', ui.contact?.email || 'EMAIL'));
+
+        const gmailComposeUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(profile.email)}&su=${encodeURIComponent(ui.contact?.gmailSubject || 'Liên hệ từ Portfolio')}`;
+
         const emailLink = ce('a', 'dp-contact-statement__email', profile.email);
-        emailLink.href = `mailto:${profile.email}`;
+        emailLink.href = gmailComposeUrl;
+        emailLink.target = '_blank';
+        emailLink.rel = 'noopener noreferrer';
+        emailLink.setAttribute('title', ui.contact?.openGmail || 'Soạn thư trên Gmail ↗');
         stmt.appendChild(emailLink);
+
+        // Action buttons bar
+        const actRow = ce('div', 'dp-contact-statement__actions');
+
+        // 1. Button: Soạn thư trên Gmail ↗
+        const gmailBtn = ce('a', 'dp-btn dp-btn--sm dp-btn--solid', `${ui.contact?.openGmail || 'Soạn thư trên Gmail'}`);
+        gmailBtn.href = gmailComposeUrl;
+        gmailBtn.target = '_blank';
+        gmailBtn.rel = 'noopener noreferrer';
+        actRow.appendChild(gmailBtn);
+
+        // 2. Button: Sao chép email
+        const copyBtn = ce('button', 'dp-btn dp-btn--sm', ui.contact?.copyEmail || 'Sao chép email');
+        copyBtn.type = 'button';
+        copyBtn.addEventListener('click', async () => {
+          try {
+            await navigator.clipboard.writeText(profile.email);
+            const originalText = copyBtn.textContent;
+            copyBtn.textContent = ui.contact?.copied || '✓ Đã sao chép!';
+            copyBtn.classList.add('dp-btn--copied');
+            setTimeout(() => {
+              copyBtn.textContent = originalText;
+              copyBtn.classList.remove('dp-btn--copied');
+            }, 2000);
+          } catch (err) {
+            const ta = document.createElement('textarea');
+            ta.value = profile.email;
+            document.body.appendChild(ta);
+            ta.select();
+            document.execCommand('copy');
+            document.body.removeChild(ta);
+            copyBtn.textContent = ui.contact?.copied || '✓ Đã sao chép!';
+            setTimeout(() => { copyBtn.textContent = ui.contact?.copyEmail || 'Sao chép email'; }, 2000);
+          }
+        });
+        actRow.appendChild(copyBtn);
+
+        // 3. Subtle link: mailto
+        const mailtoLink = ce('a', 'dp-link-subtle', 'mailto ↗');
+        mailtoLink.href = `mailto:${profile.email}`;
+        mailtoLink.setAttribute('title', 'Mở bằng ứng dụng mail mặc định (Outlook/Apple Mail)');
+        actRow.appendChild(mailtoLink);
+
+        stmt.appendChild(actRow);
         directContent.appendChild(stmt);
       }
 
@@ -2306,6 +2680,9 @@
       form.id = 'contact-form';
       if (profile.formspreeId) {
         form.action = `https://formspree.io/f/${profile.formspreeId}`;
+      }
+      if (profile.email) {
+        form.dataset.recipient = profile.email;
       }
 
       const nameField = ce('div', 'dp-form__field');
@@ -2377,15 +2754,24 @@
 
       if (statusText || statusEmail) {
         const barWrap = ce('div', 'dp-statusbar-wrap');
-        const barHref = statusEmail
-          ? `mailto:${statusEmail}`
-          : (hasContact ? buildTabUrl('contact', ui) : '');
+        const contactUrl = hasContact ? buildTabUrl('contact', ui) : (statusEmail ? `mailto:${statusEmail}` : '');
+        const barHref = contactUrl;
         const bar = barHref ? ce('a', 'dp-statusbar') : ce('div', 'dp-statusbar dp-statusbar--static');
         if (barHref) {
           bar.href = barHref;
-          bar.setAttribute('aria-label', statusEmail
-            ? (ui.statusBar?.emailAria || 'Gửi email tới {email}').replace('{email}', statusEmail)
-            : `${ui.hero?.contact || ui.statusBar?.contactAria || 'Liên hệ'}`);
+          bar.setAttribute('aria-label', `${ui.hero?.contact || ui.statusBar?.contactAria || 'Chuyển sang trang liên hệ'}${statusEmail ? ` (${statusEmail})` : ''}`);
+          bar.addEventListener('click', (e) => {
+            if (hasContact) {
+              e.preventDefault();
+              const targetHash = contactUrl.replace(/^[^#]*/, '');
+              if (window.location.hash !== targetHash) {
+                window.location.hash = targetHash;
+              } else {
+                switchTab('contact', null, false);
+              }
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+          });
         }
         if (!statusText) bar.classList.add('dp-statusbar--solo');
 
