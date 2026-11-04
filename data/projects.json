@@ -1,3 +1,97 @@
 {
-  "projects": []
+  "projects": [
+    {
+      "title": {
+        "vi": "Phân tích Doanh số Phụ tùng Xe máy theo Kho & Nhóm Sản phẩm (SQL)",
+        "en": "Analyzing Motorcycle Part Sales by Warehouse & Product Line (SQL)",
+        "fr": "Analyse des Ventes de Pièces Moto par Entrepôt & Gamme de Produits (SQL)"
+      },
+      "slug": "analyzing-motorcycle-part-sales-sql",
+      "year": "2026",
+      "context": {
+        "vi": "Một công ty bán lẻ phụ tùng xe máy vận hành 3 kho hàng (Central, North, West) với nhiều kênh bán (Retail, Wholesale). Ban lãnh đạo cần báo cáo tổng hợp doanh thu thuần theo từng dòng sản phẩm, từng kho và từng tháng trong giai đoạn từ tháng 6 đến tháng 8/2021 để tối ưu hoá phân bổ tồn kho và điều phối bán buôn.",
+        "en": "A motorcycle parts retailer operating three warehouses (Central, North, West) across multiple sales channels needed aggregated net revenue analysis per product line, warehouse location, and month (June–August 2021) to optimize warehouse replenishment and prioritize wholesale distribution.",
+        "fr": "Un distributeur de pièces de moto exploitant trois entrepôts (Central, North, West) et plusieurs canaux de vente nécessitait une analyse consolidée du chiffre d'affaires net par gamme de produits, entrepôt et mois (juin-août 2021) afin d'optimiser le réapprovisionnement et la logistique de gros."
+      },
+      "data": {
+        "vi": "Bộ dữ liệu bán hàng gồm 1.000 giao dịch thực tế từ tháng 6 đến tháng 8/2021 với các trường: order_number, date, warehouse, client_type, product_line, quantity, unit_price, total, payment, transfer_fee.",
+        "en": "Sales dataset comprising 1,000 transaction records between June and August 2021, detailing order number, date, warehouse, client type, product line, quantity, unit price, total, payment method, and transfer fee.",
+        "fr": "Jeu de données de 1 000 transactions enregistrées entre juin et août 2021, comprenant le numéro de commande, la date, l'entrepôt, le type de client, la gamme de produits, les quantités, les prix unitaires et les frais de transfert."
+      },
+      "method": {
+        "vi": [
+          "Truy vấn SQL tổng hợp tính doanh thu thuần: net_revenue = SUM(total) - SUM(payment_fee) nhóm theo product_line, tháng (TO_CHAR / EXTRACT) và warehouse.",
+          "Lọc riêng kênh bán buôn (Wholesale) theo yêu cầu nghiệp vụ và sắp xếp thứ tự doanh thu giảm dần.",
+          "Áp dụng nguyên lý Pareto (phân tích ABC) trên Jupyter Notebook (Python/Pandas/Matplotlib) để nhận diện nhóm sản phẩm và kho đóng góp tỷ trọng doanh thu cao nhất."
+        ],
+        "en": [
+          "Aggregated net revenue in SQL using formula net_revenue = SUM(total) - SUM(payment_fee) grouped by product line, month, and warehouse location.",
+          "Filtered for Wholesale client type as per business specifications and ranked revenue streams in descending order.",
+          "Conducted Pareto 80/20 ABC analysis using Python (Pandas & Matplotlib) to identify primary revenue drivers across warehouses and product lines."
+        ],
+        "fr": [
+          "Agrégation SQL du chiffre d'affaires net via la formule net_revenue = SUM(total) - SUM(payment_fee) ventilée par gamme, mois et entrepôt.",
+          "Filtrage ciblé sur les clients grossistes (Wholesale) et classement hiérarchique par chiffre d'affaires décroissant.",
+          "Application de l'analyse ABC / Pareto sous Python (Pandas & Matplotlib) pour cartographier les lignes de produits et entrepôts stratégiques."
+        ]
+      },
+      "summary": {
+        "vi": "Truy vấn SQL tổng hợp doanh thu thuần cho kênh bán buôn theo kho và nhóm phụ tùng, kết hợp phân tích Pareto ABC để định vị các mặt hàng chủ lực.",
+        "en": "SQL aggregation and Pareto ABC analysis of motorcycle parts wholesale revenue across three regional warehouses and six product lines.",
+        "fr": "Agrégation SQL et analyse Pareto ABC du chiffre d'affaires net des pièces détachées moto à travers trois entrepôts et six gammes."
+      },
+      "result": {
+        "vi": "Top 3 nhóm sản phẩm (Suspension & traction, Frame & body, Braking) mang lại 64% tổng doanh thu thuần bán buôn; kho Central dẫn đầu doanh số với đóng góp ổn định qua cả 3 tháng.",
+        "en": "Top 3 product lines (Suspension & traction, Frame & body, Braking) generated 64% of wholesale net revenue; Central warehouse dominated distribution throughout all three months.",
+        "fr": "Les 3 premières gammes (Suspension & traction, Frame & body, Braking) génèrent 64 % du chiffre d'affaires net de gros ; l'entrepôt Central maintient la tête sur les 3 mois."
+      },
+      "limitations": {
+        "vi": "Dữ liệu chỉ bao gồm giai đoạn 3 tháng mùa hè (tháng 6 - tháng 8/2021), chưa phản ánh biến động mùa vụ cả năm hoặc chi phí lưu kho chi tiết cho từng SKU.",
+        "en": "Dataset spans a single 3-month summer window (June–August 2021), lacking full annual seasonality patterns and SKU-level holding cost accounting.",
+        "fr": "L'échantillon couvre une période de 3 mois (juin-août 2021) sans saisonnalité annuelle complète ni prise en compte des coûts unitaires de stockage par SKU."
+      },
+      "result_metric": {
+        "value": "64%",
+        "label": {
+          "vi": "Doanh thu thuần từ Top 3 nhóm sản phẩm (Pareto)",
+          "en": "Net revenue from Top 3 product lines (Pareto)",
+          "fr": "Chiffre d'affaires net du Top 3 produits (Pareto)"
+        }
+      },
+      "tags": ["SQL", "PostgreSQL", "Data Analytics", "Supply Chain", "Pareto ABC"],
+      "role": {
+        "vi": "Nhà phân tích Dữ liệu / Tác giả",
+        "en": "Data Analyst / Author",
+        "fr": "Analyste Données / Auteur"
+      },
+      "figure": {
+        "src": "assets/img/motorcycle-sales-pareto.webp",
+        "srcset": "assets/img/motorcycle-sales-pareto-800.webp 800w, assets/img/motorcycle-sales-pareto.webp 1440w",
+        "caption": {
+          "vi": "Biểu đồ Pareto (80/20) phân tích đóng góp doanh thu theo dòng sản phẩm phụ tùng xe máy",
+          "en": "Pareto (80/20) chart analyzing cumulative net revenue contribution by motorcycle parts product line",
+          "fr": "Diagramme de Pareto (80/20) illustrant la contribution au chiffre d'affaires par gamme de pièces moto"
+        }
+      },
+      "hero_media": {
+        "type": "image",
+        "src": "assets/img/motorcycle-sales-pareto.webp",
+        "srcset": "assets/img/motorcycle-sales-pareto-800.webp 800w, assets/img/motorcycle-sales-pareto.webp 1440w",
+        "alt": {
+          "vi": "Biểu đồ phân tích doanh số phụ tùng xe máy",
+          "en": "Motorcycle part sales analysis chart",
+          "fr": "Graphique d'analyse des ventes de pièces moto"
+        },
+        "caption": {
+          "vi": "Biểu đồ Pareto (80/20) phân tích đóng góp doanh thu theo dòng sản phẩm phụ tùng xe máy",
+          "en": "Pareto (80/20) chart analyzing cumulative net revenue contribution by motorcycle parts product line",
+          "fr": "Diagramme de Pareto (80/20) illustrant la contribution au chiffre d'affaires par gamme de pièces moto"
+        }
+      },
+      "grayscale": false,
+      "githubLink": "https://github.com/kov1cx/Analyzing-Motorcycle-Part-Sales-SQL/",
+      "demoLink": "https://github.com/kov1cx/Analyzing-Motorcycle-Part-Sales-SQL/blob/main/motorcycle_sales_analysis.ipynb",
+      "featured": true
+    }
+  ]
 }
