@@ -58,9 +58,9 @@
     <td width="38%" align="center" valign="middle">
       <div style="background: #0d1117; border: 2px solid #30363d; border-radius: 12px; padding: 4px; box-shadow: 0 8px 24px rgba(0,0,0,0.5);">
         <!-- Thay link bên dưới bằng file ảnh local hoặc link Pinterest của bạn -->
-        <img src="https://i.pinimg.com/736x/f2/17/10/f21710ca652d031513ef2929d5d1ced3.jpg" width="100%" style="border-radius: 8px; display: block;" alt="stay chill bro, it's just a bad day, not a bad life" />
+        <img src="cat-pilot.png" width="100%" style="border-radius: 8px; display: block;" alt="stay chill bro, it's just a bad day, not a bad life" />
         <div style="padding: 8px 0 4px 0; font-size: 0.85em; color: #8b949e; font-style: italic; font-family: monospace;">
-          ☕ "stay chill bro, it's just a bad day..."
+           "i'm back babe"
         </div>
       </div>
     </td>
@@ -112,7 +112,7 @@
   <tr>
     <!-- CỘT TRÁI: ẢNH MÈO PHI CÔNG (38%) -->
     <td width="38%" align="center" valign="middle">
-      <img src="./pilot_cat.jpg" width="100%" style="border-radius: 12px; display: block;" alt="life update: I'm up again." />
+      <img src="winter-girl.png" width="100%" style="border-radius: 12px; display: block;" alt="life update: I'm up again." />
     </td>
     <!-- CỘT PHẢI: BẢNG CẤU HÌNH & TRIẾT LÝ VẬN HÀNH (62%) -->
     <td width="62%" valign="top" style="padding-left: 15px;">
