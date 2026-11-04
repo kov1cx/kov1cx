@@ -28,8 +28,9 @@
 
 <table>
   <tr>
-    <!-- LEFT: PERSONAL INFORMATION -->
+    <!-- CỘT TRÁI: THÔNG TIN CHI TIẾT (62%) -->
     <td width="62%" valign="top">
+      <!-- Khối 1: Bản thân -->
       <h3>👋 <code>IDENTITY & CURRENT RIG</code></h3>
       <ul>
         <li>🎓 <b>Senior Student</b> majoring in <b>Logistics & Supply Chain Management</b> at <a href="https://huce.edu.vn">HUCE</a>.</li>
@@ -38,6 +39,7 @@
         <li>🏃‍♂️ Endurance runner targeting <b>Sub-7:00/mile 10K</b>.</li>
       </ul>
       <br/>
+      <!-- Khối 2: Đang tập trung -->
       <h3>🚀 <code>CURRENT FOCUS & LEARNING</code></h3>
       <ul>
         <li>✨ <b>Cold-Chain Logistics</b> & Reefer Operations (CPT / FOB routes to Japan).</li>
@@ -45,28 +47,30 @@
         <li>✨ High-throughput local model serving using <code>vLLM</code> & <code>Ollama</code>.</li>
       </ul>
       <br/>
+      <!-- Khối 3: Sở thích -->
       <h3>🎮 <code>VIBE & INTERESTS</code></h3>
       <ul>
         <li>🏎️ Sim Racing, F1 & PC building/customizing.</li>
         <li>📚 Film, Light Novels & Alternative Soundtracks.</li>
       </ul>
     </td>
-    <!-- RIGHT: CAT PILOT IMAGE -->
+    <!-- CỘT PHẢI: MEME STAY CHILL BRO (38%) -->
     <td width="38%" align="center" valign="middle">
-      <img
-        src="./cat-pilot.png"
-        width="100%"
-        alt="Cat Pilot - Life Update: I'm up again."
-      />
-      <br/>
-      <sub>
-        <i>✈️ "Life update: I'm up again."</i>
-      </sub>
+      <div style="background: #0d1117; border: 2px solid #30363d; border-radius: 12px; padding: 4px; box-shadow: 0 8px 24px rgba(0,0,0,0.5);">
+        <!-- Thay link bên dưới bằng file ảnh local hoặc link Pinterest của bạn -->
+        <img src="https://i.pinimg.com/736x/f2/17/10/f21710ca652d031513ef2929d5d1ced3.jpg" width="100%" style="border-radius: 8px; display: block;" alt="stay chill bro, it's just a bad day, not a bad life" />
+        <div style="padding: 8px 0 4px 0; font-size: 0.85em; color: #8b949e; font-style: italic; font-family: monospace;">
+          ☕ "stay chill bro, it's just a bad day..."
+        </div>
+      </div>
     </td>
   </tr>
 </table>
 
 ---
+
+---
+
 ### 🛠️ Core Stack & Tooling
 
 <div align="center">
@@ -102,40 +106,34 @@
 </div>
 
 ---
-### ❄️ Mentality, Hardware & Workspace
+### 🏁 Mentality, Hardware & Workspace
 
 <table width="100%">
   <tr>
-    <!-- LEFT: WINTER ANIME -->
-    <td width="32%" align="center" valign="middle">
-      <img
-        src="./winter-girl.png"
-        width="100%"
-        alt="Winter Anime"
-      />
-      <br/>
-      <sub><i>Stay calm. Keep moving. ❄️</i></sub>
+    <!-- CỘT TRÁI: ẢNH MÈO PHI CÔNG (38%) -->
+    <td width="38%" align="center" valign="middle">
+      <img src="./pilot_cat.jpg" width="100%" style="border-radius: 12px; display: block;" alt="life update: I'm up again." />
     </td>
-    <!-- RIGHT: WORKSTATION -->
-    <td width="68%" valign="top">
-      <h3>🖥️ WORKSTATION & INFERENCE RIG</h3>
-      <p>
-        <img src="https://img.shields.io/badge/RIG_STATUS-ONLINE-00cc66?style=flat-square" />
-        <img src="https://img.shields.io/badge/INFERENCE-LOCAL_GPU-00cfff?style=flat-square" />
-        <img src="https://img.shields.io/badge/TUNNEL-ZEROTIER_SDN-ff9800?style=flat-square" />
+    <!-- CỘT PHẢI: BẢNG CẤU HÌNH & TRIẾT LÝ VẬN HÀNH (62%) -->
+    <td width="62%" valign="top" style="padding-left: 15px;">
+      <h3 align="left">🖥️ WORKSTATION & INFERENCE RIG</h3>    
+      <p align="left">
+        <img src="https://img.shields.io/badge/RIG_STATUS-ONLINE-00ff66?style=flat-square&logo=nvidia&logoColor=white" alt="Rig Online" />
+        <img src="https://img.shields.io/badge/INFERENCE-LOCAL_GPU-00e5ff?style=flat-square&logo=linux&logoColor=white" alt="Local Inference" />
+        <img src="https://img.shields.io/badge/TUNNEL-ZEROTIER_SDN-ff9800?style=flat-square&logo=zerotier&logoColor=white" alt="ZeroTier" />
       </p>
       <table width="100%">
         <tr>
-          <td width="35%"><b>⚡ Processor</b></td>
+          <td width="32%"><b>⚡ Processor</b></td>
           <td>Intel® Core™ i5-13400F (10C / 16T)</td>
         </tr>
         <tr>
           <td><b>🎮 GPU / VRAM</b></td>
-          <td>NVIDIA® GeForce RTX™ 3060 12GB </td>
+          <td>NVIDIA® GeForce RTX™ 3060 12GB GDDR6</td>
         </tr>
         <tr>
-          <td><b>🧠 Mainboard</b></td>
-          <td>B760M</td>
+          <td><b>🧠 Memory</b></td>
+          <td>16GB High-Speed System Memory</td>
         </tr>
         <tr>
           <td><b>🌐 Networking</b></td>
@@ -143,22 +141,23 @@
         </tr>
         <tr>
           <td><b>🐳 Runtimes</b></td>
-          <td>Ollama • vLLM • Docker • n8n</td>
+          <td>Ollama • vLLM • Docker Containers • n8n</td>
         </tr>
         <tr>
-          <td><b>🎯 Focus</b></td>
-          <td>Local AI • Data Pipelines • Automation</td>
+          <td><b>🎯 Target Pace</b></td>
+          <td>Sub-7:00/mile 10K • Low-Latency Automation</td>
         </tr>
       </table>
       <br/>
-      <i>"Zero excuses, pure execution."</i>
-      <br/>
-      <code>>> Status: Ascending. Target locked and deploying.</code>
+      <div align="left">
+        <i>"Zero excuses, pure execution."</i><br/>
+        <code>>> Status: Ascending. Target locked and deploying.</code>
+      </div>
     </td>
   </tr>
 </table>
-
 ---
+
 ### 📬 Connect With Me
 
 <p align="center">
