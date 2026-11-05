@@ -73,9 +73,18 @@
   "hero": {
     "cv": "Télécharger le CV",
     "contact": "Me contacter",
-    "viewProjects": "Voir les projets",
+    "viewProjects": "Voir tous les projets",
     "openFullscreen": "Ouvrir en plein écran",
     "portraitAlt": "Portrait de {name}"
+  },
+  "heroCards": {
+    "profileTitle": "Profil académique",
+    "projectsTitle": "Projets d'analyse",
+    "skillsTitle": "Compétences & Outils",
+    "certsTitle": "Certifications",
+    "projectsSummaryTmpl": "{n} projet d'analyse (SQL)",
+    "skillsSummaryTmpl": "{n} outils de données",
+    "certsSummaryTmpl": "{n} certificats vérifiés"
   },
   "profileSection": {
     "title": "Parcours Professionnel",
@@ -92,6 +101,7 @@
     "sourceCode": "Code source",
     "demo": "Démo",
     "backToList": "← Retour à la liste des projets",
+    "keyMetric": "RÉSULTAT CLÉ",
     "overview": "Présentation de la solution",
     "results": "Résultats obtenus",
     "technologies": "Technologies & Outils",

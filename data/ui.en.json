@@ -72,10 +72,19 @@
   },
   "hero": {
     "cv": "Download CV",
-    "contact": "Contact",
+    "contact": "Get in touch",
     "viewProjects": "View all projects",
     "openFullscreen": "Open fullscreen",
     "portraitAlt": "Portrait of {name}"
+  },
+  "heroCards": {
+    "profileTitle": "Academic Profile",
+    "projectsTitle": "Data Projects",
+    "skillsTitle": "Tech Stack & Tools",
+    "certsTitle": "Certifications",
+    "projectsSummaryTmpl": "{n} hands-on SQL project",
+    "skillsSummaryTmpl": "{n} data tools",
+    "certsSummaryTmpl": "{n} verified certificates"
   },
   "profileSection": {
     "title": "Professional Profile",
@@ -92,6 +101,7 @@
     "sourceCode": "Source Code",
     "demo": "Live Demo",
     "backToList": "← Back to projects list",
+    "keyMetric": "KEY HIGHLIGHT",
     "overview": "Solution Overview",
     "results": "Key Results",
     "technologies": "Technologies & Tools",

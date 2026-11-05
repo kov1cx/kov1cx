@@ -566,17 +566,59 @@
     headerBlock.appendChild(titleEl);
     topContent.appendChild(headerBlock);
 
-    if (p.result_metric && p.result_metric.value) {
-      const metricBox = ce('div', 'dp-metric dp-metric--display');
-      metricBox.appendChild(ce('span', 'dp-metric__value', formatMetricValue(p.result_metric.value)));
-      const mLabel = resolveI18n(p.result_metric.label, lang);
-      if (mLabel) metricBox.appendChild(ce('span', 'dp-metric__label', mLabel));
-      topContent.appendChild(metricBox);
+    const hasMetric = Boolean(p.result_metric && p.result_metric.value);
+    const factTable = createFactTable(p, ui, lang, false);
+
+    const linksWrap = ce('div', 'dp-project-actions');
+    if (p.demoLink) {
+      const demoBtn = ce('a', 'dp-btn dp-btn--solid', `${ui.projects?.demo || 'Bản thử'} ↗`);
+      demoBtn.href = p.demoLink;
+      demoBtn.target = '_blank';
+      demoBtn.rel = 'noopener noreferrer';
+      linksWrap.appendChild(demoBtn);
+    }
+    if (p.githubLink) {
+      const ghBtn = ce('a', 'dp-btn', `${ui.projects?.sourceCode || 'Mã nguồn'} ↗`);
+      ghBtn.href = p.githubLink;
+      ghBtn.target = '_blank';
+      ghBtn.rel = 'noopener noreferrer';
+      linksWrap.appendChild(ghBtn);
+    }
+    if (p.pdfLink) {
+      const pdfBtn = ce('a', 'dp-btn', `${ui.projects?.viewReport || 'Báo cáo PDF'} ↗`);
+      pdfBtn.href = p.pdfLink;
+      pdfBtn.target = '_blank';
+      pdfBtn.rel = 'noopener noreferrer';
+      linksWrap.appendChild(pdfBtn);
     }
 
-    const factTable = createFactTable(p, ui, lang, false);
-    if (factTable) {
-      topContent.appendChild(factTable);
+    // Unified Project Overview (Balanced 2-Column: Key Metric Card + Meta Details & Actions)
+    if (hasMetric || factTable || linksWrap.children.length > 0) {
+      const overview = ce('div', 'dp-detail-overview');
+
+      if (hasMetric) {
+        const metricCard = ce('div', 'dp-detail-metric-card');
+        const kicker = ce('span', 'dp-detail-metric-card__kicker', ui.projects?.keyMetric || 'KẾT QUẢ CỐT LÕI');
+        metricCard.appendChild(kicker);
+
+        const metricBox = ce('div', 'dp-metric');
+        metricBox.appendChild(ce('span', 'dp-metric__value', formatMetricValue(p.result_metric.value)));
+        const mLabel = resolveI18n(p.result_metric.label, lang);
+        if (mLabel) metricBox.appendChild(ce('span', 'dp-metric__label', mLabel));
+        metricCard.appendChild(metricBox);
+        overview.appendChild(metricCard);
+      }
+
+      const metaCol = ce('div', `dp-detail-meta-wrap ${!hasMetric ? 'dp-detail-meta-wrap--full' : ''}`);
+      if (factTable) {
+        metaCol.appendChild(factTable);
+      }
+      if (linksWrap.children.length > 0) {
+        metaCol.appendChild(linksWrap);
+      }
+      overview.appendChild(metaCol);
+
+      topContent.appendChild(overview);
     }
 
     const figSrc = p.figure?.src || p.image;
@@ -599,32 +641,6 @@
         figure.appendChild(ce('figcaption', 'dp-figure__caption', capText));
       }
       topContent.appendChild(figure);
-    }
-
-    const linksWrap = ce('div', 'dp-project-actions');
-    if (p.demoLink) {
-      const demoBtn = ce('a', 'dp-btn dp-btn--solid', `${ui.projects?.demo || 'Demo'} ↗`);
-      demoBtn.href = p.demoLink;
-      demoBtn.target = '_blank';
-      demoBtn.rel = 'noopener noreferrer';
-      linksWrap.appendChild(demoBtn);
-    }
-    if (p.githubLink) {
-      const ghBtn = ce('a', 'dp-btn', `${ui.projects?.sourceCode || 'Mã nguồn'} ↗`);
-      ghBtn.href = p.githubLink;
-      ghBtn.target = '_blank';
-      ghBtn.rel = 'noopener noreferrer';
-      linksWrap.appendChild(ghBtn);
-    }
-    if (p.pdfLink) {
-      const pdfBtn = ce('a', 'dp-btn', `${ui.projects?.viewReport || 'Báo cáo PDF'} ↗`);
-      pdfBtn.href = p.pdfLink;
-      pdfBtn.target = '_blank';
-      pdfBtn.rel = 'noopener noreferrer';
-      linksWrap.appendChild(pdfBtn);
-    }
-    if (linksWrap.children.length > 0) {
-      topContent.appendChild(linksWrap);
     }
 
     topSec.appendChild(topContent);
@@ -891,8 +907,8 @@
       const isCertVisible = c => Boolean(c && (showHidden || !c.hidden));
       const visibleCerts = (certificatesData.certificates || []).filter(isCertVisible);
       const hasCertificates = visibleCerts.length > 0;
-      const hasSkillsData = Boolean(skillsData && Object.entries(skillsData).some(([k, arr]) => k !== '_notice' && Array.isArray(arr) && arr.length > 0));
-      const hasSkills = hasSkillsData || hasCertificates;
+      const hasTechStack = Array.isArray(skillsData?.techStack) && skillsData.techStack.length > 0;
+      const hasSkills = hasTechStack || hasCertificates;
 
       const hasContact = Boolean(profile.email || profile.phone || profile.linkedin || profile.github || profile.kaggle);
       const resolvedRole = resolveI18n(profile.role, activeLang);
@@ -1319,6 +1335,26 @@
         : [];
       const isOverviewSingleLine = introSentences.length <= 1;
 
+      // Pre-calculate summary counts for interactive navigation pillars
+      const eduSchool = hasEducation
+        ? profile.education.map(e => resolveI18n(e?.school, activeLang)).find(Boolean)
+        : '';
+      const expCompany = (!eduSchool && hasExperience)
+        ? profile.experience.map(e => resolveI18n(e?.company, activeLang) || resolveI18n(e?.organization, activeLang)).find(Boolean)
+        : '';
+      const profileSummaryText = eduSchool || expCompany || '';
+
+      const totalProjectsCount = Array.isArray(projectsData.projects) ? projectsData.projects.length : 0;
+      const projectsSummaryText = formatPluralCount(ui.navGrid?.projectsCount, totalProjectsCount, '{n} dự án');
+
+      const totalSkillsCount = Array.isArray(skillsData?.techStack)
+        ? skillsData.techStack.reduce((sum, g) => sum + (Array.isArray(g.items) ? g.items.length : (Array.isArray(g.skills) ? g.skills.length : 0)), 0)
+        : 0;
+      const skillsSummaryText = formatPluralCount(ui.navGrid?.skillsCount, totalSkillsCount, '{n} kỹ năng');
+
+      const totalCertsCount = visibleCerts.length;
+      const certsSummaryText = formatPluralCount(ui.navGrid?.certsCount, totalCertsCount, '{n} chứng chỉ');
+
       // 1. Opening Statement (Desktop: 12/12 cols without portrait, or 9/12 left + 3/12 right portrait)
       const openingGrid = ce('div', `dp-opening dp-grid ${hasPortrait ? 'dp-opening--with-portrait' : ''}`);
       const openingMain = ce('div', 'dp-opening__main');
@@ -1444,65 +1480,79 @@
 
       openingMain.appendChild(openingIntro);
 
-      // Fact Table (from profile.json "facts", hiding empty rows) + Contact Actions inside Left Column
-      const rawFacts = Array.isArray(profile.facts)
-        ? profile.facts
-        : (Array.isArray(profile.facts?.[activeLang]) ? profile.facts[activeLang] : []);
-      const visibleFacts = rawFacts
-        .map(f => ({
-          label: resolveI18n(f?.label, activeLang),
-          value: resolveI18n(f?.value, activeLang)
-        }))
-        .filter(f => f.value && String(f.value).trim() !== '');
+      // 4 Interactive Navigation Pillars inside Hero (Option 2 Layout)
+      const heroCardsGrid = ce('div', 'dp-hero-cards');
+      const heroCardsList = [
+        {
+          key: 'profile',
+          icon: '🎓',
+          badge: `${tabNumbers.profile || '02'} ↗`,
+          title: ui.heroCards?.profileTitle || (activeLang === 'vi' ? 'Hồ sơ Học vấn' : (activeLang === 'fr' ? 'Profil académique' : 'Academic Profile')),
+          summary: profileSummaryText || (activeLang === 'vi' ? 'ĐH Xây dựng Hà Nội' : 'Hanoi University of Civil Engineering'),
+          href: buildTabUrl('profile', ui)
+        },
+        {
+          key: 'projects',
+          icon: '📊',
+          badge: `${tabNumbers.projects || '03'} ↗`,
+          title: ui.heroCards?.projectsTitle || (activeLang === 'vi' ? 'Dự án Phân tích' : (activeLang === 'fr' ? 'Projets d\'analyse' : 'Analysis Projects')),
+          summary: ui.heroCards?.projectsSummaryTmpl
+            ? formatPluralCount(ui.heroCards.projectsSummaryTmpl, totalProjectsCount, '{n} dự án thực chiến (SQL)')
+            : (activeLang === 'vi' ? `${totalProjectsCount} dự án thực chiến (SQL)` : `${totalProjectsCount} hands-on SQL project`),
+          href: buildTabUrl('projects', ui)
+        },
+        {
+          key: 'skills',
+          icon: '⚡',
+          badge: `${tabNumbers.skills || '04'} ↗`,
+          title: ui.heroCards?.skillsTitle || (activeLang === 'vi' ? 'Kỹ năng & Tools' : (activeLang === 'fr' ? 'Compétences & Outils' : 'Skills & Tooling')),
+          summary: ui.heroCards?.skillsSummaryTmpl
+            ? formatPluralCount(ui.heroCards.skillsSummaryTmpl, totalSkillsCount, '{n} công cụ dữ liệu')
+            : (activeLang === 'vi' ? `${totalSkillsCount} công cụ dữ liệu` : `${totalSkillsCount} data tools`),
+          href: `${window.location.search}#/ky-nang`
+        },
+        {
+          key: 'certificates',
+          icon: '📜',
+          badge: '04.2 ↗',
+          title: ui.heroCards?.certsTitle || (activeLang === 'vi' ? 'Chứng chỉ Quốc tế' : (activeLang === 'fr' ? 'Certifications' : 'Certifications')),
+          summary: ui.heroCards?.certsSummaryTmpl
+            ? formatPluralCount(ui.heroCards.certsSummaryTmpl, totalCertsCount, '{n} chứng chỉ xác thực')
+            : (activeLang === 'vi' ? `${totalCertsCount} chứng chỉ xác thực` : `${totalCertsCount} verified certificates`),
+          href: `${window.location.search}#/ky-nang#chung-chi`
+        }
+      ];
 
-      if (!hasHeroData) {
-        const metaList = ce('div', 'dp-opening__meta-list');
-        const hintItem = ce('div', 'dp-opening__meta-item');
-        hintItem.appendChild(ce('p', 'dp-meta dp-meta--muted', ui.emptyProfileHint || ''));
-        metaList.appendChild(hintItem);
-        openingMain.appendChild(metaList);
-      } else if (visibleFacts.length > 0) {
-        const factsDl = ce('dl', 'dp-hero-facts');
-        visibleFacts.forEach(f => {
-          const row = ce('div', 'dp-hero-facts__row');
-          if (f.label) row.appendChild(ce('dt', 'dp-hero-facts__dt', f.label));
-          row.appendChild(ce('dd', 'dp-hero-facts__dd', f.value));
-          factsDl.appendChild(row);
-        });
-        openingMain.appendChild(factsDl);
-      } else {
-        const metaList = ce('div', 'dp-opening__meta-list');
-        if (resolvedTarget) {
-          const item = ce('div', 'dp-opening__meta-item');
-          item.appendChild(ce('p', 'dp-meta', resolvedTarget));
-          metaList.appendChild(item);
-        }
-        if (resolvedStatus) {
-          const item = ce('div', 'dp-opening__meta-item');
-          item.appendChild(ce('p', 'dp-meta dp-meta--muted', resolvedStatus));
-          metaList.appendChild(item);
-        }
-        if (resolvedLocation) {
-          const item = ce('div', 'dp-opening__meta-item');
-          item.appendChild(ce('p', 'dp-meta dp-meta--muted', resolvedLocation));
-          metaList.appendChild(item);
-        }
-        if (metaList.children.length > 0) {
-          openingMain.appendChild(metaList);
-        }
-      }
+      heroCardsList.forEach(p => {
+        const card = ce('a', 'dp-hero-card');
+        card.href = p.href;
 
+        const hdr = ce('div', 'dp-hero-card__header');
+        hdr.appendChild(ce('span', 'dp-hero-card__icon', p.icon));
+        hdr.appendChild(ce('span', 'dp-hero-card__badge', p.badge));
+        card.appendChild(hdr);
+
+        const bdy = ce('div', 'dp-hero-card__body');
+        bdy.appendChild(ce('div', 'dp-hero-card__title', p.title));
+        bdy.appendChild(ce('div', 'dp-hero-card__summary', p.summary));
+        card.appendChild(bdy);
+
+        heroCardsGrid.appendChild(card);
+      });
+
+      openingMain.appendChild(heroCardsGrid);
+
+      // Hero Actions (Modern Style 1: Rounded 8px, Soft Borders)
       const openingActions = ce('div', 'dp-opening__actions');
       if (profile.cvLink) {
-        const cvBtn = ce('a', 'dp-btn dp-btn--solid', `${ui.hero?.cv || 'Tải CV'} ↗`);
+        const cvBtn = ce('a', 'dp-btn', `${ui.hero?.cv || 'Tải CV'} ↗`);
         cvBtn.href = profile.cvLink;
         cvBtn.target = '_blank';
         cvBtn.rel = 'noopener noreferrer';
         openingActions.appendChild(cvBtn);
       }
       if (hasContact) {
-        const contactCls = profile.cvLink ? 'dp-btn' : 'dp-btn dp-btn--solid';
-        const contactBtn = ce('a', contactCls, `${ui.hero?.contact || 'Liên hệ'} →`);
+        const contactBtn = ce('a', 'dp-btn dp-btn--solid', `${ui.hero?.contact || 'Liên hệ ngay'} →`);
         contactBtn.href = buildTabUrl('contact', ui);
         openingActions.appendChild(contactBtn);
       }
@@ -1694,16 +1744,25 @@
           const detailLink = ce('a', 'dp-btn dp-btn--solid', `${ui.projects?.viewProject || 'Xem dự án'} →`);
           detailLink.href = buildTabUrl('projects', ui, p.slug);
           actions.appendChild(detailLink);
+
+          const allProjBtn = ce('a', 'dp-btn', `${ui.hero?.viewProjects || 'Xem tất cả dự án'} →`);
+          allProjBtn.href = buildTabUrl('projects', ui);
+          actions.appendChild(allProjBtn);
+
           infoCol.appendChild(actions);
 
           rowEl.appendChild(infoCol);
           card.appendChild(rowEl);
 
-          // c) & d) Full 9-col 16:9 hero_media (max-height 520px, object-fit: cover, width/height) + single 2px frame & 12px caption with thin top rule
+          // c) & d) Compact teaser media (max-height ~220px, subtle frame, clickable link to project)
           const mediaEl = createMediaElement(resolvedMediaObj, pTitle, !hasPortrait && idx === 0, false, Boolean(p.grayscale));
           if (mediaEl) {
             const mediaCol = ce('div', 'dp-project-featured__media');
-            mediaCol.appendChild(mediaEl);
+            const mediaLink = ce('a', 'dp-project-featured__media-link');
+            mediaLink.href = buildTabUrl('projects', ui, p.slug);
+            mediaLink.setAttribute('aria-label', `${ui.projects?.viewProject || 'Xem dự án'}: ${pTitle}`);
+            mediaLink.appendChild(mediaEl);
+            mediaCol.appendChild(mediaLink);
             card.appendChild(mediaCol);
           }
 
@@ -1711,12 +1770,6 @@
         });
 
         fpContent.appendChild(fpList);
-        const allProjWrap = ce('div', 'dp-project-actions dp-project-actions--all');
-        const allProjBtn = ce('a', 'dp-btn', `${ui.hero?.viewProjects || 'Xem tất cả dự án'} →`);
-        allProjBtn.href = buildTabUrl('projects', ui);
-        allProjWrap.appendChild(allProjBtn);
-        fpContent.appendChild(allProjWrap);
-
         fpSec.appendChild(fpContent);
         panelHome.appendChild(fpSec);
       }
@@ -1774,111 +1827,7 @@
         panelHome.appendChild(tsSec);
       }
 
-      // 4. Navigation Tile Grid (Replaces Home Featured Certifications; positioned right after Hero or after Featured Projects)
-      const eduSchool = hasEducation
-        ? profile.education.map(e => resolveI18n(e?.school, activeLang)).find(Boolean)
-        : '';
-      const expCompany = (!eduSchool && hasExperience)
-        ? profile.experience.map(e => resolveI18n(e?.company, activeLang) || resolveI18n(e?.organization, activeLang)).find(Boolean)
-        : '';
-      const profileSummaryText = eduSchool || expCompany || '';
-
-      const totalProjectsCount = Array.isArray(projectsData.projects) ? projectsData.projects.length : 0;
-      const projectsSummaryText = formatPluralCount(ui.navGrid?.projectsCount, totalProjectsCount, '{n} dự án');
-
-      const totalSkillsCount = Object.entries(skillsData || {}).reduce(
-        (sum, [k, arr]) => (k !== '_notice' && k !== 'techStack' && Array.isArray(arr)) ? sum + arr.length : sum,
-        0
-      );
-      const skillsSummaryText = formatPluralCount(ui.navGrid?.skillsCount, totalSkillsCount, '{n} kỹ năng');
-
-      const totalCertsCount = visibleCerts.length;
-      const certsSummaryText = formatPluralCount(ui.navGrid?.certsCount, totalCertsCount, '{n} chứng chỉ');
-
-      const contactSummaryText = (profile.email && String(profile.email).trim())
-        || (profile.phone && String(profile.phone).trim())
-        || '';
-
-      const candidateNavTiles = [
-        {
-          key: 'profile',
-          visible: hasProfileData,
-          title: ui.tabs?.profile?.name || 'Hồ sơ',
-          summary: profileSummaryText,
-          href: buildTabUrl('profile', ui)
-        },
-        {
-          key: 'projects',
-          visible: hasProjects,
-          title: ui.tabs?.projects?.name || 'Dự án',
-          summary: projectsSummaryText,
-          href: buildTabUrl('projects', ui)
-        },
-        {
-          key: 'skills',
-          visible: hasSkillsData,
-          title: ui.tabs?.skills?.name || 'Kỹ năng',
-          summary: skillsSummaryText,
-          href: `${window.location.search}#/ky-nang`
-        },
-        {
-          key: 'certificates',
-          visible: hasCertificates,
-          title: ui.navGrid?.certificatesName || 'Chứng chỉ',
-          summary: certsSummaryText,
-          href: `${window.location.search}#/ky-nang#chung-chi`
-        },
-        {
-          key: 'contact',
-          visible: hasContact,
-          title: ui.tabs?.contact?.name || 'Liên hệ',
-          summary: contactSummaryText,
-          href: buildTabUrl('contact', ui)
-        }
-      ].filter(t => t.visible);
-
-      if (candidateNavTiles.length > 0) {
-        const navSec = ce('nav', 'dp-nav-tiles-sec');
-        navSec.setAttribute('aria-label', ui.navGrid?.ariaLabel || 'Điều hướng các mục hồ sơ');
-
-        const navTilesGrid = ce('div', 'dp-nav-tiles');
-        navTilesGrid.style.setProperty('--dp-tile-count', String(Math.min(5, candidateNavTiles.length)));
-
-        const openText = ui.navGrid?.open || 'Mở';
-        const openAriaTmpl = ui.navGrid?.openAria || 'Mở: {name}';
-
-        candidateNavTiles.forEach(t => {
-          const tileLink = ce('a', 'dp-nav-tile');
-          tileLink.href = t.href;
-          tileLink.dataset.tileKey = t.key;
-          tileLink.setAttribute('aria-label', openAriaTmpl.replace('{name}', t.title));
-
-          const contentWrap = ce('div', 'dp-nav-tile__content');
-
-          const topMark = ce('span', 'dp-nav-tile__mark');
-          topMark.setAttribute('aria-hidden', 'true');
-          contentWrap.appendChild(topMark);
-
-          const bodyWrap = ce('div', 'dp-nav-tile__body');
-          bodyWrap.appendChild(ce('span', 'dp-nav-tile__title', t.title));
-          if (t.summary) {
-            bodyWrap.appendChild(ce('span', 'dp-nav-tile__summary', t.summary));
-          }
-          contentWrap.appendChild(bodyWrap);
-          tileLink.appendChild(contentWrap);
-
-          const ctaBar = ce('span', 'dp-nav-tile__cta');
-          ctaBar.setAttribute('aria-hidden', 'true');
-          ctaBar.appendChild(ce('span', 'dp-nav-tile__cta-text', openText));
-          ctaBar.appendChild(ce('span', 'dp-nav-tile__cta-arrow', '→'));
-          tileLink.appendChild(ctaBar);
-
-          navTilesGrid.appendChild(tileLink);
-        });
-
-        navSec.appendChild(navTilesGrid);
-        panelHome.appendChild(navSec);
-      }
+      // Bottom nav-tiles replaced by Hero navigation cards
 
       main.appendChild(panelHome);
 
@@ -2220,77 +2169,6 @@
         tsContent.appendChild(tsWrapper);
         tsSec.appendChild(tsContent);
         panelSkills.appendChild(tsSec);
-      }
-
-      // Block A. Kỹ năng chuyên môn (skills.json categories)
-      if (hasSkillsData) {
-        const skSec = ce('div', 'dp-section dp-grid');
-        skSec.appendChild(createRail(`${skillsTabNum}.${skillsSubIdx++}`, ui.rail?.skills || ui.tabs?.skills?.name || 'KỸ NĂNG', ui.skills?.skillsTitle || 'Kỹ năng chuyên môn'));
-
-        const skContent = ce('div', 'dp-content');
-        Object.entries(skillsData).forEach(([catKey, list]) => {
-          if (catKey === '_notice' || catKey === 'techStack' || !Array.isArray(list) || list.length === 0) return;
-
-          const groupDiv = ce('div', 'dp-skills-group');
-          const catTitle = ui.skills?.skillCategory?.[catKey] || ui.skills?.category?.[catKey] || catKey;
-          groupDiv.appendChild(ce('h3', 'dp-label dp-label--ink', catTitle));
-
-          const matrix = ce('ul', 'dp-skills-matrix');
-          list.forEach(sk => {
-            const li = ce('li', 'dp-skill-row');
-            const headRow = ce('div', 'dp-skill-row__head');
-
-            const skName = resolveI18n(sk.name, activeLang) || sk.name;
-            headRow.appendChild(ce('span', 'dp-skill-row__name', skName));
-
-            const rawLevel = resolveI18n(sk.level, activeLang) || sk.level;
-            const levelWords = ui.skills?.level?.[rawLevel] || rawLevel;
-            if (levelWords) {
-              headRow.appendChild(ce('span', 'dp-skill-row__level', levelWords));
-            }
-            li.appendChild(headRow);
-
-            if (Array.isArray(sk.evidence) && sk.evidence.length > 0) {
-              const evContainer = ce('p', 'dp-skill-row__evidence');
-              evContainer.appendChild(ce('span', '', `${ui.skills?.evidencePrefix || 'Minh chứng:'} `));
-              let addedCount = 0;
-
-              sk.evidence.forEach(evId => {
-                const proj = (projectsData.projects || []).find(p => p.slug === evId || p.id === evId);
-                if (proj) {
-                  if (addedCount > 0) evContainer.appendChild(ce('span', '', ' · '));
-                  const pTitle = resolveI18n(proj.title, activeLang) || proj.slug;
-                  const a = ce('a', 'dp-verify-link', `${pTitle} ↗`);
-                  a.href = buildTabUrl('projects', ui, proj.slug);
-                  evContainer.appendChild(a);
-                  addedCount++;
-                } else {
-                  const cert = (certificatesData.certificates || []).find(c => c.id === evId);
-                  if (cert) {
-                    if (addedCount > 0) evContainer.appendChild(ce('span', '', ' · '));
-                    const cTitle = resolveI18n(cert.title, activeLang) || cert.title;
-                    const a = ce('a', 'dp-verify-link', `${cTitle} ↗`);
-                    a.href = `#cert-${cert.id}`;
-                    evContainer.appendChild(a);
-                    addedCount++;
-                  }
-                }
-              });
-
-              if (addedCount > 0) {
-                li.appendChild(evContainer);
-              }
-            }
-
-            matrix.appendChild(li);
-          });
-
-          groupDiv.appendChild(matrix);
-          skContent.appendChild(groupDiv);
-        });
-
-        skSec.appendChild(skContent);
-        panelSkills.appendChild(skSec);
       }
 
       if (hasCertificates) {

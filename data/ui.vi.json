@@ -72,10 +72,19 @@
   },
   "hero": {
     "cv": "Tải CV",
-    "contact": "Liên hệ",
+    "contact": "Liên hệ ngay",
     "viewProjects": "Xem tất cả dự án",
     "openFullscreen": "Mở toàn màn hình",
     "portraitAlt": "Chân dung của {name}"
+  },
+  "heroCards": {
+    "profileTitle": "Hồ sơ Học vấn",
+    "projectsTitle": "Dự án Phân tích",
+    "skillsTitle": "Kỹ năng & Tools",
+    "certsTitle": "Chứng chỉ Quốc tế",
+    "projectsSummaryTmpl": "{n} dự án thực chiến (SQL)",
+    "skillsSummaryTmpl": "{n} công cụ dữ liệu",
+    "certsSummaryTmpl": "{n} chứng chỉ xác thực"
   },
   "profileSection": {
     "title": "Hồ sơ năng lực",
@@ -92,6 +101,7 @@
     "sourceCode": "Mã nguồn",
     "demo": "Bản thử",
     "backToList": "← Quay lại danh sách dự án",
+    "keyMetric": "KẾT QUẢ CỐT LÕI",
     "overview": "Tổng quan giải pháp",
     "results": "Kết quả thực tiễn",
     "technologies": "Công nghệ & Công cụ ứng dụng",
