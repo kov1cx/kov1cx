@@ -128,7 +128,31 @@
   function ce(tag, cls, txt) {
     const el = document.createElement(tag);
     if (cls) el.className = cls;
-    if (txt !== undefined && txt !== null && txt !== '') el.textContent = txt;
+    if (txt !== undefined && txt !== null && txt !== '') {
+      if (typeof txt === 'string' && cls && (cls.includes('dp-btn') || cls.includes('dp-hero-card__badge'))) {
+        const arrowMatch = txt.match(/^(.*?)\s*([→↗])$/);
+        const leftArrowMatch = txt.match(/^([←])\s*(.*?)$/);
+        if (arrowMatch) {
+          el.appendChild(document.createTextNode(arrowMatch[1] + ' '));
+          const arr = document.createElement('span');
+          arr.className = cls.includes('dp-hero-card') ? 'dp-hero-card__arrow' : 'dp-btn__arrow';
+          arr.setAttribute('aria-hidden', 'true');
+          arr.textContent = arrowMatch[2];
+          el.appendChild(arr);
+        } else if (leftArrowMatch) {
+          const arr = document.createElement('span');
+          arr.className = cls.includes('dp-hero-card') ? 'dp-hero-card__arrow dp-hero-card__arrow--left' : 'dp-btn__arrow dp-btn__arrow--left';
+          arr.setAttribute('aria-hidden', 'true');
+          arr.textContent = leftArrowMatch[1];
+          el.appendChild(arr);
+          el.appendChild(document.createTextNode(' ' + leftArrowMatch[2]));
+        } else {
+          el.textContent = txt;
+        }
+      } else {
+        el.textContent = txt;
+      }
+    }
     return el;
   }
 
@@ -820,40 +844,58 @@
 
   window.addEventListener('hashchange', handleHashRoute);
 
-  // Build Language & Theme controls group
+  // Build Language & Theme controls group (Fully decoupled & styled)
   function createControlsGroup(activeLang, ui, isHeader) {
     const controls = ce('div', 'dp-header__controls');
 
-    const langGroup = ce('div', 'lang-switch');
+    // 1. Language Segmented Control
+    const langGroup = ce('div', 'dp-control-segmented dp-control-segmented--lang');
     if (isHeader) langGroup.id = 'lang-toggle';
     langGroup.setAttribute('role', 'group');
     langGroup.setAttribute('aria-label', ui.header?.langToggle || 'Ngôn ngữ');
 
     ['vi', 'en', 'fr'].forEach(l => {
       const isAct = activeLang === l;
-      const btn = ce('button', `lang-opt ${isAct ? 'active' : ''}`, l.toUpperCase());
+      const btn = ce('button', `dp-control-btn dp-control-btn--lang ${isAct ? 'active' : ''}`, l.toUpperCase());
       btn.type = 'button';
       btn.dataset.lang = l;
       btn.setAttribute('aria-pressed', isAct ? 'true' : 'false');
+      btn.setAttribute('aria-label', `Ngôn ngữ ${l.toUpperCase()}`);
       langGroup.appendChild(btn);
     });
     controls.appendChild(langGroup);
 
+    // 2. Theme Segmented Control
     const curTheme = document.documentElement.dataset.theme || 'light';
     const isDark = curTheme === 'dark';
-    const darkLbl = ui.header?.themeDark || 'DARK';
-    const lightLbl = ui.header?.themeLight || 'LIGHT';
-    const themeBtn = ce('button', 'dp-ctrl-btn');
-    themeBtn.type = 'button';
-    if (isHeader) themeBtn.id = 'theme-toggle';
-    themeBtn.setAttribute('data-theme-toggle', 'true');
-    themeBtn.dataset.labelDark = darkLbl;
-    themeBtn.dataset.labelLight = lightLbl;
-    themeBtn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
-    themeBtn.setAttribute('aria-label', ui.header?.themeToggle || 'Chế độ sáng/tối');
-    const txtSpan = ce('span', 'dp-theme-text', isDark ? darkLbl : lightLbl);
-    themeBtn.appendChild(txtSpan);
-    controls.appendChild(themeBtn);
+    const darkLbl = ui.header?.themeDark || 'TỐI';
+    const lightLbl = ui.header?.themeLight || 'SÁNG';
+
+    const themeGroup = ce('div', 'dp-control-segmented dp-control-segmented--theme');
+    if (isHeader) themeGroup.id = 'theme-toggle-group';
+    themeGroup.setAttribute('role', 'group');
+    themeGroup.setAttribute('aria-label', ui.header?.themeToggle || 'Chế độ giao diện');
+
+    // Clean inline SVG icons
+    const sunSvg = `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="dp-control-icon"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>`;
+
+    const moonSvg = `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="dp-control-icon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>`;
+
+    const lightBtn = ce('button', `dp-control-btn dp-control-btn--theme ${!isDark ? 'active' : ''}`);
+    lightBtn.type = 'button';
+    lightBtn.dataset.themeVal = 'light';
+    lightBtn.setAttribute('aria-pressed', !isDark ? 'true' : 'false');
+    lightBtn.innerHTML = `${sunSvg}<span>${lightLbl}</span>`;
+    themeGroup.appendChild(lightBtn);
+
+    const darkBtn = ce('button', `dp-control-btn dp-control-btn--theme ${isDark ? 'active' : ''}`);
+    darkBtn.type = 'button';
+    darkBtn.dataset.themeVal = 'dark';
+    darkBtn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+    darkBtn.innerHTML = `${moonSvg}<span>${darkLbl}</span>`;
+    themeGroup.appendChild(darkBtn);
+
+    controls.appendChild(themeGroup);
 
     return controls;
   }
@@ -1485,16 +1527,16 @@
       const heroCardsList = [
         {
           key: 'profile',
-          icon: '🎓',
-          badge: `${tabNumbers.profile || '02'} ↗`,
+          iconSvg: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>',
+          badge: `${tabNumbers.profile || '02'} →`,
           title: ui.heroCards?.profileTitle || (activeLang === 'vi' ? 'Hồ sơ Học vấn' : (activeLang === 'fr' ? 'Profil académique' : 'Academic Profile')),
           summary: profileSummaryText || (activeLang === 'vi' ? 'ĐH Xây dựng Hà Nội' : 'Hanoi University of Civil Engineering'),
           href: buildTabUrl('profile', ui)
         },
         {
           key: 'projects',
-          icon: '📊',
-          badge: `${tabNumbers.projects || '03'} ↗`,
+          iconSvg: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>',
+          badge: `${tabNumbers.projects || '03'} →`,
           title: ui.heroCards?.projectsTitle || (activeLang === 'vi' ? 'Dự án Phân tích' : (activeLang === 'fr' ? 'Projets d\'analyse' : 'Analysis Projects')),
           summary: ui.heroCards?.projectsSummaryTmpl
             ? formatPluralCount(ui.heroCards.projectsSummaryTmpl, totalProjectsCount, '{n} dự án thực chiến (SQL)')
@@ -1503,8 +1545,8 @@
         },
         {
           key: 'skills',
-          icon: '⚡',
-          badge: `${tabNumbers.skills || '04'} ↗`,
+          iconSvg: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>',
+          badge: `${tabNumbers.skills || '04'} →`,
           title: ui.heroCards?.skillsTitle || (activeLang === 'vi' ? 'Kỹ năng & Tools' : (activeLang === 'fr' ? 'Compétences & Outils' : 'Skills & Tooling')),
           summary: ui.heroCards?.skillsSummaryTmpl
             ? formatPluralCount(ui.heroCards.skillsSummaryTmpl, totalSkillsCount, '{n} công cụ dữ liệu')
@@ -1513,8 +1555,8 @@
         },
         {
           key: 'certificates',
-          icon: '📜',
-          badge: '04.2 ↗',
+          iconSvg: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>',
+          badge: '04.2 →',
           title: ui.heroCards?.certsTitle || (activeLang === 'vi' ? 'Chứng chỉ Quốc tế' : (activeLang === 'fr' ? 'Certifications' : 'Certifications')),
           summary: ui.heroCards?.certsSummaryTmpl
             ? formatPluralCount(ui.heroCards.certsSummaryTmpl, totalCertsCount, '{n} chứng chỉ xác thực')
@@ -1528,7 +1570,9 @@
         card.href = p.href;
 
         const hdr = ce('div', 'dp-hero-card__header');
-        hdr.appendChild(ce('span', 'dp-hero-card__icon', p.icon));
+        const iconWrap = ce('span', 'dp-hero-card__icon');
+        iconWrap.innerHTML = p.iconSvg;
+        hdr.appendChild(iconWrap);
         hdr.appendChild(ce('span', 'dp-hero-card__badge', p.badge));
         card.appendChild(hdr);
 
@@ -1745,7 +1789,7 @@
           detailLink.href = buildTabUrl('projects', ui, p.slug);
           actions.appendChild(detailLink);
 
-          const allProjBtn = ce('a', 'dp-btn', `${ui.hero?.viewProjects || 'Xem tất cả dự án'} →`);
+          const allProjBtn = ce('a', 'dp-btn--link', `${ui.hero?.viewProjects || 'Xem tất cả dự án'} →`);
           allProjBtn.href = buildTabUrl('projects', ui);
           actions.appendChild(allProjBtn);
 
@@ -2748,11 +2792,18 @@
       col3.appendChild(col3List);
       footerGrid.appendChild(col3);
 
-      // Col 4: Language & Theme Controls
+      // Col 4: Back to top & System Info (Keeps 4-column balanced grid without duplicate controls)
       const col4 = ce('div', colCls);
       const col4Top = ce('div', 'dp-footer__list');
-      col4Top.appendChild(ce('span', 'dp-label', `${ui.header?.langToggle || 'LANG'} / ${ui.header?.themeToggle || 'THEME'}`));
-      col4Top.appendChild(createControlsGroup(activeLang, ui, false));
+      col4Top.appendChild(ce('span', 'dp-label', activeLang === 'vi' ? 'ĐIỀU HƯỚNG' : (activeLang === 'fr' ? 'NAVIGATION' : 'NAVIGATION')));
+      const topLink = ce('a', 'dp-footer__link dp-footer__link--top', activeLang === 'vi' ? '↑ Lên đầu trang' : (activeLang === 'fr' ? '↑ Haut de page' : '↑ Back to top'));
+      topLink.href = '#main';
+      topLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+      col4Top.appendChild(topLink);
+      col4Top.appendChild(ce('p', 'dp-meta dp-meta--muted', 'Swiss Minimalist System'));
       col4.appendChild(col4Top);
       footerGrid.appendChild(col4);
 

@@ -74,7 +74,7 @@ async function loadUI(lang) {
     });
 
     // Update language switch buttons
-    document.querySelectorAll('.lang-switch .lang-opt').forEach(opt => {
+    document.querySelectorAll('[data-lang]').forEach(opt => {
       const isActive = opt.dataset.lang === targetLang;
       opt.classList.toggle('active', isActive);
       opt.setAttribute('aria-pressed', isActive ? 'true' : 'false');
@@ -91,53 +91,45 @@ async function loadUI(lang) {
   }
 }
 
-// Language switch click handler (handles individual options and button cycling)
+// Language switch click handler (strictly decoupled to [data-lang])
 document.addEventListener('click', async e => {
-  const switchBtn = e.target.closest('.lang-switch');
-  if (switchBtn) {
-    const opt = e.target.closest('.lang-opt');
-    const curLang = document.documentElement.lang || DEFAULT_LANG;
-    let targetLang;
-    if (opt && opt.dataset.lang) {
-      targetLang = opt.dataset.lang;
-    } else {
-      // Cycle: vi -> en -> fr -> vi
-      const idx = SUPPORTED_LANGS.indexOf(curLang);
-      targetLang = SUPPORTED_LANGS[(idx + 1) % SUPPORTED_LANGS.length];
-    }
+  const opt = e.target.closest('[data-lang]');
+  if (!opt) return;
 
-    if (targetLang && targetLang !== curLang && SUPPORTED_LANGS.includes(targetLang)) {
-      const { tabKey, projectSlug, sectionAnchor } = getCurrentTabInfo();
-      try {
-        const res = await fetch(`data/ui.${targetLang}.json`);
-        const nextUI = await res.json();
-        const nextSlug = nextUI.tabs?.[tabKey]?.slug || '';
-        let nextHash = '#/';
-        if (tabKey === 'home') {
-          nextHash = '#/';
-        } else if (tabKey === 'projects' && projectSlug) {
-          nextHash = `#/${nextSlug}/${projectSlug}`;
-        } else if (nextSlug) {
-          nextHash = sectionAnchor ? `#/${nextSlug}#${sectionAnchor}` : `#/${nextSlug}`;
-        }
+  const targetLang = opt.dataset.lang;
+  const curLang = document.documentElement.lang || DEFAULT_LANG;
 
-        // Updating hash will preserve window.location.search (e.g. ?demo=1)
-        if (window.location.hash !== nextHash) {
-          window.location.hash = nextHash;
-        }
-      } catch (err) {
-        console.warn('Could not pre-calculate translated hash:', err);
+  if (targetLang && targetLang !== curLang && SUPPORTED_LANGS.includes(targetLang)) {
+    const { tabKey, projectSlug, sectionAnchor } = getCurrentTabInfo();
+    try {
+      const res = await fetch(`data/ui.${targetLang}.json`);
+      const nextUI = await res.json();
+      const nextSlug = nextUI.tabs?.[tabKey]?.slug || '';
+      let nextHash = '#/';
+      if (tabKey === 'home') {
+        nextHash = '#/';
+      } else if (tabKey === 'projects' && projectSlug) {
+        nextHash = `#/${nextSlug}/${projectSlug}`;
+      } else if (nextSlug) {
+        nextHash = sectionAnchor ? `#/${nextSlug}#${sectionAnchor}` : `#/${nextSlug}`;
       }
 
-      await loadUI(targetLang);
+      // Updating hash will preserve window.location.search (e.g. ?demo=1)
+      if (window.location.hash !== nextHash) {
+        window.location.hash = nextHash;
+      }
+    } catch (err) {
+      console.warn('Could not pre-calculate translated hash:', err);
     }
+
+    await loadUI(targetLang);
   }
 });
 
 // Keyboard support for language options
 document.addEventListener('keydown', e => {
   if (e.key === 'Enter' || e.key === ' ') {
-    const opt = e.target.closest('.lang-opt');
+    const opt = e.target.closest('[data-lang]');
     if (opt) {
       e.preventDefault();
       opt.click();

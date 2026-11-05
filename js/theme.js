@@ -4,9 +4,14 @@ const THEME_KEY = 'theme';
 function applyTheme(t) {
   document.documentElement.dataset.theme = t;
   localStorage.setItem(THEME_KEY, t);
-  const groundColor = t === 'dark' ? '#000000' : '#ffffff';
+  const groundColor = t === 'dark' ? '#121316' : '#ffffff';
   document.querySelectorAll('meta[name="theme-color"]').forEach(meta => {
     meta.setAttribute('content', groundColor);
+  });
+  document.querySelectorAll('[data-theme-val]').forEach(btn => {
+    const isMatch = btn.dataset.themeVal === t;
+    btn.classList.toggle('active', isMatch);
+    btn.setAttribute('aria-pressed', isMatch ? 'true' : 'false');
   });
   document.querySelectorAll('[data-theme-toggle]').forEach(btn => {
     const isDark = t === 'dark';
@@ -33,6 +38,11 @@ function initTheme() {
 }
 
 document.addEventListener('click', e => {
+  const valBtn = e.target.closest('[data-theme-val]');
+  if (valBtn) {
+    applyTheme(valBtn.dataset.themeVal);
+    return;
+  }
   const btn = e.target.closest('[data-theme-toggle]');
   if (btn) {
     const cur = document.documentElement.dataset.theme;
