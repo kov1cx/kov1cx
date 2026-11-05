@@ -2237,7 +2237,7 @@
           featSec.appendChild(createRail(`${skillsTabNum}.${skillsSubIdx++}`, ui.rail?.certificates || ui.skills?.featuredBadge || 'CHỨNG CHỈ', ui.skills?.featuredTitle || 'Chứng chỉ nổi bật'));
 
           const featContent = ce('div', 'dp-content');
-          const topFeatCerts = featuredCerts.slice(0, 4);
+          const topFeatCerts = featuredCerts;
           const showFeatCertBadge = hasMixedFeatured(topFeatCerts);
           const featGrid = ce('div', 'dp-cert-cards-grid');
           topFeatCerts.forEach(c => {
