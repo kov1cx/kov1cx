@@ -9,14 +9,14 @@
       "slug": "analyzing-motorcycle-part-sales-sql",
       "year": "2026",
       "context": {
-        "vi": "Một công ty bán lẻ phụ tùng xe máy vận hành 3 kho hàng (Central, North, West) với nhiều kênh bán (Retail, Wholesale). Ban lãnh đạo cần báo cáo tổng hợp doanh thu thuần theo từng dòng sản phẩm, từng kho và từng tháng trong giai đoạn từ tháng 6 đến tháng 8/2021 để tối ưu hoá phân bổ tồn kho và điều phối bán buôn.",
-        "en": "A motorcycle parts retailer operating three warehouses (Central, North, West) across multiple sales channels needed aggregated net revenue analysis per product line, warehouse location, and month (June–August 2021) to optimize warehouse replenishment and prioritize wholesale distribution.",
-        "fr": "Un distributeur de pièces de moto exploitant trois entrepôts (Central, North, West) et plusieurs canaux de vente nécessitait une analyse consolidée du chiffre d'affaires net par gamme de produits, entrepôt et mois (juin-août 2021) afin d'optimiser le réapprovisionnement et la logistique de gros."
+        "vi": "Dự án phân tích tình huống kinh doanh giả định dựa trên bộ dữ liệu bán hàng công khai (Kaggle / DataCamp): Một doanh nghiệp bán lẻ phụ tùng xe máy vận hành 3 kho hàng (Central, North, West) với các kênh bán Retail và Wholesale. Ban lãnh đạo cần báo cáo tổng hợp doanh thu thuần theo từng dòng sản phẩm, từng kho và từng tháng trong giai đoạn từ tháng 6 đến tháng 8/2021 để tối ưu hoá phân bổ tồn kho và điều phối bán buôn.",
+        "en": "Business scenario analysis based on a public benchmark dataset (Kaggle / DataCamp): A simulated motorcycle parts retailer operates three regional warehouses (Central, North, West) across Retail and Wholesale channels. The objective is to aggregate and analyze net revenue by product line, warehouse, and month (June–August 2021) to optimize warehouse replenishment and prioritize wholesale distribution.",
+        "fr": "Étude de cas d'entreprise basée sur un jeu de données public de référence (Kaggle / DataCamp) : Un distributeur simulé de pièces moto exploite trois entrepôts régionaux (Central, North, West) sur les canaux Retail et Wholesale. La direction requiert une analyse consolidée du chiffre d'affaires net par gamme de produits, entrepôt et mois (juin–août 2021) afin d'optimiser le réapprovisionnement et la logistique de gros."
       },
       "data": {
-        "vi": "Bộ dữ liệu bán hàng gồm 1.000 giao dịch thực tế từ tháng 6 đến tháng 8/2021 với các trường: order_number, date, warehouse, client_type, product_line, quantity, unit_price, total, payment, transfer_fee.",
-        "en": "Sales dataset comprising 1,000 transaction records between June and August 2021, detailing order number, date, warehouse, client type, product line, quantity, unit price, total, payment method, and transfer fee.",
-        "fr": "Jeu de données de 1 000 transactions enregistrées entre juin et août 2021, comprenant le numéro de commande, la date, l'entrepôt, le type de client, la gamme de produits, les quantités, les prix unitaires et les frais de transfert."
+        "vi": "Bộ dữ liệu công khai sales_data (Kaggle / DataCamp) gồm 1.000 bản ghi giao dịch mô phỏng từ tháng 6 đến tháng 8/2021 với các trường: order_number, date, warehouse, client_type, product_line, quantity, unit_price, total, payment, transfer_fee.",
+        "en": "Public benchmark dataset sales_data (Kaggle / DataCamp) comprising 1,000 simulated transaction records between June and August 2021, detailing order_number, date, warehouse, client_type, product_line, quantity, unit_price, total, payment, and transfer_fee.",
+        "fr": "Jeu de données public sales_data (Kaggle / DataCamp) comprenant 1 000 transactions simulées entre juin et août 2021, avec les attributs : order_number, date, warehouse, client_type, product_line, quantity, unit_price, total, payment et transfer_fee."
       },
       "method": {
         "vi": [
@@ -36,14 +36,14 @@
         ]
       },
       "summary": {
-        "vi": "Truy vấn SQL tổng hợp doanh thu thuần cho kênh bán buôn theo kho và nhóm phụ tùng, kết hợp phân tích Pareto ABC để định vị các mặt hàng chủ lực.",
-        "en": "SQL aggregation and Pareto ABC analysis of motorcycle parts wholesale revenue across three regional warehouses and six product lines.",
-        "fr": "Agrégation SQL et analyse Pareto ABC du chiffre d'affaires net des pièces détachées moto à travers trois entrepôts et six gammes."
+        "vi": "Truy vấn SQL tổng hợp doanh thu thuần cho kênh bán buôn theo kho và nhóm phụ tùng trên bộ dữ liệu công khai (Kaggle / DataCamp), kết hợp phân tích Pareto ABC để định vị các mặt hàng chủ lực.",
+        "en": "SQL aggregation and Pareto ABC analysis of motorcycle parts wholesale revenue across three regional warehouses and six product lines using a public benchmark dataset (Kaggle / DataCamp).",
+        "fr": "Agrégation SQL et analyse Pareto ABC du chiffre d'affaires net des pièces détachées moto à travers trois entrepôts et six gammes à partir d'un jeu de données public (Kaggle / DataCamp)."
       },
       "result": {
-        "vi": "Top 3 nhóm sản phẩm (Suspension & traction, Frame & body, Braking) mang lại 64% tổng doanh thu thuần bán buôn; kho Central dẫn đầu doanh số với đóng góp ổn định qua cả 3 tháng.",
-        "en": "Top 3 product lines (Suspension & traction, Frame & body, Braking) generated 64% of wholesale net revenue; Central warehouse dominated distribution throughout all three months.",
-        "fr": "Les 3 premières gammes (Suspension & traction, Frame & body, Braking) génèrent 64 % du chiffre d'affaires net de gros ; l'entrepôt Central maintient la tête sur les 3 mois."
+        "vi": "Top 3 nhóm sản phẩm (Hệ thống treo, Khung & thân xe, Hệ thống điện) mang lại 64.3% tổng doanh thu thuần bán buôn; kho Central dẫn đầu doanh số với đóng góp ổn định qua cả 3 tháng.",
+        "en": "Top 3 product lines (Suspension & traction, Frame & body, Electrical system) generated 64.3% of wholesale net revenue; Central warehouse dominated distribution throughout all three months.",
+        "fr": "Les 3 premières gammes (Suspension & traction, Cadre & carrosserie, Système électrique) génèrent 64,3 % du chiffre d'affaires net de gros ; l'entrepôt Central maintient la tête sur les 3 mois."
       },
       "limitations": {
         "vi": "Dữ liệu chỉ bao gồm giai đoạn 3 tháng mùa hè (tháng 6 - tháng 8/2021), chưa phản ánh biến động mùa vụ cả năm hoặc chi phí lưu kho chi tiết cho từng SKU.",
@@ -51,11 +51,11 @@
         "fr": "L'échantillon couvre une période de 3 mois (juin-août 2021) sans saisonnalité annuelle complète ni prise en compte des coûts unitaires de stockage par SKU."
       },
       "result_metric": {
-        "value": "64%",
+        "value": "64.3%",
         "label": {
-          "vi": "Doanh thu thuần từ Top 3 nhóm sản phẩm (Pareto)",
-          "en": "Net revenue from Top 3 product lines (Pareto)",
-          "fr": "Chiffre d'affaires net du Top 3 produits (Pareto)"
+          "vi": "Doanh thu thuần từ Top 3 nhóm sản phẩm chủ lực",
+          "en": "Net revenue share from Top 3 key product lines",
+          "fr": "Chiffre d'affaires net du Top 3 des gammes"
         }
       },
       "tags": ["SQL", "PostgreSQL", "Data Analytics", "Supply Chain", "Pareto ABC"],
@@ -68,9 +68,9 @@
         "src": "assets/img/motorcycle-sales-pareto.webp",
         "srcset": "assets/img/motorcycle-sales-pareto-800.webp 800w, assets/img/motorcycle-sales-pareto.webp 1440w",
         "caption": {
-          "vi": "Biểu đồ Pareto (80/20) phân tích đóng góp doanh thu theo dòng sản phẩm phụ tùng xe máy",
-          "en": "Pareto (80/20) chart analyzing cumulative net revenue contribution by motorcycle parts product line",
-          "fr": "Diagramme de Pareto (80/20) illustrant la contribution au chiffre d'affaires par gamme de pièces moto"
+          "vi": "Biểu đồ phân tích ABC / Pareto phân loại dòng sản phẩm phụ tùng theo doanh số thuần (Nguồn: Kaggle / DataCamp, Q2–Q3/2021; Số liệu làm tròn 1 chữ số thập phân)",
+          "en": "ABC / Pareto analysis classifying motorcycle parts product lines by net revenue contribution (Source: Kaggle / DataCamp, Q2–Q3/2021; Figures rounded to 1 decimal place)",
+          "fr": "Analyse ABC / Pareto classant les gammes de pièces moto selon leur contribution au chiffre d'affaires net (Source : Kaggle / DataCamp, T2–T3/2021 ; chiffres arrondis à 1 décimale)"
         }
       },
       "hero_media": {
@@ -83,9 +83,9 @@
           "fr": "Graphique d'analyse des ventes de pièces moto"
         },
         "caption": {
-          "vi": "Biểu đồ Pareto (80/20) phân tích đóng góp doanh thu theo dòng sản phẩm phụ tùng xe máy",
-          "en": "Pareto (80/20) chart analyzing cumulative net revenue contribution by motorcycle parts product line",
-          "fr": "Diagramme de Pareto (80/20) illustrant la contribution au chiffre d'affaires par gamme de pièces moto"
+          "vi": "Biểu đồ phân tích ABC / Pareto phân loại dòng sản phẩm phụ tùng theo doanh số thuần (Nguồn: Kaggle / DataCamp, Q2–Q3/2021; Số liệu làm tròn 1 chữ số thập phân)",
+          "en": "ABC / Pareto analysis classifying motorcycle parts product lines by net revenue contribution (Source: Kaggle / DataCamp, Q2–Q3/2021; Figures rounded to 1 decimal place)",
+          "fr": "Analyse ABC / Pareto classant les gammes de pièces moto selon leur contribution au chiffre d'affaires net (Source : Kaggle / DataCamp, T2–T3/2021 ; chiffres arrondis à 1 décimale)"
         }
       },
       "grayscale": false,

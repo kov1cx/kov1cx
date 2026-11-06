@@ -83,7 +83,7 @@
   --dp-accent: var(--dp-color-accent);
   --dp-typography-face: "SwissMinimalistHost", "SwissMinimalistFallback", Arial, sans-serif;
   --dp-typography-body: 16px;
-  --dp-typography-label: 12px;
+  --dp-typography-label: 13px;
   --dp-typography-metadata: 14px;
   --dp-typography-lead: 17px;
   --dp-typography-item-title: 24px;
@@ -101,7 +101,7 @@
   --dp-color-rule: #000000;
 
   /* Derived Tokens (WCAG AA >= 4.5:1 verified) */
-  --dp-color-ink-muted: #525252;
+  --dp-color-ink-muted: #3f4246;
   --dp-color-badge-bg: #c90000;
   --dp-color-badge-ink: #ffffff;
   --dp-color-field-bg: #000000;
@@ -128,7 +128,7 @@
   --dp-color-ground: #121316;
   --dp-color-ink: #e8e8ea;
   --dp-color-surface: #1b1d22;
-  --dp-color-ink-muted: #a0a4ab;
+  --dp-color-ink-muted: #b8bcc4;
   --dp-color-accent: #ff6b6b;
   --dp-color-rule: #3a3d44;
   --dp-accent: var(--dp-color-accent);

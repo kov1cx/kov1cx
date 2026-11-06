@@ -2,39 +2,33 @@
   "techStack": [
     {
       "category": {
-        "vi": "Data Pipelines, Analytics & Machine Learning",
-        "en": "Data Pipelines, Analytics & Machine Learning",
-        "fr": "Pipelines de Données, Analyse & Machine Learning"
+        "vi": "Phân tích Dữ liệu & Báo cáo Logistics",
+        "en": "Data Analytics & Logistics Reporting",
+        "fr": "Analyse de Données & Reporting Logistique"
       },
       "items": [
-        { "name": "Python", "slug": "python", "icon": "assets/icons/python.svg" },
         { "name": "PostgreSQL", "slug": "postgresql", "icon": "assets/icons/postgresql.svg" },
         { "name": "SQLite", "slug": "sqlite", "icon": "assets/icons/sqlite.svg" },
         { "name": "Microsoft Excel", "slug": "excel", "icon": "assets/icons/excel.svg" },
         { "name": "Power BI", "slug": "powerbi", "icon": "assets/icons/powerbi.svg" },
+        { "name": "Python", "slug": "python", "icon": "assets/icons/python.svg" },
         { "name": "Pandas", "slug": "pandas", "icon": "assets/icons/pandas.svg" },
         { "name": "NumPy", "slug": "numpy", "icon": "assets/icons/numpy.svg" },
         { "name": "Matplotlib", "slug": "matplotlib", "icon": "assets/icons/matplotlib.svg" },
-        { "name": "Jupyter", "slug": "jupyter", "icon": "assets/icons/jupyter.svg" },
-        { "name": "Scikit-Learn", "slug": "scikitlearn", "icon": "assets/icons/scikitlearn.svg" },
-        { "name": "PyTorch", "slug": "pytorch", "icon": "assets/icons/pytorch.svg" },
-        { "name": "TensorFlow", "slug": "tensorflow", "icon": "assets/icons/tensorflow.svg" },
-        { "name": "Postman", "slug": "postman", "icon": "assets/icons/postman.svg" }
+        { "name": "Jupyter", "slug": "jupyter", "icon": "assets/icons/jupyter.svg" }
       ]
     },
     {
       "category": {
-        "vi": "Systems, Infrastructure & Tooling",
-        "en": "Systems, Infrastructure & Tooling",
-        "fr": "Systèmes, Infrastructure & Outils"
+        "vi": "Công cụ làm việc & Quản lý mã nguồn",
+        "en": "Development Tools & Version Control",
+        "fr": "Outils de Développement & Contrôle de Version"
       },
       "items": [
-        { "name": "Docker", "slug": "docker", "icon": "assets/icons/docker.svg" },
-        { "name": "Linux", "slug": "linux", "icon": "assets/icons/linux.svg" },
-        { "name": "Terminal / Bash", "slug": "bash", "icon": "assets/icons/bash.svg" },
         { "name": "Git", "slug": "git", "icon": "assets/icons/git.svg" },
         { "name": "GitHub", "slug": "github", "icon": "assets/icons/github.svg" },
-        { "name": "VS Code", "slug": "vscode", "icon": "assets/icons/vscode.svg" }
+        { "name": "VS Code", "slug": "vscode", "icon": "assets/icons/vscode.svg" },
+        { "name": "Docker", "slug": "docker", "icon": "assets/icons/docker.svg" }
       ]
     }
   ]

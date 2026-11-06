@@ -1552,7 +1552,7 @@
         {
           key: 'certificates',
           iconSvg: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>',
-          badge: '04.2 →',
+          badge: activeLang === 'vi' ? 'CHỨNG CHỈ →' : (activeLang === 'fr' ? 'CERTIF →' : 'CERTS →'),
           title: ui.heroCards?.certsTitle || (activeLang === 'vi' ? 'Chứng chỉ Quốc tế' : (activeLang === 'fr' ? 'Certifications' : 'Certifications')),
           summary: ui.heroCards?.certsSummaryTmpl
             ? formatPluralCount(ui.heroCards.certsSummaryTmpl, totalCertsCount, '{n} chứng chỉ xác thực')
@@ -1597,8 +1597,12 @@
         openingActions.appendChild(contactBtn);
       }
       if (hasProjects) {
-        const projBtn = ce('a', 'dp-btn', `${ui.hero?.viewProjects || 'Xem tất cả dự án'} →`);
-        projBtn.href = buildTabUrl('projects', ui);
+        const firstProj = (projectsData.projects || [])[0];
+        const projBtnText = totalProjectsCount > 1
+          ? (ui.hero?.viewProjects || 'Xem tất cả dự án')
+          : (activeLang === 'vi' ? 'Xem dự án SQL' : (activeLang === 'fr' ? 'Voir le projet SQL' : 'View SQL Project'));
+        const projBtn = ce('a', 'dp-btn', `${projBtnText} →`);
+        projBtn.href = totalProjectsCount > 1 ? buildTabUrl('projects', ui) : buildTabUrl('projects', ui, firstProj?.slug);
         openingActions.appendChild(projBtn);
       }
       if (openingActions.children.length > 0) {
@@ -1718,7 +1722,7 @@
 
       if (homeFeaturedProjects.length > 0) {
         const fpSec = ce('div', 'dp-section dp-grid');
-        fpSec.appendChild(createRail(`${tabNumbers.home}.${homeSubIdx++}`, ui.rail?.projects || 'DỰ ÁN', ui.projects?.title || 'Dự án tiêu biểu'));
+        fpSec.appendChild(createRail(tabNumbers.projects || '03', ui.rail?.projects || 'DỰ ÁN', ui.projects?.title || 'Dự án tiêu biểu'));
         const fpContent = ce('div', 'dp-content');
         const fpList = ce('div', 'dp-projects-list');
 
@@ -1781,13 +1785,16 @@
           }
 
           const actions = ce('div', 'dp-project-actions');
-          const detailLink = ce('a', 'dp-btn dp-btn--solid', `${ui.projects?.viewProject || 'Xem dự án'} →`);
+          const detailLinkText = activeLang === 'vi' ? 'Xem chi tiết dự án SQL' : (activeLang === 'fr' ? 'Détails du projet SQL' : 'View SQL Project Details');
+          const detailLink = ce('a', 'dp-btn dp-btn--solid', `${detailLinkText} ↗`);
           detailLink.href = buildTabUrl('projects', ui, p.slug);
           actions.appendChild(detailLink);
 
-          const allProjBtn = ce('a', 'dp-btn--link', `${ui.hero?.viewProjects || 'Xem tất cả dự án'} →`);
-          allProjBtn.href = buildTabUrl('projects', ui);
-          actions.appendChild(allProjBtn);
+          if ((projectsData.projects || []).length > 1) {
+            const allProjBtn = ce('a', 'dp-btn--link', `${ui.hero?.viewProjects || 'Xem tất cả dự án'} →`);
+            allProjBtn.href = buildTabUrl('projects', ui);
+            actions.appendChild(allProjBtn);
+          }
 
           infoCol.appendChild(actions);
 
@@ -1819,7 +1826,7 @@
       if (techStackGroups.length > 0) {
         const tsSec = ce('div', 'dp-section dp-grid dp-section--techstack');
         tsSec.appendChild(createRail(
-          `${tabNumbers.home}.${homeSubIdx++}`,
+          tabNumbers.skills || '04',
           ui.rail?.skills || 'KỸ NĂNG',
           ui.skills?.techStackTitle || 'Công nghệ & Công cụ'
         ));
@@ -2799,7 +2806,7 @@
         window.scrollTo({ top: 0, behavior: 'smooth' });
       });
       col4Top.appendChild(topLink);
-      col4Top.appendChild(ce('p', 'dp-meta dp-meta--muted', 'Swiss Minimalist System'));
+      col4Top.appendChild(ce('p', 'dp-meta dp-meta--muted', '© 2026 Nguyễn Nam Khánh'));
       col4.appendChild(col4Top);
       footerGrid.appendChild(col4);
 
