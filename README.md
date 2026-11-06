@@ -11,8 +11,8 @@
       <p><i>"Tryna do my best!"</i></p>
       <p>
         <img src="https://komarev.com/ghpvc/?username=kov1cx&color=58a6ff&style=flat-square&label=PROFILE+VIEWS" alt="views" />
-        <img src="https://img.shields.io/badge/STATUS-SYSTEM%20ONLINE-00ff66?style=flat-square" alt="status" />
-        <img src="https://img.shields.io/badge/LOCATION-HANOI%2C%20VN-ff007f?style=flat-square" alt="location" />
+        <img src="https://img.shields.io/static/v1?label=STATUS&message=SYSTEM+ONLINE&color=00ff66&style=flat-square" alt="status" />
+        <img src="https://img.shields.io/static/v1?label=LOCATION&message=HANOI%2C+VN&color=ff007f&style=flat-square" alt="location" />
       </p>
       <a href="https://github.com/kov1cx">
         <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=15&duration=2600&pause=1000&color=58A6FF&center=false&vCenter=true&width=450&lines=Data-Driven+Supply+Chain+Pipelines;Fine-tuning+Custom+LLMs+for+Logistics;Targeting+Sub-7%3A00%2Fmile+10K;PC+Modding+%26+Local+AI+Inference" alt="Typing SVG" />
@@ -91,16 +91,16 @@
 
 #### Applied AI & Domain Logistics
 <p>
-  <img src="https://img.shields.io/badge/Local_AI-Ollama%20%7C%20vLLM-00e5ff?style=for-the-badge&logo=linux&logoColor=white" />
-  <img src="https://img.shields.io/badge/GPU_Acceleration-NVIDIA_CUDA-76b900?style=for-the-badge&logo=nvidia&logoColor=white" />
-  <img src="https://img.shields.io/badge/Pipelines-n8n_Automation-ea4c89?style=for-the-badge&logo=n8n&logoColor=white" />
-  <img src="https://img.shields.io/badge/Mesh_SDN-ZeroTier-ff9800?style=for-the-badge&logo=zerotier&logoColor=white" />
+  <img src="https://img.shields.io/static/v1?label=Local+AI&message=Ollama+%7C+vLLM&color=00e5ff&style=for-the-badge&logo=linux&logoColor=white" alt="Local AI" />
+  <img src="https://img.shields.io/static/v1?label=GPU+Acceleration&message=NVIDIA+CUDA&color=76b900&style=for-the-badge&logo=nvidia&logoColor=white" alt="GPU Acceleration" />
+  <img src="https://img.shields.io/static/v1?label=Pipelines&message=n8n+Automation&color=ea4c89&style=for-the-badge&logo=n8n&logoColor=white" alt="Pipelines" />
+  <img src="https://img.shields.io/static/v1?label=Mesh+SDN&message=ZeroTier&color=ff9800&style=for-the-badge&logo=zerotier&logoColor=white" alt="Mesh SDN" />
 </p>
 <p>
-  <img src="https://img.shields.io/badge/Cold--Chain-Reefer%2040'RH%20%7C%20CPT%20%7C%20FOB-0288d1?style=flat-square" />
-  <img src="https://img.shields.io/badge/Procurement-S2P%20%7C%20P2P%20%7C%20Kraljic-2e7d32?style=flat-square" />
-  <img src="https://img.shields.io/badge/Quality_Ops-FMEA%20%7C%20Ishikawa%20%7C%20Pareto-e65100?style=flat-square" />
-  <img src="https://img.shields.io/badge/Customs-Import%2FExport%20Compliance-455a64?style=flat-square" />
+  <img src="https://img.shields.io/static/v1?label=Cold-Chain&message=Reefer+40%27RH+%7C+CPT+%7C+FOB&color=0288d1&style=flat-square" alt="Cold Chain" />
+  <img src="https://img.shields.io/static/v1?label=Procurement&message=S2P+%7C+P2P+%7C+Kraljic&color=2e7d32&style=flat-square" alt="Procurement" />
+  <img src="https://img.shields.io/static/v1?label=Quality+Ops&message=FMEA+%7C+Ishikawa+%7C+Pareto&color=e65100&style=flat-square" alt="Quality Ops" />
+  <img src="https://img.shields.io/static/v1?label=Customs&message=Import%2FExport+Compliance&color=455a64&style=flat-square" alt="Customs" />
 </p>
 
 </div>
@@ -118,9 +118,9 @@
     <td width="62%" valign="top" style="padding-left: 15px;">
       <h3 align="left">🖥️ WORKSTATION & INFERENCE RIG</h3>    
       <p align="left">
-        <img src="https://img.shields.io/badge/RIG_STATUS-ONLINE-00ff66?style=flat-square&logo=nvidia&logoColor=white" alt="Rig Online" />
-        <img src="https://img.shields.io/badge/INFERENCE-LOCAL_GPU-00e5ff?style=flat-square&logo=linux&logoColor=white" alt="Local Inference" />
-        <img src="https://img.shields.io/badge/TUNNEL-ZEROTIER_SDN-ff9800?style=flat-square&logo=zerotier&logoColor=white" alt="ZeroTier" />
+        <img src="https://img.shields.io/static/v1?label=RIG+STATUS&message=ONLINE&color=00ff66&style=flat-square&logo=nvidia&logoColor=white" alt="Rig Online" />
+        <img src="https://img.shields.io/static/v1?label=INFERENCE&message=LOCAL+GPU&color=00e5ff&style=flat-square&logo=linux&logoColor=white" alt="Local Inference" />
+        <img src="https://img.shields.io/static/v1?label=TUNNEL&message=ZEROTIER+SDN&color=ff9800&style=flat-square&logo=zerotier&logoColor=white" alt="ZeroTier" />
       </p>
       <table width="100%">
         <tr>
@@ -162,13 +162,13 @@
 
 <p align="center">
   <a href="https://github.com/kov1cx">
-    <img src="https://img.shields.io/badge/GitHub-kov1cx-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+    <img src="https://img.shields.io/static/v1?label=GitHub&message=kov1cx&color=181717&style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
   </a>
   <a href="https://x.com/Kov1cx1">
-    <img src="https://img.shields.io/badge/X-@Kov1cx1-000000?style=for-the-badge&logo=x&logoColor=white" alt="X" />
+    <img src="https://img.shields.io/static/v1?label=X&message=%40Kov1cx1&color=000000&style=for-the-badge&logo=x&logoColor=white" alt="X" />
   </a>
   <a href="https://bio.link/kov1cx">
-    <img src="https://img.shields.io/badge/Bio.link-kov1cx-4353ff?style=for-the-badge&logo=linktree&logoColor=white" alt="Bio Link" />
+    <img src="https://img.shields.io/static/v1?label=Bio.link&message=kov1cx&color=4353ff&style=for-the-badge&logo=linktree&logoColor=white" alt="Bio Link" />
   </a>
 </p>
 
