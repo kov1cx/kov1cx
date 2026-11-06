@@ -18,50 +18,46 @@
       ]);
   let initialDataLoaded = false;
   const loadStartTime = performance.now();
-  const LOADING_DURATION_MS = 3000;
   let initialLoaderDismissed = false;
   let initialRenderFinished = false;
   let loaderRafId = null;
 
+  function dismissLoadingScreen() {
+    if (initialLoaderDismissed) return;
+    initialRenderFinished = true;
+    initialLoaderDismissed = true;
+    if (loaderRafId) {
+      cancelAnimationFrame(loaderRafId);
+      loaderRafId = null;
+    }
+    const percentEl = document.getElementById('loading-percent');
+    if (percentEl) percentEl.textContent = '100%';
+    const loadingEl = document.getElementById('loading-screen');
+    if (loadingEl) {
+      loadingEl.classList.add('dp-loading-screen--hidden');
+      loadingEl.hidden = true;
+    }
+  }
+
   function tickLoadingPercent() {
     if (initialLoaderDismissed) return;
+    if (initialRenderFinished) {
+      dismissLoadingScreen();
+      return;
+    }
     const percentEl = document.getElementById('loading-percent');
     const elapsed = performance.now() - loadStartTime;
-    const rawRatio = Math.min(1, Math.max(0, elapsed / LOADING_DURATION_MS));
-    // Cap at 99% until initial data & DOM render finish AND 3000ms have elapsed
-    const pct = (rawRatio >= 1 && initialRenderFinished)
-      ? 100
-      : Math.min(99, Math.floor(rawRatio * 100));
+    const rawRatio = Math.min(1, Math.max(0, elapsed / 500));
+    const pct = Math.min(99, Math.floor(rawRatio * 100));
 
     if (percentEl) {
       percentEl.textContent = `${pct}%`;
-    }
-
-    if (pct >= 100) {
-      initialLoaderDismissed = true;
-      if (loaderRafId) {
-        cancelAnimationFrame(loaderRafId);
-        loaderRafId = null;
-      }
-      const loadingEl = document.getElementById('loading-screen');
-      if (loadingEl) {
-        loadingEl.hidden = true;
-        loadingEl.classList.add('dp-loading-screen--hidden');
-      }
-      return;
     }
 
     loaderRafId = requestAnimationFrame(tickLoadingPercent);
   }
 
   loaderRafId = requestAnimationFrame(tickLoadingPercent);
-
-  function dismissLoadingScreen() {
-    initialRenderFinished = true;
-    if (!initialLoaderDismissed && !loaderRafId) {
-      loaderRafId = requestAnimationFrame(tickLoadingPercent);
-    }
-  }
 
   // Tab canonical keys
   const TAB_KEYS = ['home', 'profile', 'projects', 'skills', 'contact'];
@@ -465,7 +461,7 @@
     const tabName = tabMeta.name || '';
 
     if (tabKey === 'home') {
-      docTitle = personName ? `${tabName} · ${personName}` : (ui.meta?.title || 'Portfolio');
+      docTitle = ui.meta?.title || (personName ? `${personName} – Portfolio` : 'Portfolio');
       metaDesc = tabMeta.metaDesc || ui.meta?.description || '';
     } else if (tabKey === 'projects' && projectSlug) {
       const p = (projectsData.projects || []).find(x => x.slug === projectSlug);

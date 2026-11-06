@@ -1,10 +1,10 @@
 {
   "meta": {
-    "title": "Portfolio Professionnel",
-    "description": "Dossier de compétences professionnelles et réalisations de projets en supply chain et logistique",
-    "ogTitle": "Portfolio Professionnel",
-    "ogDescription": "Dossier de compétences professionnelles et réalisations de projets en supply chain et logistique",
-    "ogUrl": "https://USERNAME.github.io/portfolio/"
+    "title": "Nguyen Nam Khanh – Portfolio Logistique & Gestion de la Supply Chain",
+    "description": "Dossier de compétences professionnelles et projets d'analyse de données en Logistique et Gestion de la Supply Chain par Nguyen Nam Khanh.",
+    "ogTitle": "Nguyen Nam Khanh – Portfolio Logistique & Gestion de la Supply Chain",
+    "ogDescription": "Dossier de compétences professionnelles et projets d'analyse de données en Logistique et Gestion de la Supply Chain par Nguyen Nam Khanh.",
+    "ogUrl": "https://kov1cx.github.io/kov1cx/"
   },
   "skip": "Passer au contenu",
   "demoBadge": "Mode Démo",
@@ -43,7 +43,7 @@
       "name": "Accueil",
       "slug": "",
       "metaTitle": "Accueil",
-      "metaDesc": "Présentation de mon profil professionnel, de mes compétences et de mes solutions logistiques."
+      "metaDesc": "Présentation du profil professionnel, des compétences et des solutions en Logistique et Gestion de la Supply Chain de Nguyen Nam Khanh."
     },
     "profile": {
       "name": "Parcours",

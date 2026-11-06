@@ -1,10 +1,10 @@
 {
   "meta": {
-    "title": "Professional Portfolio",
-    "description": "Professional portfolio and projects showcase",
-    "ogTitle": "Professional Portfolio",
-    "ogDescription": "Professional portfolio and projects showcase",
-    "ogUrl": "https://USERNAME.github.io/portfolio/"
+    "title": "Nguyen Nam Khanh – Logistics & Supply Chain Management Portfolio",
+    "description": "Professional portfolio and data analytics projects in Logistics & Supply Chain Management by Nguyen Nam Khanh.",
+    "ogTitle": "Nguyen Nam Khanh – Logistics & Supply Chain Management Portfolio",
+    "ogDescription": "Professional portfolio and data analytics projects in Logistics & Supply Chain Management by Nguyen Nam Khanh.",
+    "ogUrl": "https://kov1cx.github.io/kov1cx/"
   },
   "skip": "Skip to content",
   "demoBadge": "Demo Mode",
@@ -43,7 +43,7 @@
       "name": "About",
       "slug": "",
       "metaTitle": "About",
-      "metaDesc": "Introduction to professional background, expertise, and supply chain solutions."
+      "metaDesc": "Introduction to professional background, expertise, and Logistics & Supply Chain Management solutions by Nguyen Nam Khanh."
     },
     "profile": {
       "name": "Profile",
