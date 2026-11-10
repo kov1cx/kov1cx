@@ -3147,6 +3147,81 @@
    CARTOON & MANGA THEME COMPONENT STYLES (Giao diện Hoạt hình & Truyện tranh)
    ========================================================================== */
 
+/* Typography Pop-Art Cartoon (Font Baloo 2 Rounded Comic) */
+[data-theme="cartoon"] nav,
+[data-theme="cartoon"] nav a,
+[data-theme="cartoon"] nav button,
+[data-theme="cartoon"] .dp-nav__link,
+[data-theme="cartoon"] .dp-nav__text,
+[data-theme="cartoon"] .dp-nav__num,
+[data-theme="cartoon"] .dp-header__logo,
+[data-theme="cartoon"] h1,
+[data-theme="cartoon"] h2,
+[data-theme="cartoon"] h3,
+[data-theme="cartoon"] h4,
+[data-theme="cartoon"] .dp-opening__title,
+[data-theme="cartoon"] .dp-section__title,
+[data-theme="cartoon"] .dp-project-featured__title,
+[data-theme="cartoon"] .dp-cert-card__title,
+[data-theme="cartoon"] .dp-techstack-card__title,
+[data-theme="cartoon"] .dp-btn,
+[data-theme="cartoon"] .dp-btn--solid,
+[data-theme="cartoon"] .dp-control-btn,
+[data-theme="cartoon"] .dp-filter-btn,
+[data-theme="cartoon"] .dp-hero-card__title,
+[data-theme="cartoon"] .dp-hero-card__badge,
+[data-theme="cartoon"] .dp-hero-card__summary,
+[data-theme="cartoon"] .dp-metric__value,
+[data-theme="cartoon"] .dp-badge-featured,
+[data-theme="cartoon-dark"] nav,
+[data-theme="cartoon-dark"] nav a,
+[data-theme="cartoon-dark"] nav button,
+[data-theme="cartoon-dark"] .dp-nav__link,
+[data-theme="cartoon-dark"] .dp-nav__text,
+[data-theme="cartoon-dark"] .dp-nav__num,
+[data-theme="cartoon-dark"] .dp-header__logo,
+[data-theme="cartoon-dark"] h1,
+[data-theme="cartoon-dark"] h2,
+[data-theme="cartoon-dark"] h3,
+[data-theme="cartoon-dark"] h4,
+[data-theme="cartoon-dark"] .dp-opening__title,
+[data-theme="cartoon-dark"] .dp-section__title,
+[data-theme="cartoon-dark"] .dp-project-featured__title,
+[data-theme="cartoon-dark"] .dp-cert-card__title,
+[data-theme="cartoon-dark"] .dp-techstack-card__title,
+[data-theme="cartoon-dark"] .dp-btn,
+[data-theme="cartoon-dark"] .dp-btn--solid,
+[data-theme="cartoon-dark"] .dp-control-btn,
+[data-theme="cartoon-dark"] .dp-filter-btn,
+[data-theme="cartoon-dark"] .dp-hero-card__title,
+[data-theme="cartoon-dark"] .dp-hero-card__badge,
+[data-theme="cartoon-dark"] .dp-hero-card__summary,
+[data-theme="cartoon-dark"] .dp-metric__value,
+[data-theme="cartoon-dark"] .dp-badge-featured {
+  font-family: var(--dp-typography-face) !important;
+}
+
+[data-theme="cartoon"] .site-header {
+  background-color: #fefce8 !important;
+  border-bottom: 3px solid #18181b !important;
+}
+
+[data-theme="cartoon"] .dp-nav__link.active {
+  border-radius: 9999px !important;
+  background-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+[data-theme="cartoon-dark"] .dp-nav__link.active {
+  border-radius: 9999px !important;
+  background-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+/* Bỏ hiển thị số thứ tự (01, 02, 03...) trên menu điều hướng theo yêu cầu */
+[data-theme="cartoon"] .dp-nav__num,
+[data-theme="cartoon-dark"] .dp-nav__num {
+  display: none !important;
+}
+
 /* 1. Pop-Art Cartoon Theme (Bubble Gum & Thick Comic Outlines) */
 [data-theme="cartoon"] .dp-btn,
 [data-theme="cartoon"] .dp-btn--solid {
@@ -3327,6 +3402,19 @@
   color: #18181b !important;
   font-weight: 800 !important;
   box-shadow: 2px 2px 0px #18181b !important;
+}
+
+[data-theme="cartoon"] .dp-techstack__tile {
+  border-radius: 16px !important;
+  border: 2.5px solid #18181b !important;
+  background-color: #ffffff !important;
+  box-shadow: 3.5px 3.5px 0px #18181b !important;
+  transition: transform 0.12s ease, box-shadow 0.12s ease !important;
+}
+
+[data-theme="cartoon"] .dp-techstack__tile:hover {
+  transform: translate(-2px, -2px) !important;
+  box-shadow: 5px 5px 0px #18181b !important;
 }
 
 /* 1b. Pop-Art Cartoon Dark Theme (Bubble Gum & Comic Sticker Noir - Bản Tối) */
@@ -3527,6 +3615,19 @@
   box-shadow: 2px 2px 0px #000000 !important;
 }
 
+[data-theme="cartoon-dark"] .dp-techstack__tile {
+  border-radius: 16px !important;
+  border: 2.5px solid #000000 !important;
+  background-color: #221e36 !important;
+  box-shadow: 3.5px 3.5px 0px #000000 !important;
+  transition: transform 0.12s ease, box-shadow 0.12s ease !important;
+}
+
+[data-theme="cartoon-dark"] .dp-techstack__tile:hover {
+  transform: translate(-2px, -2px) !important;
+  box-shadow: 5px 5px 0px #ffd166 !important;
+}
+
 [data-theme="cartoon-dark"] .dp-filter-btn {
   border-radius: 9999px !important;
   border: 2.5px solid #000000 !important;
@@ -3565,6 +3666,341 @@
   background-color: #ff70a6 !important;
   color: #161424 !important;
   box-shadow: 2px 2px 0px #000000 !important;
+}
+
+/* ==========================================================================
+   CARTOON THEME MOBILE ENHANCEMENTS (Giao diện Mobile Thân thiện & Đáng yêu)
+   ========================================================================== */
+@media (max-width: 600px) {
+  /* 1. Thanh Header & Logo trên Mobile */
+  [data-theme="cartoon"] .dp-header,
+  [data-theme="cartoon-dark"] .dp-header {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    row-gap: 8px !important;
+  }
+
+  [data-theme="cartoon"] .dp-header__logo,
+  [data-theme="cartoon-dark"] .dp-header__logo {
+    font-size: 13px !important;
+    font-weight: 800 !important;
+    white-space: nowrap !important;
+    letter-spacing: -0.01em !important;
+  }
+
+  [data-theme="cartoon"] .dp-header__controls,
+  [data-theme="cartoon-dark"] .dp-header__controls {
+    gap: 6px !important;
+  }
+
+  [data-theme="cartoon"] .dp-control-segmented,
+  [data-theme="cartoon-dark"] .dp-control-segmented {
+    height: 32px !important;
+    padding: 2px !important;
+    border-width: 2px !important;
+    box-shadow: 2px 2px 0px #000000 !important;
+  }
+
+  [data-theme="cartoon"] .dp-control-btn,
+  [data-theme="cartoon-dark"] .dp-control-btn {
+    padding: 0 8px !important;
+    font-size: 10.5px !important;
+    font-weight: 800 !important;
+  }
+
+  /* 2. Ribbon điều hướng dạng Pill bo tròn, vuốt mượt mà (Không còn khung bảng cứng nhắc) */
+  [data-theme="cartoon"] .dp-nav,
+  [data-theme="cartoon-dark"] .dp-nav {
+    overflow: hidden;
+    padding: 2px 0 4px 0;
+  }
+
+  [data-theme="cartoon"] .dp-nav__list,
+  [data-theme="cartoon-dark"] .dp-nav__list {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    border: none !important;
+    gap: 8px !important;
+    padding: 4px 4px 6px 2px !important;
+    margin: 0 !important;
+  }
+
+  [data-theme="cartoon"] .dp-nav__list::-webkit-scrollbar,
+  [data-theme="cartoon-dark"] .dp-nav__list::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  [data-theme="cartoon"] .dp-nav__item,
+  [data-theme="cartoon-dark"] .dp-nav__item {
+    flex: 0 0 auto !important;
+    border: none !important;
+    min-width: auto !important;
+    scroll-snap-align: start !important;
+  }
+
+  [data-theme="cartoon"] .dp-nav__link,
+  [data-theme="cartoon-dark"] .dp-nav__link {
+    display: inline-flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 6px !important;
+    padding: 7px 14px !important;
+    min-height: 36px !important;
+    border-radius: 9999px !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    white-space: nowrap !important;
+    text-decoration: none !important;
+    transition: transform 0.12s ease, box-shadow 0.12s ease !important;
+  }
+
+  /* Cartoon Sáng: Nav Link Pills */
+  [data-theme="cartoon"] .dp-nav__link {
+    background-color: #ffffff !important;
+    border: 2px solid #18181b !important;
+    color: #52525b !important;
+    box-shadow: 2px 2px 0px #18181b !important;
+  }
+
+  [data-theme="cartoon"] .dp-nav__link .dp-nav__num,
+  [data-theme="cartoon-dark"] .dp-nav__link .dp-nav__num {
+    display: none !important;
+  }
+
+  [data-theme="cartoon"] .dp-nav__link .dp-nav__text {
+    color: #18181b !important;
+    text-decoration: none !important;
+  }
+
+  [data-theme="cartoon"] .dp-nav__link.active,
+  [data-theme="cartoon"] .dp-nav__link[aria-current="page"] {
+    background-color: #ffd166 !important;
+    border: 2.5px solid #18181b !important;
+    color: #18181b !important;
+    box-shadow: 2.5px 2.5px 0px #18181b !important;
+    font-weight: 800 !important;
+  }
+
+  /* Cartoon Tối: Nav Link Pills */
+  [data-theme="cartoon-dark"] .dp-nav__link {
+    background-color: #221e36 !important;
+    border: 2px solid #000000 !important;
+    color: #a39ebd !important;
+    box-shadow: 2px 2px 0px #000000 !important;
+  }
+
+  [data-theme="cartoon-dark"] .dp-nav__link .dp-nav__text {
+    color: #f8fafc !important;
+    text-decoration: none !important;
+  }
+
+  [data-theme="cartoon-dark"] .dp-nav__link.active,
+  [data-theme="cartoon-dark"] .dp-nav__link[aria-current="page"] {
+    background-color: #ffd166 !important;
+    border: 2.5px solid #000000 !important;
+    color: #161424 !important;
+    box-shadow: 2.5px 2.5px 0px #000000 !important;
+    font-weight: 800 !important;
+  }
+
+  [data-theme="cartoon-dark"] .dp-nav__link.active .dp-nav__text,
+  [data-theme="cartoon-dark"] .dp-nav__link[aria-current="page"] .dp-nav__text {
+    color: #161424 !important;
+  }
+
+  [data-theme="cartoon"] .dp-nav__link .dp-nav__mark,
+  [data-theme="cartoon-dark"] .dp-nav__link .dp-nav__mark {
+    display: none !important;
+  }
+
+  [data-theme="cartoon"] .dp-nav__link.active .dp-nav__mark,
+  [data-theme="cartoon-dark"] .dp-nav__link.active .dp-nav__mark {
+    width: 6px !important;
+    height: 6px !important;
+    border-radius: 50% !important;
+    background-color: #ff477e !important;
+    display: inline-block !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* 3. Hero Opening trên Mobile */
+  [data-theme="cartoon"] .dp-opening,
+  [data-theme="cartoon-dark"] .dp-opening {
+    padding-top: var(--dp-space-md) !important;
+    row-gap: 12px !important;
+  }
+
+  [data-theme="cartoon"] .dp-opening__title,
+  [data-theme="cartoon-dark"] .dp-opening__title {
+    font-size: clamp(32px, 8.5vw, 42px) !important;
+    line-height: 1.15 !important;
+    margin-bottom: 8px !important;
+  }
+
+  [data-theme="cartoon"] .dp-opening__lead,
+  [data-theme="cartoon-dark"] .dp-opening__lead {
+    font-size: 14px !important;
+    line-height: 1.55 !important;
+  }
+
+  /* 4. 4 Thẻ Hero Pillars dạng Sticker Widget trên Mobile */
+  [data-theme="cartoon"] .dp-hero-cards,
+  [data-theme="cartoon-dark"] .dp-hero-cards {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+    padding: 10px 0 16px 0 !important;
+  }
+
+  [data-theme="cartoon"] .dp-hero-card,
+  [data-theme="cartoon-dark"] .dp-hero-card {
+    border-radius: 16px !important;
+    border-width: 2.5px !important;
+    box-shadow: 3px 3px 0px #000000 !important;
+    padding: 12px 12px !important;
+    min-height: 76px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+  }
+
+  [data-theme="cartoon"] .dp-hero-card {
+    box-shadow: 3px 3px 0px #18181b !important;
+    border-color: #18181b !important;
+  }
+
+  [data-theme="cartoon"] .dp-hero-card .dp-hero-card__title,
+  [data-theme="cartoon-dark"] .dp-hero-card .dp-hero-card__title {
+    font-size: 13.5px !important;
+    font-weight: 800 !important;
+    line-height: 1.25 !important;
+    margin: 2px 0 !important;
+  }
+
+  [data-theme="cartoon"] .dp-hero-card .dp-hero-card__summary,
+  [data-theme="cartoon-dark"] .dp-hero-card .dp-hero-card__summary {
+    font-size: 11.5px !important;
+    font-weight: 600 !important;
+    line-height: 1.3 !important;
+  }
+
+  [data-theme="cartoon"] .dp-hero-card .dp-hero-card__badge,
+  [data-theme="cartoon-dark"] .dp-hero-card .dp-hero-card__badge {
+    font-size: 10.5px !important;
+  }
+
+  [data-theme="cartoon"] .dp-hero-card .dp-hero-card__icon svg,
+  [data-theme="cartoon-dark"] .dp-hero-card .dp-hero-card__icon svg {
+    width: 16px !important;
+    height: 16px !important;
+  }
+
+  /* 5. Nút Hành động Hero CTA cạnh nhau (Không bị chiếm hết màn hình) */
+  [data-theme="cartoon"] .dp-opening__actions,
+  [data-theme="cartoon-dark"] .dp-opening__actions {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 10px !important;
+    width: 100% !important;
+    margin-top: 6px !important;
+  }
+
+  [data-theme="cartoon"] .dp-opening__actions .dp-btn,
+  [data-theme="cartoon-dark"] .dp-opening__actions .dp-btn {
+    width: 100% !important;
+    min-height: 44px !important;
+    padding: 0 8px !important;
+    font-size: 13px !important;
+    font-weight: 800 !important;
+    text-align: center !important;
+    justify-content: center !important;
+    box-shadow: 3px 3px 0px #000000 !important;
+  }
+
+  [data-theme="cartoon"] .dp-opening__actions .dp-btn {
+    box-shadow: 3px 3px 0px #18181b !important;
+  }
+
+  /* 6. Featured Project Card trên Mobile */
+  [data-theme="cartoon"] .dp-project-featured--home,
+  [data-theme="cartoon-dark"] .dp-project-featured--home {
+    padding: 18px 16px !important;
+    border-radius: 20px !important;
+    gap: 14px !important;
+  }
+
+  [data-theme="cartoon"] .dp-project-featured--home .dp-project-featured__title,
+  [data-theme="cartoon-dark"] .dp-project-featured--home .dp-project-featured__title {
+    font-size: 18px !important;
+    margin-bottom: 12px !important;
+    line-height: 1.35 !important;
+  }
+
+  [data-theme="cartoon"] .dp-project-featured--home .dp-project-featured__metric,
+  [data-theme="cartoon-dark"] .dp-project-featured--home .dp-project-featured__metric {
+    padding: 16px 18px !important;
+    border-radius: 16px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  [data-theme="cartoon"] .dp-project-featured--home .dp-metric__value,
+  [data-theme="cartoon-dark"] .dp-project-featured--home .dp-metric__value {
+    font-size: 38px !important;
+  }
+
+  [data-theme="cartoon"] .dp-project-featured--home .dp-metric__label,
+  [data-theme="cartoon-dark"] .dp-project-featured--home .dp-metric__label {
+    font-size: 12.5px !important;
+    line-height: 1.4 !important;
+  }
+
+  [data-theme="cartoon"] .dp-project-featured--home .dp-figure,
+  [data-theme="cartoon-dark"] .dp-project-featured--home .dp-figure {
+    border-radius: 16px !important;
+    border: 2.5px solid #000000 !important;
+    overflow: hidden !important;
+  }
+
+  [data-theme="cartoon"] .dp-project-featured--home .dp-figure {
+    border-color: #18181b !important;
+  }
+
+  /* 7. Lưới Tech Stack & Tools trên Mobile */
+  [data-theme="cartoon"] .dp-techstack__tile,
+  [data-theme="cartoon-dark"] .dp-techstack__tile {
+    border-radius: 16px !important;
+    border-width: 2.5px !important;
+    padding: 12px 6px !important;
+    min-height: 72px !important;
+    transition: transform 0.12s ease !important;
+  }
+
+  [data-theme="cartoon"] .dp-techstack__tile {
+    border-color: #18181b !important;
+    box-shadow: 2.5px 2.5px 0px #18181b !important;
+    background-color: #ffffff !important;
+  }
+
+  [data-theme="cartoon-dark"] .dp-techstack__tile {
+    border-color: #000000 !important;
+    background-color: #221e36 !important;
+    box-shadow: 2.5px 2.5px 0px #000000 !important;
+  }
+
+  [data-theme="cartoon"] .dp-techstack__tile:active,
+  [data-theme="cartoon-dark"] .dp-techstack__tile:active {
+    transform: scale(0.95) !important;
+  }
+
+  [data-theme="cartoon"] .dp-techstack__name,
+  [data-theme="cartoon-dark"] .dp-techstack__name {
+    font-size: 11.5px !important;
+    font-weight: 700 !important;
+  }
 }
 
 /* 2. Cyber Manga Theme (Comic Arcade Dark & Neon Pop) */

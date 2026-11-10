@@ -289,6 +289,7 @@
 /* Theme 1: Pop-Art Cartoon / Bubble Gum Comic (Bản Sáng) */
 [data-theme="cartoon"] {
   color-scheme: light;
+  --dp-typography-face: "Baloo 2", "SwissMinimalistHost", "SwissMinimalistFallback", Arial, sans-serif;
   --dp-color-ground: #fefce8; /* Kem bơ vàng pastel vui tươi */
   --dp-color-ink: #18181b;
   --dp-color-surface: #ffffff;
@@ -307,6 +308,7 @@
 /* Theme 1b: Pop-Art Cartoon Dark (Bubble Gum Comic Noir - Bản Tối) */
 [data-theme="cartoon-dark"] {
   color-scheme: dark;
+  --dp-typography-face: "Baloo 2", "SwissMinimalistHost", "SwissMinimalistFallback", Arial, sans-serif;
   --dp-color-ground: #161424; /* Nền tím than mực in Manga đêm */
   --dp-color-ink: #f8fafc; /* Trắng comic sắc nét */
   --dp-color-surface: #221e36; /* Mặt card truyện tranh thẫm */
