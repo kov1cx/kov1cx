@@ -2839,3 +2839,833 @@
   border-top: 2px solid var(--dp-color-ink);
   flex-wrap: wrap;
 }
+
+/* ==========================================================================
+   MODERN THEME-AWARE REDESIGNED BUTTONS & FRAMES (Nút & Khung Phong Cách Mới)
+   ========================================================================== */
+
+/* Modern Rounded Pill Buttons for Modern & Mesh Themes */
+[data-theme="aurora"] .dp-btn,
+[data-theme="sunset"] .dp-btn,
+[data-theme="emerald"] .dp-btn,
+[data-theme="silk"] .dp-btn,
+[data-theme="cyber"] .dp-btn,
+[data-theme="amber"] .dp-btn,
+[data-theme="dark"] .dp-btn {
+  border-radius: 9999px;
+  min-height: 44px;
+  padding: 0 22px;
+  border: 1px solid var(--dp-color-rule);
+  background: var(--dp-color-surface);
+  color: var(--dp-color-ink);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  font-weight: 600;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transform: none;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-theme="aurora"] .dp-btn:hover,
+[data-theme="sunset"] .dp-btn:hover,
+[data-theme="emerald"] .dp-btn:hover,
+[data-theme="silk"] .dp-btn:hover,
+[data-theme="cyber"] .dp-btn:hover,
+[data-theme="amber"] .dp-btn:hover,
+[data-theme="dark"] .dp-btn:hover {
+  transform: translateY(-2px);
+  border-color: var(--dp-color-accent);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  background: var(--dp-color-surface);
+  color: var(--dp-color-ink);
+}
+
+[data-theme="aurora"] .dp-btn:active,
+[data-theme="sunset"] .dp-btn:active,
+[data-theme="emerald"] .dp-btn:active,
+[data-theme="silk"] .dp-btn:active,
+[data-theme="cyber"] .dp-btn:active,
+[data-theme="amber"] .dp-btn:active,
+[data-theme="dark"] .dp-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Modern Pill Solid Primary Buttons (Gradient & Aura Glow) */
+[data-theme="aurora"] .dp-btn--solid {
+  background: linear-gradient(135deg, #00f0ff 0%, #0070f3 100%) !important;
+  color: #070913 !important;
+  border: none !important;
+  box-shadow: 0 4px 20px rgba(0, 240, 255, 0.38), inset 0 1px 1px rgba(255, 255, 255, 0.5) !important;
+}
+[data-theme="aurora"] .dp-btn--solid:hover {
+  box-shadow: 0 8px 28px rgba(0, 240, 255, 0.55), inset 0 1px 1px rgba(255, 255, 255, 0.6) !important;
+  transform: translateY(-2px);
+}
+
+[data-theme="sunset"] .dp-btn--solid {
+  background: linear-gradient(135deg, #ff007a 0%, #ff6b00 100%) !important;
+  color: #ffffff !important;
+  border: none !important;
+  box-shadow: 0 4px 20px rgba(255, 0, 122, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.4) !important;
+}
+[data-theme="sunset"] .dp-btn--solid:hover {
+  box-shadow: 0 8px 28px rgba(255, 0, 122, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.5) !important;
+  transform: translateY(-2px);
+}
+
+[data-theme="emerald"] .dp-btn--solid {
+  background: linear-gradient(135deg, #10b981 0%, #06b6d4 100%) !important;
+  color: #040907 !important;
+  border: none !important;
+  box-shadow: 0 4px 20px rgba(16, 185, 129, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.5) !important;
+}
+[data-theme="emerald"] .dp-btn--solid:hover {
+  box-shadow: 0 8px 28px rgba(16, 185, 129, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.6) !important;
+  transform: translateY(-2px);
+}
+
+[data-theme="silk"] .dp-btn--solid {
+  background: linear-gradient(135deg, #e11d48 0%, #f43f5e 100%) !important;
+  color: #ffffff !important;
+  border: none !important;
+  box-shadow: 0 4px 20px rgba(225, 29, 72, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.4) !important;
+}
+[data-theme="silk"] .dp-btn--solid:hover {
+  box-shadow: 0 8px 28px rgba(225, 29, 72, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.5) !important;
+  transform: translateY(-2px);
+}
+
+[data-theme="cyber"] .dp-btn--solid {
+  background: #00e5ff !important;
+  color: #0a0f1d !important;
+  border: none !important;
+  box-shadow: 0 4px 18px rgba(0, 229, 255, 0.35) !important;
+}
+[data-theme="cyber"] .dp-btn--solid:hover {
+  box-shadow: 0 8px 26px rgba(0, 229, 255, 0.55) !important;
+  transform: translateY(-2px);
+}
+
+[data-theme="amber"] .dp-btn--solid {
+  background: #ff6b00 !important;
+  color: #0c0c0e !important;
+  border: none !important;
+  box-shadow: 0 4px 18px rgba(255, 107, 0, 0.4) !important;
+}
+[data-theme="amber"] .dp-btn--solid:hover {
+  box-shadow: 0 8px 26px rgba(255, 107, 0, 0.6) !important;
+  transform: translateY(-2px);
+}
+
+[data-theme="dark"] .dp-btn--solid {
+  background: #e8e8ea !important;
+  color: #121316 !important;
+  border: none !important;
+  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.15) !important;
+}
+[data-theme="dark"] .dp-btn--solid:hover {
+  box-shadow: 0 6px 22px rgba(255, 255, 255, 0.25) !important;
+  transform: translateY(-2px);
+}
+
+/* Small Buttons (dp-btn--sm) */
+[data-theme="aurora"] .dp-btn--sm,
+[data-theme="sunset"] .dp-btn--sm,
+[data-theme="emerald"] .dp-btn--sm,
+[data-theme="silk"] .dp-btn--sm,
+[data-theme="cyber"] .dp-btn--sm,
+[data-theme="amber"] .dp-btn--sm,
+[data-theme="dark"] .dp-btn--sm {
+  min-height: 36px;
+  padding: 0 16px;
+  font-size: 13px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Sleek Floating Pill Segmented Controls */
+[data-theme="aurora"] .dp-control-segmented,
+[data-theme="sunset"] .dp-control-segmented,
+[data-theme="emerald"] .dp-control-segmented,
+[data-theme="silk"] .dp-control-segmented,
+[data-theme="cyber"] .dp-control-segmented,
+[data-theme="amber"] .dp-control-segmented,
+[data-theme="dark"] .dp-control-segmented {
+  border-radius: 9999px;
+  padding: 3px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  gap: 2px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+[data-theme="aurora"] .dp-control-btn,
+[data-theme="sunset"] .dp-control-btn,
+[data-theme="emerald"] .dp-control-btn,
+[data-theme="silk"] .dp-control-btn,
+[data-theme="cyber"] .dp-control-btn,
+[data-theme="amber"] .dp-control-btn,
+[data-theme="dark"] .dp-control-btn {
+  border-radius: 9999px;
+  border: none;
+  font-weight: 600;
+  font-size: 11.5px;
+  padding: 0 12px;
+  color: var(--dp-color-ink-muted);
+  transition: all 0.15s ease;
+}
+
+[data-theme="aurora"] .dp-control-btn.active,
+[data-theme="sunset"] .dp-control-btn.active,
+[data-theme="emerald"] .dp-control-btn.active,
+[data-theme="cyber"] .dp-control-btn.active,
+[data-theme="amber"] .dp-control-btn.active,
+[data-theme="dark"] .dp-control-btn.active {
+  background-color: var(--dp-color-accent);
+  color: var(--dp-color-ground);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+[data-theme="silk"] .dp-control-segmented {
+  background-color: rgba(0, 0, 0, 0.04);
+  border-color: rgba(0, 0, 0, 0.08);
+}
+[data-theme="silk"] .dp-control-btn.active {
+  background-color: #e11d48;
+  color: #ffffff;
+}
+
+/* Redesigned Curved Glassmorphic Hero Cards */
+[data-theme="aurora"] .dp-hero-card,
+[data-theme="sunset"] .dp-hero-card,
+[data-theme="emerald"] .dp-hero-card,
+[data-theme="silk"] .dp-hero-card,
+[data-theme="cyber"] .dp-hero-card,
+[data-theme="amber"] .dp-hero-card,
+[data-theme="dark"] .dp-hero-card {
+  border-radius: 16px;
+  padding: 20px 22px;
+  min-height: 112px;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-theme="aurora"] .dp-hero-card:hover,
+[data-theme="sunset"] .dp-hero-card:hover,
+[data-theme="emerald"] .dp-hero-card:hover,
+[data-theme="silk"] .dp-hero-card:hover,
+[data-theme="cyber"] .dp-hero-card:hover,
+[data-theme="amber"] .dp-hero-card:hover,
+[data-theme="dark"] .dp-hero-card:hover {
+  transform: translateY(-3px);
+  text-decoration: none;
+}
+
+/* Redesigned Curved Certificate Cards */
+[data-theme="aurora"] .dp-cert-card,
+[data-theme="sunset"] .dp-cert-card,
+[data-theme="emerald"] .dp-cert-card,
+[data-theme="silk"] .dp-cert-card,
+[data-theme="cyber"] .dp-cert-card,
+[data-theme="amber"] .dp-cert-card,
+[data-theme="dark"] .dp-cert-card {
+  border-radius: 18px;
+  overflow: hidden;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-theme="aurora"] .dp-cert-card .dp-cert-card__media,
+[data-theme="sunset"] .dp-cert-card .dp-cert-card__media,
+[data-theme="emerald"] .dp-cert-card .dp-cert-card__media,
+[data-theme="silk"] .dp-cert-card .dp-cert-card__media,
+[data-theme="cyber"] .dp-cert-card .dp-cert-card__media,
+[data-theme="amber"] .dp-cert-card .dp-cert-card__media,
+[data-theme="dark"] .dp-cert-card .dp-cert-card__media {
+  border-radius: 17px 17px 0 0;
+}
+
+[data-theme="aurora"] .dp-cert-card:hover,
+[data-theme="sunset"] .dp-cert-card:hover,
+[data-theme="emerald"] .dp-cert-card:hover,
+[data-theme="silk"] .dp-cert-card:hover,
+[data-theme="cyber"] .dp-cert-card:hover,
+[data-theme="amber"] .dp-cert-card:hover,
+[data-theme="dark"] .dp-cert-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Redesigned Featured Project Card on Home */
+[data-theme="aurora"] .dp-project-featured--home,
+[data-theme="sunset"] .dp-project-featured--home,
+[data-theme="emerald"] .dp-project-featured--home,
+[data-theme="silk"] .dp-project-featured--home,
+[data-theme="cyber"] .dp-project-featured--home,
+[data-theme="amber"] .dp-project-featured--home,
+[data-theme="dark"] .dp-project-featured--home {
+  border-radius: 20px;
+  padding: 28px;
+  border-bottom: none;
+  background-color: var(--dp-color-surface);
+  border: 1px solid var(--dp-color-rule);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  margin-top: 12px;
+}
+
+/* Redesigned Metric Box (Doppelrand Highlight) */
+[data-theme="aurora"] .dp-project-featured__metric,
+[data-theme="sunset"] .dp-project-featured__metric,
+[data-theme="emerald"] .dp-project-featured__metric,
+[data-theme="silk"] .dp-project-featured__metric,
+[data-theme="cyber"] .dp-project-featured__metric,
+[data-theme="amber"] .dp-project-featured__metric,
+[data-theme="dark"] .dp-project-featured__metric {
+  border-radius: 14px;
+  padding: 20px 24px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+}
+
+/* Badges / Pill Tags */
+[data-theme="aurora"] .dp-badge-featured,
+[data-theme="sunset"] .dp-badge-featured,
+[data-theme="emerald"] .dp-badge-featured,
+[data-theme="silk"] .dp-badge-featured,
+[data-theme="cyber"] .dp-badge-featured,
+[data-theme="amber"] .dp-badge-featured,
+[data-theme="dark"] .dp-badge-featured {
+  border-radius: 9999px;
+  padding: 3px 10px;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+   CARTOON & MANGA THEME COMPONENT STYLES (Giao diện Hoạt hình & Truyện tranh)
+   ========================================================================== */
+
+/* 1. Pop-Art Cartoon Theme (Bubble Gum & Thick Comic Outlines) */
+[data-theme="cartoon"] .dp-btn,
+[data-theme="cartoon"] .dp-btn--solid {
+  border-radius: 9999px !important;
+  border: 3px solid #18181b !important;
+  background-color: #ff70a6 !important;
+  color: #18181b !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.01em !important;
+  box-shadow: 4px 4px 0px #18181b !important;
+  transform: translate(0, 0) !important;
+  transition: transform 0.12s ease, box-shadow 0.12s ease !important;
+}
+
+[data-theme="cartoon"] .dp-btn--solid {
+  background-color: #ffd166 !important; /* Vàng chuối pop */
+}
+
+[data-theme="cartoon"] .dp-btn:hover,
+[data-theme="cartoon"] .dp-btn--solid:hover {
+  transform: translate(2px, 2px) !important;
+  box-shadow: 2px 2px 0px #18181b !important;
+}
+
+[data-theme="cartoon"] .dp-btn:active,
+[data-theme="cartoon"] .dp-btn--solid:active {
+  transform: translate(4px, 4px) !important;
+  box-shadow: 0px 0px 0px #18181b !important;
+}
+
+[data-theme="cartoon"] .dp-hero-card {
+  border-radius: 20px !important;
+  border: 3px solid #18181b !important;
+  box-shadow: 5px 5px 0px #18181b !important;
+  transition: transform 0.15s ease, box-shadow 0.15s ease !important;
+}
+
+[data-theme="cartoon"] .dp-hero-card:hover {
+  transform: translate(-2px, -2px) !important;
+  box-shadow: 7px 7px 0px #18181b !important;
+}
+
+/* Card màu sắc luân phiên phong cách Cartoon */
+[data-theme="cartoon"] .dp-hero-card:nth-child(1) {
+  background-color: #e0f2fe !important; /* Xanh mây sky */
+}
+[data-theme="cartoon"] .dp-hero-card:nth-child(2) {
+  background-color: #fef08a !important; /* Vàng bơ */
+}
+[data-theme="cartoon"] .dp-hero-card:nth-child(3) {
+  background-color: #ede9fe !important; /* Tím kẹo */
+}
+[data-theme="cartoon"] .dp-hero-card:nth-child(4) {
+  background-color: #dcfce7 !important; /* Xanh bạc hà */
+}
+
+/* Màu chữ sắc nét, đậm đà trên nền thẻ pastel (Theme Cartoon Sáng) */
+[data-theme="cartoon"] .dp-hero-card,
+[data-theme="cartoon"] .dp-hero-card:hover {
+  color: #18181b !important;
+}
+[data-theme="cartoon"] .dp-hero-card .dp-hero-card__icon,
+[data-theme="cartoon"] .dp-hero-card:hover .dp-hero-card__icon {
+  color: #18181b !important;
+}
+[data-theme="cartoon"] .dp-hero-card .dp-hero-card__badge,
+[data-theme="cartoon"] .dp-hero-card:hover .dp-hero-card__badge {
+  color: #27272a !important;
+  font-weight: 800 !important;
+}
+[data-theme="cartoon"] .dp-hero-card .dp-hero-card__arrow,
+[data-theme="cartoon"] .dp-hero-card:hover .dp-hero-card__arrow {
+  color: #18181b !important;
+  font-weight: 800 !important;
+}
+[data-theme="cartoon"] .dp-hero-card .dp-hero-card__title,
+[data-theme="cartoon"] .dp-hero-card:hover .dp-hero-card__title {
+  color: #18181b !important;
+  font-weight: 800 !important;
+}
+[data-theme="cartoon"] .dp-hero-card .dp-hero-card__summary,
+[data-theme="cartoon"] .dp-hero-card:hover .dp-hero-card__summary {
+  color: #3f3f46 !important;
+  font-weight: 600 !important;
+}
+
+[data-theme="cartoon"] .dp-cert-card {
+  border-radius: 22px !important;
+  border: 3px solid #18181b !important;
+  background-color: #ffffff !important;
+  box-shadow: 5px 5px 0px #18181b !important;
+  overflow: hidden !important;
+  transition: transform 0.15s ease, box-shadow 0.15s ease !important;
+}
+
+[data-theme="cartoon"] .dp-cert-card:hover {
+  transform: translate(-3px, -3px) !important;
+  box-shadow: 8px 8px 0px #18181b !important;
+}
+
+[data-theme="cartoon"] .dp-cert-card .dp-cert-card__media {
+  border-bottom: 3px solid #18181b !important;
+  border-radius: 19px 19px 0 0 !important;
+}
+
+[data-theme="cartoon"] .dp-project-featured--home {
+  border-radius: 24px !important;
+  border: 3px solid #18181b !important;
+  background-color: #ffffff !important;
+  box-shadow: 6px 6px 0px #18181b !important;
+  padding: 28px !important;
+}
+
+[data-theme="cartoon"] .dp-project-featured--home .dp-project-featured__title {
+  margin-bottom: 20px !important;
+  font-weight: 800 !important;
+  line-height: 1.3 !important;
+}
+
+[data-theme="cartoon"] .dp-project-featured--home .dp-project-featured__metric {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: flex-start !important;
+  border-radius: 20px !important;
+  border: 3px solid #18181b !important;
+  background-color: #ffd166 !important;
+  box-shadow: 4px 4px 0px #18181b !important;
+  padding: 22px 24px !important;
+  gap: 8px !important;
+  box-sizing: border-box !important;
+  align-self: flex-start !important;
+}
+
+[data-theme="cartoon"] .dp-project-featured--home .dp-metric__value {
+  font-size: 42px !important;
+  font-weight: 900 !important;
+  line-height: 1 !important;
+  letter-spacing: -0.02em !important;
+  color: #18181b !important;
+  margin: 0 !important;
+}
+
+[data-theme="cartoon"] .dp-project-featured--home .dp-metric__label {
+  font-size: 13.5px !important;
+  font-weight: 700 !important;
+  line-height: 1.45 !important;
+  color: #27272a !important;
+  margin: 0 !important;
+  max-width: 100% !important;
+}
+
+[data-theme="cartoon"] .dp-control-segmented {
+  border-radius: 9999px !important;
+  border: 3px solid #18181b !important;
+  background-color: #ffffff !important;
+  box-shadow: 3px 3px 0px #18181b !important;
+  padding: 3px !important;
+}
+
+[data-theme="cartoon"] .dp-control-btn {
+  border-radius: 9999px !important;
+  border: none !important;
+  font-weight: 800 !important;
+  color: #52525b !important;
+}
+
+[data-theme="cartoon"] .dp-control-btn.active {
+  background-color: #ffd166 !important;
+  color: #18181b !important;
+  box-shadow: 1.5px 1.5px 0px #18181b !important;
+}
+
+[data-theme="cartoon"] .dp-badge-featured {
+  border-radius: 9999px !important;
+  border: 2px solid #18181b !important;
+  background-color: #ff70a6 !important;
+  color: #18181b !important;
+  font-weight: 800 !important;
+  box-shadow: 2px 2px 0px #18181b !important;
+}
+
+/* 1b. Pop-Art Cartoon Dark Theme (Bubble Gum & Comic Sticker Noir - Bản Tối) */
+[data-theme="cartoon-dark"] .site-header {
+  background-color: #161424 !important;
+  border-bottom: 3px solid #000000 !important;
+}
+
+[data-theme="cartoon-dark"] .dp-btn,
+[data-theme="cartoon-dark"] .dp-btn--solid {
+  border-radius: 9999px !important;
+  border: 3px solid #000000 !important;
+  background-color: #ff70a6 !important;
+  color: #161424 !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.01em !important;
+  box-shadow: 4px 4px 0px #000000 !important;
+  transform: translate(0, 0) !important;
+  transition: transform 0.12s ease, box-shadow 0.12s ease !important;
+}
+
+[data-theme="cartoon-dark"] .dp-btn--solid {
+  background-color: #ffd166 !important;
+}
+
+[data-theme="cartoon-dark"] .dp-btn:hover,
+[data-theme="cartoon-dark"] .dp-btn--solid:hover {
+  transform: translate(2px, 2px) !important;
+  box-shadow: 2px 2px 0px #000000 !important;
+}
+
+[data-theme="cartoon-dark"] .dp-btn:active,
+[data-theme="cartoon-dark"] .dp-btn--solid:active {
+  transform: translate(4px, 4px) !important;
+  box-shadow: 0px 0px 0px #000000 !important;
+}
+
+[data-theme="cartoon-dark"] .dp-hero-card {
+  border-radius: 20px !important;
+  border: 3px solid #000000 !important;
+  box-shadow: 5px 5px 0px #000000 !important;
+  color: #18181b !important;
+  transition: transform 0.15s ease, box-shadow 0.15s ease !important;
+}
+
+[data-theme="cartoon-dark"] .dp-hero-card:hover {
+  transform: translate(-2px, -2px) !important;
+  box-shadow: 7px 7px 0px #000000 !important;
+}
+
+/* 4 Thẻ Hero màu sắc pastel sticker nổi bật trên nền tối */
+[data-theme="cartoon-dark"] .dp-hero-card:nth-child(1) {
+  background-color: #e0f2fe !important; /* Xanh mây sky */
+}
+[data-theme="cartoon-dark"] .dp-hero-card:nth-child(2) {
+  background-color: #fef08a !important; /* Vàng bơ */
+}
+[data-theme="cartoon-dark"] .dp-hero-card:nth-child(3) {
+  background-color: #ede9fe !important; /* Tím kẹo */
+}
+[data-theme="cartoon-dark"] .dp-hero-card:nth-child(4) {
+  background-color: #dcfce7 !important; /* Xanh bạc hà */
+}
+
+/* Màu chữ sắc nét, đậm đà, dễ đọc tuyệt đối trên nền card pastel (Theme Cartoon Tối) */
+[data-theme="cartoon-dark"] .dp-hero-card,
+[data-theme="cartoon-dark"] .dp-hero-card:hover {
+  color: #18181b !important;
+}
+
+[data-theme="cartoon-dark"] .dp-hero-card .dp-hero-card__icon,
+[data-theme="cartoon-dark"] .dp-hero-card:hover .dp-hero-card__icon {
+  color: #18181b !important;
+}
+
+[data-theme="cartoon-dark"] .dp-hero-card .dp-hero-card__badge,
+[data-theme="cartoon-dark"] .dp-hero-card:hover .dp-hero-card__badge {
+  color: #27272a !important;
+  font-weight: 800 !important;
+}
+
+[data-theme="cartoon-dark"] .dp-hero-card .dp-hero-card__arrow,
+[data-theme="cartoon-dark"] .dp-hero-card:hover .dp-hero-card__arrow {
+  color: #18181b !important;
+  font-weight: 800 !important;
+}
+
+[data-theme="cartoon-dark"] .dp-hero-card .dp-hero-card__title,
+[data-theme="cartoon-dark"] .dp-hero-card:hover .dp-hero-card__title {
+  color: #18181b !important;
+  font-weight: 800 !important;
+}
+
+[data-theme="cartoon-dark"] .dp-hero-card .dp-hero-card__summary,
+[data-theme="cartoon-dark"] .dp-hero-card:hover .dp-hero-card__summary {
+  color: #3f3f46 !important;
+  font-weight: 600 !important;
+}
+
+[data-theme="cartoon-dark"] .dp-cert-card {
+  border-radius: 22px !important;
+  border: 3px solid #000000 !important;
+  background-color: #221e36 !important;
+  box-shadow: 5px 5px 0px #000000 !important;
+  overflow: hidden !important;
+  transition: transform 0.15s ease, box-shadow 0.15s ease !important;
+}
+
+[data-theme="cartoon-dark"] .dp-cert-card:hover {
+  transform: translate(-3px, -3px) !important;
+  box-shadow: 8px 8px 0px #ffd166 !important;
+}
+
+[data-theme="cartoon-dark"] .dp-cert-card .dp-cert-card__media {
+  border-bottom: 3px solid #000000 !important;
+  border-radius: 19px 19px 0 0 !important;
+}
+
+[data-theme="cartoon-dark"] .dp-project-featured--home {
+  border-radius: 24px !important;
+  border: 3px solid #000000 !important;
+  background-color: #221e36 !important;
+  box-shadow: 6px 6px 0px #000000 !important;
+  padding: 28px !important;
+}
+
+[data-theme="cartoon-dark"] .dp-project-featured--home .dp-project-featured__title {
+  margin-bottom: 20px !important;
+  font-weight: 800 !important;
+  line-height: 1.3 !important;
+}
+
+[data-theme="cartoon-dark"] .dp-project-featured--home .dp-project-featured__metric {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: flex-start !important;
+  border-radius: 20px !important;
+  border: 3px solid #000000 !important;
+  background-color: #ffd166 !important;
+  box-shadow: 4px 4px 0px #000000 !important;
+  padding: 22px 24px !important;
+  gap: 8px !important;
+  box-sizing: border-box !important;
+  align-self: flex-start !important;
+}
+
+[data-theme="cartoon-dark"] .dp-project-featured--home .dp-metric__value {
+  font-size: 42px !important;
+  font-weight: 900 !important;
+  line-height: 1 !important;
+  letter-spacing: -0.02em !important;
+  color: #161424 !important;
+  margin: 0 !important;
+}
+
+[data-theme="cartoon-dark"] .dp-project-featured--home .dp-metric__label {
+  font-size: 13.5px !important;
+  font-weight: 700 !important;
+  line-height: 1.45 !important;
+  color: #27272a !important;
+  margin: 0 !important;
+  max-width: 100% !important;
+}
+
+[data-theme="cartoon-dark"] .dp-btn *,
+[data-theme="cartoon-dark"] .dp-btn--solid * {
+  color: inherit !important;
+}
+
+[data-theme="cartoon-dark"] .dp-control-segmented {
+  border-radius: 9999px !important;
+  border: 3px solid #000000 !important;
+  background-color: #221e36 !important;
+  box-shadow: 3px 3px 0px #000000 !important;
+  padding: 3px !important;
+}
+
+[data-theme="cartoon-dark"] .dp-control-btn {
+  border-radius: 9999px !important;
+  border: none !important;
+  font-weight: 800 !important;
+  color: #a39ebd !important;
+}
+
+[data-theme="cartoon-dark"] .dp-control-btn.active {
+  background-color: #ffd166 !important;
+  color: #161424 !important;
+  box-shadow: 1.5px 1.5px 0px #000000 !important;
+}
+
+[data-theme="cartoon-dark"] .dp-badge-featured {
+  border-radius: 9999px !important;
+  border: 2px solid #000000 !important;
+  background-color: #ff70a6 !important;
+  color: #161424 !important;
+  font-weight: 800 !important;
+  box-shadow: 2px 2px 0px #000000 !important;
+}
+
+[data-theme="cartoon-dark"] .dp-filter-btn {
+  border-radius: 9999px !important;
+  border: 2.5px solid #000000 !important;
+  background-color: #221e36 !important;
+  color: #f8fafc !important;
+  font-weight: 700 !important;
+  box-shadow: 3px 3px 0px #000000 !important;
+  transition: transform 0.12s ease, box-shadow 0.12s ease !important;
+}
+
+[data-theme="cartoon-dark"] .dp-filter-btn:hover {
+  background-color: #2c2744 !important;
+  transform: translate(1px, 1px) !important;
+  box-shadow: 2px 2px 0px #000000 !important;
+}
+
+[data-theme="cartoon-dark"] .dp-filter-btn.active,
+[data-theme="cartoon-dark"] .dp-filter-btn[aria-pressed="true"] {
+  background-color: #ffd166 !important;
+  color: #161424 !important;
+  border-color: #000000 !important;
+  transform: translate(2px, 2px) !important;
+  box-shadow: 1px 1px 0px #000000 !important;
+}
+
+[data-theme="cartoon-dark"] .dp-cert-modal__dialog {
+  border-radius: 24px !important;
+  border: 3px solid #000000 !important;
+  background-color: #161424 !important;
+  box-shadow: 8px 8px 0px #000000 !important;
+}
+
+[data-theme="cartoon-dark"] .dp-cert-modal__close {
+  border-radius: 9999px !important;
+  border: 2px solid #000000 !important;
+  background-color: #ff70a6 !important;
+  color: #161424 !important;
+  box-shadow: 2px 2px 0px #000000 !important;
+}
+
+/* 2. Cyber Manga Theme (Comic Arcade Dark & Neon Pop) */
+[data-theme="manga"] .dp-btn,
+[data-theme="manga"] .dp-btn--solid {
+  border-radius: 14px !important;
+  border: 2.5px solid #ffd60a !important;
+  background-color: #ffd60a !important;
+  color: #161224 !important;
+  font-weight: 800 !important;
+  box-shadow: 4px 4px 0px #00f0ff !important;
+  transform: translate(0, 0) !important;
+  transition: transform 0.12s ease, box-shadow 0.12s ease !important;
+}
+
+[data-theme="manga"] .dp-btn {
+  background-color: #241d3b !important;
+  color: #ffd60a !important;
+}
+
+[data-theme="manga"] .dp-btn:hover,
+[data-theme="manga"] .dp-btn--solid:hover {
+  transform: translate(2px, 2px) !important;
+  box-shadow: 2px 2px 0px #00f0ff !important;
+}
+
+[data-theme="manga"] .dp-hero-card {
+  border-radius: 18px !important;
+  border: 2.5px solid #ffd60a !important;
+  background-color: #241d3b !important;
+  box-shadow: 5px 5px 0px #00f0ff !important;
+  transition: transform 0.15s ease, box-shadow 0.15s ease !important;
+}
+
+[data-theme="manga"] .dp-hero-card:hover {
+  transform: translate(-2px, -2px) !important;
+  box-shadow: 7px 7px 0px #ff007a !important;
+  border-color: #ff007a !important;
+}
+
+[data-theme="manga"] .dp-cert-card {
+  border-radius: 20px !important;
+  border: 2.5px solid #ffd60a !important;
+  background-color: #241d3b !important;
+  box-shadow: 5px 5px 0px #00f0ff !important;
+  overflow: hidden !important;
+  transition: transform 0.15s ease, box-shadow 0.15s ease !important;
+}
+
+[data-theme="manga"] .dp-cert-card:hover {
+  transform: translate(-3px, -3px) !important;
+  box-shadow: 8px 8px 0px #ff007a !important;
+  border-color: #ff007a !important;
+}
+
+[data-theme="manga"] .dp-cert-card .dp-cert-card__media {
+  border-bottom: 2.5px solid #ffd60a !important;
+  border-radius: 17px 17px 0 0 !important;
+}
+
+[data-theme="manga"] .dp-project-featured--home {
+  border-radius: 22px !important;
+  border: 2.5px solid #ffd60a !important;
+  background-color: #241d3b !important;
+  box-shadow: 6px 6px 0px #00f0ff !important;
+  padding: 28px !important;
+}
+
+[data-theme="manga"] .dp-project-featured__metric {
+  border-radius: 14px !important;
+  border: 2.5px solid #ffd60a !important;
+  background-color: #2a2245 !important;
+  box-shadow: 3px 3px 0px #00f0ff !important;
+}
+
+[data-theme="manga"] .dp-control-segmented {
+  border-radius: 14px !important;
+  border: 2.5px solid #ffd60a !important;
+  background-color: #241d3b !important;
+  box-shadow: 3px 3px 0px #00f0ff !important;
+  padding: 3px !important;
+}
+
+[data-theme="manga"] .dp-control-btn {
+  border-radius: 10px !important;
+  border: none !important;
+  font-weight: 800 !important;
+  color: #c4b5fd !important;
+}
+
+[data-theme="manga"] .dp-control-btn.active {
+  background-color: #ffd60a !important;
+  color: #161224 !important;
+  box-shadow: 1.5px 1.5px 0px #00f0ff !important;
+}
+
+[data-theme="manga"] .dp-badge-featured {
+  border-radius: 9999px !important;
+  border: 2px solid #ffd60a !important;
+  background-color: #ff007a !important;
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  box-shadow: 2px 2px 0px #ffd60a !important;
+}

@@ -139,6 +139,297 @@
   --dp-color-field-muted: #6b7280;
 }
 
+/* Theme 1: Cold-Chain Cyber / Arctic Terminal (Neon Ice Cyan & Sub-Zero Navy) */
+[data-theme="cyber"] {
+  color-scheme: dark;
+  --dp-color-ground: #0a0f1d;
+  --dp-color-ink: #e2e8f0;
+  --dp-color-surface: #111a2e;
+  --dp-color-ink-muted: #94a9c9;
+  --dp-color-accent: #00e5ff;
+  --dp-color-rule: #1e2c47;
+  --dp-accent: var(--dp-color-accent);
+  --dp-color-badge-bg: #00e5ff;
+  --dp-color-badge-ink: #0a0f1d;
+  --dp-color-field-bg: #111a2e;
+  --dp-color-field-ink: #e2e8f0;
+  --dp-color-field-muted: #64748b;
+}
+
+[data-theme="cyber"] .dp-figure__img {
+  filter: brightness(0.92);
+}
+
+/* Theme 2: F1 Telemetry & High-Pace Amber (Racing Carbon & Neon Orange) */
+[data-theme="amber"] {
+  color-scheme: dark;
+  --dp-color-ground: #0c0c0e;
+  --dp-color-ink: #f4f4f5;
+  --dp-color-surface: #18181b;
+  --dp-color-ink-muted: #a1a1aa;
+  --dp-color-accent: #ff6b00;
+  --dp-color-rule: #27272a;
+  --dp-accent: var(--dp-color-accent);
+  --dp-color-badge-bg: #ff6b00;
+  --dp-color-badge-ink: #0c0c0e;
+  --dp-color-field-bg: #18181b;
+  --dp-color-field-ink: #f4f4f5;
+  --dp-color-field-muted: #71717a;
+}
+
+/* Theme 3: Swiss Architectural Paper (Exhibition Warm Paper & Vermilion Ink) */
+[data-theme="paper"] {
+  color-scheme: light;
+  --dp-color-ground: #f5f2eb;
+  --dp-color-ink: #1c1917;
+  --dp-color-surface: #e9e4d8;
+  --dp-color-ink-muted: #57534e;
+  --dp-color-accent: #d9381e;
+  --dp-color-rule: #d5cdbd;
+  --dp-accent: var(--dp-color-accent);
+  --dp-color-badge-bg: #d9381e;
+  --dp-color-badge-ink: #ffffff;
+  --dp-color-field-bg: #1c1917;
+  --dp-color-field-ink: #f5f2eb;
+  --dp-color-field-muted: #a8a29e;
+}
+
+/* ==========================================================================
+   CREATIVE MESH GRADIENT & AURA GLOW THEMES (Màu loang phong cách cao cấp)
+   ========================================================================== */
+
+/* Theme A: Aurora Borealis Mesh (Cực quang Bắc cực / Deep Cyber Glow) */
+[data-theme="aurora"] {
+  color-scheme: dark;
+  --dp-color-ground: #070913;
+  --dp-color-ink: #f8fafc;
+  --dp-color-surface: rgba(15, 23, 42, 0.65);
+  --dp-color-ink-muted: #94a3b8;
+  --dp-color-accent: #00f0ff;
+  --dp-color-rule: rgba(0, 240, 255, 0.22);
+  --dp-accent: var(--dp-color-accent);
+  --dp-color-badge-bg: #00f0ff;
+  --dp-color-badge-ink: #070913;
+  --dp-color-field-bg: rgba(15, 23, 42, 0.8);
+  --dp-color-field-ink: #f8fafc;
+  --dp-color-field-muted: #64748b;
+  --dp-mesh-gradient: 
+    radial-gradient(circle 800px at 10% 10%, rgba(0, 240, 255, 0.16), transparent 70%),
+    radial-gradient(circle 900px at 90% 20%, rgba(121, 40, 202, 0.20), transparent 70%),
+    radial-gradient(circle 700px at 50% 80%, rgba(0, 245, 160, 0.13), transparent 70%);
+}
+
+/* Theme B: Tokyo Sunset Mesh (Hoàng hôn Neon & Tím khói Cyber) */
+[data-theme="sunset"] {
+  color-scheme: dark;
+  --dp-color-ground: #09070f;
+  --dp-color-ink: #fdf4ff;
+  --dp-color-surface: rgba(26, 17, 38, 0.65);
+  --dp-color-ink-muted: #c084fc;
+  --dp-color-accent: #ff007a;
+  --dp-color-rule: rgba(255, 0, 122, 0.24);
+  --dp-accent: var(--dp-color-accent);
+  --dp-color-badge-bg: #ff007a;
+  --dp-color-badge-ink: #ffffff;
+  --dp-color-field-bg: rgba(26, 17, 38, 0.8);
+  --dp-color-field-ink: #fdf4ff;
+  --dp-color-field-muted: #8b5cf6;
+  --dp-mesh-gradient: 
+    radial-gradient(circle 850px at 85% 12%, rgba(255, 0, 122, 0.22), transparent 70%),
+    radial-gradient(circle 750px at 10% 45%, rgba(255, 107, 0, 0.18), transparent 70%),
+    radial-gradient(circle 800px at 70% 85%, rgba(139, 92, 246, 0.18), transparent 70%);
+}
+
+/* Theme C: Emerald Telemetry Mesh (Ngọc Lục Bảo & Dòng chảy Dữ liệu Matrix) */
+[data-theme="emerald"] {
+  color-scheme: dark;
+  --dp-color-ground: #040907;
+  --dp-color-ink: #ecfdf5;
+  --dp-color-surface: rgba(8, 26, 18, 0.65);
+  --dp-color-ink-muted: #6ee7b7;
+  --dp-color-accent: #10b981;
+  --dp-color-rule: rgba(16, 185, 129, 0.22);
+  --dp-accent: var(--dp-color-accent);
+  --dp-color-badge-bg: #10b981;
+  --dp-color-badge-ink: #040907;
+  --dp-color-field-bg: rgba(8, 26, 18, 0.8);
+  --dp-color-field-ink: #ecfdf5;
+  --dp-color-field-muted: #059669;
+  --dp-mesh-gradient: 
+    radial-gradient(circle 850px at 50% 10%, rgba(16, 185, 129, 0.22), transparent 70%),
+    radial-gradient(circle 750px at 90% 50%, rgba(6, 182, 212, 0.18), transparent 70%),
+    radial-gradient(circle 700px at 15% 85%, rgba(132, 204, 22, 0.15), transparent 70%);
+}
+
+/* Theme D: Silk Pastel Mesh (Màu loang Tơ lụa & Mỹ thuật Tạp chí Nền Sáng) */
+[data-theme="silk"] {
+  color-scheme: light;
+  --dp-color-ground: #faf7f2;
+  --dp-color-ink: #18181b;
+  --dp-color-surface: rgba(255, 255, 255, 0.72);
+  --dp-color-ink-muted: #52525b;
+  --dp-color-accent: #e11d48;
+  --dp-color-rule: rgba(225, 29, 72, 0.18);
+  --dp-accent: var(--dp-color-accent);
+  --dp-color-badge-bg: #e11d48;
+  --dp-color-badge-ink: #ffffff;
+  --dp-color-field-bg: #18181b;
+  --dp-color-field-ink: #faf7f2;
+  --dp-color-field-muted: #a1a1aa;
+  --dp-mesh-gradient: 
+    radial-gradient(circle 800px at 15% 15%, rgba(255, 182, 193, 0.50), transparent 70%),
+    radial-gradient(circle 850px at 85% 25%, rgba(199, 210, 254, 0.45), transparent 70%),
+    radial-gradient(circle 750px at 45% 85%, rgba(254, 215, 170, 0.50), transparent 70%);
+}
+
+/* ==========================================================================
+   CARTOON & MANGA POP THEMES (Giao diện Hoạt hình & Truyện tranh Vui nhộn)
+   ========================================================================== */
+
+/* Theme 1: Pop-Art Cartoon / Bubble Gum Comic (Bản Sáng) */
+[data-theme="cartoon"] {
+  color-scheme: light;
+  --dp-color-ground: #fefce8; /* Kem bơ vàng pastel vui tươi */
+  --dp-color-ink: #18181b;
+  --dp-color-surface: #ffffff;
+  --dp-color-ink-muted: #52525b;
+  --dp-color-accent: #ff477e; /* Hồng kẹo dâu pop */
+  --dp-color-rule: #18181b;
+  --dp-accent: var(--dp-color-accent);
+  --dp-color-badge-bg: #ffd166; /* Vàng chuối cartoon */
+  --dp-color-badge-ink: #18181b;
+  --dp-color-field-bg: #18181b;
+  --dp-color-field-ink: #fefce8;
+  --dp-color-field-muted: #71717a;
+  --dp-mesh-gradient: none;
+}
+
+/* Theme 1b: Pop-Art Cartoon Dark (Bubble Gum Comic Noir - Bản Tối) */
+[data-theme="cartoon-dark"] {
+  color-scheme: dark;
+  --dp-color-ground: #161424; /* Nền tím than mực in Manga đêm */
+  --dp-color-ink: #f8fafc; /* Trắng comic sắc nét */
+  --dp-color-surface: #221e36; /* Mặt card truyện tranh thẫm */
+  --dp-color-ink-muted: #a39ebd;
+  --dp-color-accent: #ff70a6; /* Hồng kẹo dâu bubblegum signature */
+  --dp-color-rule: #000000;
+  --dp-accent: var(--dp-color-accent);
+  --dp-color-badge-bg: #ffd166; /* Vàng chuối pop */
+  --dp-color-badge-ink: #161424;
+  --dp-color-field-bg: #000000;
+  --dp-color-field-ink: #f8fafc;
+  --dp-color-field-muted: #71717a;
+  --dp-mesh-gradient: none;
+}
+
+/* Theme 2: Cyber Manga / Comic Arcade */
+[data-theme="manga"] {
+  color-scheme: dark;
+  --dp-color-ground: #161224; /* Tím thẫm manga */
+  --dp-color-ink: #ffffff;
+  --dp-color-surface: #221b38;
+  --dp-color-ink-muted: #c4b5fd;
+  --dp-color-accent: #ffd60a; /* Vàng neon truyện tranh */
+  --dp-color-rule: #ffd60a;
+  --dp-accent: var(--dp-color-accent);
+  --dp-color-badge-bg: #ff477e;
+  --dp-color-badge-ink: #ffffff;
+  --dp-color-field-bg: #ffd60a;
+  --dp-color-field-ink: #161224;
+  --dp-color-field-muted: #a78bfa;
+  --dp-mesh-gradient: none;
+}
+
+/* Mesh Gradient Glassmorphic Styles */
+[data-theme="aurora"] .site-header,
+[data-theme="sunset"] .site-header,
+[data-theme="emerald"] .site-header,
+[data-theme="silk"] .site-header {
+  background-color: transparent !important;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+[data-theme="aurora"] .site-footer,
+[data-theme="sunset"] .site-footer,
+[data-theme="emerald"] .site-footer,
+[data-theme="silk"] .site-footer {
+  background-color: transparent !important;
+}
+
+[data-theme="aurora"] .dp-hero-card,
+[data-theme="aurora"] .dp-cert-card,
+[data-theme="aurora"] .dp-project-featured,
+[data-theme="aurora"] .dp-techstack-card {
+  background-color: rgba(13, 19, 35, 0.65) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 240, 255, 0.22) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45), inset 0 1px 1px rgba(255, 255, 255, 0.12);
+}
+
+[data-theme="sunset"] .dp-hero-card,
+[data-theme="sunset"] .dp-cert-card,
+[data-theme="sunset"] .dp-project-featured,
+[data-theme="sunset"] .dp-techstack-card {
+  background-color: rgba(24, 16, 36, 0.68) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 0, 122, 0.24) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.12);
+}
+
+[data-theme="emerald"] .dp-hero-card,
+[data-theme="emerald"] .dp-cert-card,
+[data-theme="emerald"] .dp-project-featured,
+[data-theme="emerald"] .dp-techstack-card {
+  background-color: rgba(7, 22, 16, 0.68) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(16, 185, 129, 0.22) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.12);
+}
+
+[data-theme="silk"] .dp-hero-card,
+[data-theme="silk"] .dp-cert-card,
+[data-theme="silk"] .dp-project-featured,
+[data-theme="silk"] .dp-techstack-card {
+  background-color: rgba(255, 255, 255, 0.75) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.85) !important;
+  box-shadow: 0 12px 32px rgba(180, 160, 150, 0.15), 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="aurora"] .dp-hero-card:hover,
+[data-theme="aurora"] .dp-cert-card:hover {
+  border-color: rgba(0, 240, 255, 0.55) !important;
+  box-shadow: 0 12px 36px rgba(0, 240, 255, 0.16), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+}
+
+[data-theme="sunset"] .dp-hero-card:hover,
+[data-theme="sunset"] .dp-cert-card:hover {
+  border-color: rgba(255, 0, 122, 0.6) !important;
+  box-shadow: 0 12px 36px rgba(255, 0, 122, 0.18), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+}
+
+[data-theme="emerald"] .dp-hero-card:hover,
+[data-theme="emerald"] .dp-cert-card:hover {
+  border-color: rgba(16, 185, 129, 0.6) !important;
+  box-shadow: 0 12px 36px rgba(16, 185, 129, 0.18), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+}
+
+[data-theme="silk"] .dp-hero-card:hover,
+[data-theme="silk"] .dp-cert-card:hover {
+  border-color: rgba(225, 29, 72, 0.35) !important;
+  box-shadow: 0 16px 40px rgba(225, 29, 72, 0.12), 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="cyber"] .dp-techstack__icon,
+[data-theme="amber"] .dp-techstack__icon {
+  filter: saturate(0.9);
+}
+
 [data-theme="dark"] .dp-figure__img {
   filter: brightness(0.88);
 }
@@ -195,6 +486,10 @@ body {
   display: flex;
   flex-direction: column;
   background-color: var(--dp-color-ground);
+  background-image: var(--dp-mesh-gradient, none);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
   color: var(--dp-color-ink);
   font-family: var(--dp-typography-face);
   font-size: var(--dp-typography-body);

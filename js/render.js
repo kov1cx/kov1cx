@@ -866,8 +866,8 @@
     controls.appendChild(langGroup);
 
     // 2. Theme Segmented Control
-    const curTheme = document.documentElement.dataset.theme || 'light';
-    const isDark = curTheme === 'dark';
+    const curTheme = document.documentElement.dataset.theme || 'cartoon';
+    const isDark = ['dark', 'cyber', 'amber', 'aurora', 'sunset', 'emerald', 'manga', 'cartoon-dark'].includes(curTheme);
     const darkLbl = ui.header?.themeDark || 'TỐI';
     const lightLbl = ui.header?.themeLight || 'SÁNG';
 
@@ -1110,7 +1110,10 @@
         titleBlock.appendChild(ce('h2', 'dp-cert-modal__title', cTitle));
         const cIssuer = resolveI18n(c.issuer, activeLang) || c.issuer;
         if (cIssuer) {
-          titleBlock.appendChild(ce('p', 'dp-cert-modal__meta', `${cIssuer} · ${formatCertDate(c)}`));
+          const metaText = c.verify_note
+            ? `${cIssuer} · ${formatCertDate(c)} · ID: ${c.verify_note}`
+            : `${cIssuer} · ${formatCertDate(c)}`;
+          titleBlock.appendChild(ce('p', 'dp-cert-modal__meta', metaText));
         }
         header.appendChild(titleBlock);
 
@@ -1227,6 +1230,9 @@
         metaRow.appendChild(ce('span', 'dp-cert-card__date', formatCertDate(c)));
         if (cIssuerTxt) {
           metaRow.appendChild(ce('span', 'dp-cert-card__issuer', cIssuerTxt));
+        }
+        if (c.verify_note) {
+          metaRow.appendChild(ce('span', 'dp-cert-card__id', `ID: ${c.verify_note}`));
         }
         if (c.hours) {
           const hoursTxt = (ui.skills?.hours || '{hours} giờ').replace('{hours}', c.hours);

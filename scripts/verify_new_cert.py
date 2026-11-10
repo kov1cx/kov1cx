@@ -21,7 +21,7 @@ async def verify():
         
         hero_cert_card = await page.locator('.dp-hero-card').nth(3).inner_text()
         print("Hero card text:\n", hero_cert_card)
-        assert "13" in hero_cert_card, f"Expected 13 in hero card, got: {hero_cert_card}"
+        assert "14" in hero_cert_card, f"Expected 14 in hero card, got: {hero_cert_card}"
         
         await page.locator('.dp-hero-card').nth(3).screenshot(path=f"{artifacts_dir}/verified_hero_cert_card.png")
         print("Captured verified_hero_cert_card.png")
