@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Hard Comic Shadow -->
+  <rect x="14" y="14" width="76" height="76" rx="22" fill="#000000"/>
+  <!-- Main Pill Surface (Night Slate) -->
+  <rect x="10" y="10" width="76" height="76" rx="22" fill="#221e36" stroke="#ffd166" stroke-width="5"/>
+  
+  <!-- 3 Colorful Ascending Bouncy Bars -->
+  <!-- Bar 1 (Mint) -->
+  <rect x="22" y="52" width="14" height="24" rx="7" fill="#4ade80" stroke="#000000" stroke-width="3"/>
+  <!-- Bar 2 (Sky Blue) -->
+  <rect x="42" y="38" width="14" height="38" rx="7" fill="#38bdf8" stroke="#000000" stroke-width="3"/>
+  <!-- Bar 3 (Pink Pop) -->
+  <rect x="62" y="24" width="14" height="52" rx="7" fill="#ff70a6" stroke="#000000" stroke-width="3"/>
+  
+  <!-- Trend Arrow curved up -->
+  <path d="M 24 44 Q 44 36 68 18" stroke="#ffd166" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <!-- Arrow Head -->
+  <polygon points="68,14 74,24 62,20" fill="#ffd166" stroke="#000000" stroke-width="2.5"/>
+  
+  <!-- Cute mini sparkle ✦ -->
+  <path d="M 24 22 Q 24 27 29 27 Q 24 27 24 32 Q 24 27 19 27 Q 24 27 24 22 Z" fill="#ffd166"/>
+</svg>

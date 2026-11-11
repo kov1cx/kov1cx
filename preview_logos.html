@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logo & Favicon Concepts Preview – Nguyễn Nam Khánh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Inter:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0f0d18;
+      color: #f8fafc;
+      padding: 40px 24px;
+      line-height: 1.5;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    h1 {
+      font-family: 'Baloo 2', cursive, sans-serif;
+      font-size: 36px;
+      font-weight: 800;
+      color: #ffd166;
+      margin-bottom: 8px;
+    }
+    p.lead {
+      font-size: 16px;
+      color: #a39ebd;
+      margin-bottom: 36px;
+    }
+    .concepts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+    .concept-card {
+      background: #1e1a30;
+      border: 3px solid #000000;
+      border-radius: 24px;
+      box-shadow: 6px 6px 0px #000000;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .concept-card:hover {
+      transform: translate(-3px, -3px);
+      box-shadow: 9px 9px 0px #ffd166;
+    }
+    .concept-badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      background: #ff70a6;
+      color: #161424;
+      font-size: 12px;
+      font-weight: 800;
+      border: 2px solid #000;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+    .logo-large {
+      width: 110px;
+      height: 110px;
+      margin: 12px 0 20px 0;
+      filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3));
+    }
+    .concept-title {
+      font-family: 'Baloo 2', cursive, sans-serif;
+      font-size: 20px;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 6px;
+    }
+    .concept-desc {
+      font-size: 13.5px;
+      color: #c4b5fd;
+      line-height: 1.45;
+      margin-bottom: 20px;
+    }
+    
+    /* Browser Tab Mockups (Matching user's exact screenshot!) */
+    .section-title {
+      font-family: 'Baloo 2', cursive, sans-serif;
+      font-size: 24px;
+      font-weight: 800;
+      color: #ffffff;
+      margin: 36px 0 16px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section-title span {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background: #ff477e;
+    }
+    
+    .tab-mockups {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 36px;
+    }
+    @media (max-width: 768px) {
+      .tab-mockups { grid-template-columns: 1fr; }
+    }
+    
+    .browser-window {
+      border: 3px solid #000000;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 6px 6px 0px #000000;
+    }
+    .browser-bar-dark {
+      background: #1e1e24;
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .browser-bar-light {
+      background: #e2e8f0;
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .browser-dots {
+      display: flex;
+      gap: 6px;
+      margin-right: 8px;
+    }
+    .browser-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+    .browser-dot.red { background: #ef4444; }
+    .browser-dot.yellow { background: #f59e0b; }
+    .browser-dot.green { background: #10b981; }
+    
+    .browser-tab-dark {
+      background: #2b2a33;
+      color: #f8fafc;
+      padding: 6px 14px;
+      border-radius: 8px 8px 0 0;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 500;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      max-width: 200px;
+    }
+    .browser-tab-light {
+      background: #ffffff;
+      color: #18181b;
+      padding: 6px 14px;
+      border-radius: 8px 8px 0 0;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      box-shadow: 0 -1px 3px rgba(0,0,0,0.06);
+      max-width: 200px;
+    }
+    .tab-favicon {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+    }
+    .tab-title {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    
+    /* Header Live Mockup */
+    .header-mockups {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .header-bar-mock {
+      padding: 16px 24px;
+      border-radius: 20px;
+      border: 3px solid #000000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 5px 5px 0px #000000;
+    }
+    .header-bar-mock.dark {
+      background: #161424;
+      color: #ffffff;
+    }
+    .header-bar-mock.light {
+      background: #fefce8;
+      color: #18181b;
+    }
+    
+    .mock-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: inherit;
+      font-family: 'Baloo 2', cursive, sans-serif;
+      font-size: 18px;
+      font-weight: 800;
+    }
+    .mock-brand-icon {
+      width: 32px;
+      height: 32px;
+    }
+    .mock-nav {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      font-family: 'Baloo 2', cursive, sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+    }
+    .mock-nav-pill {
+      padding: 6px 14px;
+      border-radius: 9999px;
+      border: 2px solid #000;
+      background: #ffd166;
+      color: #18181b;
+      box-shadow: 2px 2px 0 #000;
+    }
+    .mock-nav-link {
+      padding: 6px 12px;
+      color: inherit;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Bảng Ý Tưởng Logo & Favicon Pop-Art Cartoon</h1>
+    <p class="lead">Thiết kế logo thay thế khối ô vuông Bauhaus cũ, đồng bộ hoàn hảo với phong cách Pop-Art & Cartoon của website Nguyễn Nam Khánh.</p>
+    
+    <!-- 4 Main Concepts -->
+    <div class="concepts-grid">
+      <!-- Concept 1 -->
+      <div class="concept-card">
+        <span class="concept-badge">Option 1 • Khuyên dùng</span>
+        <img src="assets/img/logos/logo_c1_monogram.svg" class="logo-large" alt="Concept 1">
+        <h3 class="concept-title">Huy hiệu Chữ NK Pop-Art</h3>
+        <p class="concept-desc">Chữ lồng "NK" (Nam Khánh) bo tròn 3D trên nền vàng chuối, viền comic dày và ngôi sao lấp lánh (✦). Nhận diện thương hiệu cá nhân cực mạnh ở mọi kích thước.</p>
+      </div>
+
+      <!-- Concept 2 -->
+      <div class="concept-card">
+        <span class="concept-badge">Option 2 • Đáng yêu nhất</span>
+        <img src="assets/img/logos/logo_c2_logibox.svg" class="logo-large" alt="Concept 2">
+        <h3 class="concept-title">Thùng Hàng LogiBox Vui Vẻ</h3>
+        <p class="concept-desc">Hộp kiện hàng Logistics hoạt hình với khuôn mặt mỉm cười đáng yêu, dán băng keo hồng bubblegum và mã vạch mini. Thể hiện chuẩn xác ngành Logistics & Supply Chain.</p>
+      </div>
+
+      <!-- Concept 3 -->
+      <div class="concept-card">
+        <span class="concept-badge">Option 3 • Năng động</span>
+        <img src="assets/img/logos/logo_c3_logitruck.svg" class="logo-large" alt="Concept 3">
+        <h3 class="concept-title">Xe Tải Giao Hàng Mini</h3>
+        <p class="concept-desc">Chiếc xe tải Logistics mini ngộ nghĩnh đang lăn bánh thần tốc, thùng hàng mang ký hiệu "NK" rực rỡ sắc màu cartoon.</p>
+      </div>
+
+      <!-- Concept 4 -->
+      <div class="concept-card">
+        <span class="concept-badge">Option 4 • Phân tích Dữ liệu</span>
+        <img src="assets/img/logos/logo_c4_datachart.svg" class="logo-large" alt="Concept 4">
+        <h3 class="concept-title">Biểu Đồ Cột Tăng Trưởng</h3>
+        <p class="concept-desc">Huy hiệu biểu đồ 3 cột pastel vút lên cùng mũi tên vàng năng lượng, thể hiện năng lực Phân tích Dữ liệu (SQL, Python, Analytics).</p>
+      </div>
+    </div>
+
+    <!-- Live Browser Tab Mockup -->
+    <h2 class="section-title"><span></span>Hiển thị thực tế trên Browser Tab (Thẻ trình duyệt)</h2>
+    <div class="tab-mockups">
+      <!-- Dark Tab Mockup (Matching user's screenshot) -->
+      <div class="browser-window">
+        <div class="browser-bar-dark">
+          <div class="browser-dots">
+            <div class="browser-dot red"></div>
+            <div class="browser-dot yellow"></div>
+            <div class="browser-dot green"></div>
+          </div>
+          <!-- Option 1 in Dark Tab -->
+          <div class="browser-tab-dark">
+            <img src="assets/img/logos/logo_c1_monogram.svg" class="tab-favicon" alt="Favicon C1">
+            <span class="tab-title">Option 1: NK</span>
+          </div>
+          <!-- Option 2 in Dark Tab -->
+          <div class="browser-tab-dark">
+            <img src="assets/img/logos/logo_c2_logibox.svg" class="tab-favicon" alt="Favicon C2">
+            <span class="tab-title">Option 2: LogiBox</span>
+          </div>
+          <!-- Option 3 in Dark Tab -->
+          <div class="browser-tab-dark">
+            <img src="assets/img/logos/logo_c3_logitruck.svg" class="tab-favicon" alt="Favicon C3">
+            <span class="tab-title">Option 3: Xe tải</span>
+          </div>
+          <!-- Option 4 in Dark Tab -->
+          <div class="browser-tab-dark">
+            <img src="assets/img/logos/logo_c4_datachart.svg" class="tab-favicon" alt="Favicon C4">
+            <span class="tab-title">Option 4: Data</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Light Tab Mockup -->
+      <div class="browser-window">
+        <div class="browser-bar-light">
+          <div class="browser-dots">
+            <div class="browser-dot red"></div>
+            <div class="browser-dot yellow"></div>
+            <div class="browser-dot green"></div>
+          </div>
+          <!-- Option 1 in Light Tab -->
+          <div class="browser-tab-light">
+            <img src="assets/img/logos/logo_c1_monogram.svg" class="tab-favicon" alt="Favicon C1">
+            <span class="tab-title">Option 1: NK</span>
+          </div>
+          <!-- Option 2 in Light Tab -->
+          <div class="browser-tab-light">
+            <img src="assets/img/logos/logo_c2_logibox.svg" class="tab-favicon" alt="Favicon C2">
+            <span class="tab-title">Option 2: LogiBox</span>
+          </div>
+          <!-- Option 3 in Light Tab -->
+          <div class="browser-tab-light">
+            <img src="assets/img/logos/logo_c3_logitruck.svg" class="tab-favicon" alt="Favicon C3">
+            <span class="tab-title">Option 3: Xe tải</span>
+          </div>
+          <!-- Option 4 in Light Tab -->
+          <div class="browser-tab-light">
+            <img src="assets/img/logos/logo_c4_datachart.svg" class="tab-favicon" alt="Favicon C4">
+            <span class="tab-title">Option 4: Data</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Header Live Mockup -->
+    <h2 class="section-title"><span></span>Hiển thị trên Thanh Điều Hướng (Header Website)</h2>
+    <div class="header-mockups">
+      <!-- Dark Header -->
+      <div class="header-bar-mock dark">
+        <div class="mock-brand">
+          <img src="assets/img/logos/logo_c1_monogram.svg" class="mock-brand-icon" alt="Brand Logo">
+          <span>Nguyễn Nam Khánh</span>
+        </div>
+        <div class="mock-nav">
+          <span class="mock-nav-pill">● Giới thiệu</span>
+          <span class="mock-nav-link">Hồ sơ</span>
+          <span class="mock-nav-link">Dự án</span>
+          <span class="mock-nav-link">Kỹ năng</span>
+        </div>
+      </div>
+
+      <!-- Light Header with Option 2 (LogiBox) -->
+      <div class="header-bar-mock light">
+        <div class="mock-brand">
+          <img src="assets/img/logos/logo_c2_logibox.svg" class="mock-brand-icon" alt="Brand Logo">
+          <span>Nguyễn Nam Khánh</span>
+        </div>
+        <div class="mock-nav">
+          <span class="mock-nav-pill" style="background:#ff70a6;">● Giới thiệu</span>
+          <span class="mock-nav-link">Hồ sơ</span>
+          <span class="mock-nav-link">Dự án</span>
+          <span class="mock-nav-link">Kỹ năng</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

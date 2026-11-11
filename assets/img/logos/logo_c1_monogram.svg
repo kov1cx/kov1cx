@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Hard Comic Shadow -->
+  <rect x="14" y="14" width="76" height="76" rx="22" fill="#000000"/>
+  <!-- Main Badge Body (Banana Yellow) -->
+  <rect x="10" y="10" width="76" height="76" rx="22" fill="#ffd166" stroke="#18181b" stroke-width="6"/>
+  
+  <!-- Gloss highlight curve -->
+  <path d="M 22 18 Q 48 16 68 20" stroke="#ffffff" stroke-width="5" stroke-linecap="round" fill="none" opacity="0.9"/>
+  
+  <!-- Comic Shadow for Letters -->
+  <text x="52" y="69" font-family="'Arial Black', 'Trebuchet MS', Impact, sans-serif" font-size="44" font-weight="900" text-anchor="middle" fill="#000000" letter-spacing="-2">NK</text>
+  
+  <!-- "NK" Cartoon Monogram in Bubblegum Pink with Bold Comic Stroke -->
+  <text x="48" y="65" font-family="'Arial Black', 'Trebuchet MS', Impact, sans-serif" font-size="44" font-weight="900" text-anchor="middle" fill="#ff477e" stroke="#18181b" stroke-width="5" paint-order="stroke fill" letter-spacing="-2">NK</text>
+  
+  <!-- Sparkle ✦ top right -->
+  <path d="M 76 16 Q 76 23 83 23 Q 76 23 76 30 Q 76 23 69 23 Q 76 23 76 16 Z" fill="#ff70a6" stroke="#18181b" stroke-width="1.8"/>
+  <circle cx="76" cy="23" r="1.5" fill="#ffffff"/>
+</svg>

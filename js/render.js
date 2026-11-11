@@ -1013,8 +1013,19 @@
 
       if (brandText) {
         const brandCol = ce('div', 'dp-header__brand');
-        const logoLink = ce('a', 'dp-header__logo', brandText);
+        const logoLink = ce('a', 'dp-header__logo');
         logoLink.href = buildTabUrl('home', ui);
+        
+        const logoIcon = ce('img', 'dp-header__logo-icon');
+        logoIcon.src = 'assets/img/favicon.svg?v=20261111a';
+        logoIcon.alt = 'Logo';
+        logoIcon.width = 24;
+        logoIcon.height = 24;
+        logoLink.appendChild(logoIcon);
+        
+        const logoText = ce('span', 'dp-header__logo-text', brandText);
+        logoLink.appendChild(logoText);
+        
         brandCol.appendChild(logoLink);
         headerGrid.appendChild(brandCol);
       }
